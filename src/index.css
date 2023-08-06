@@ -45,7 +45,8 @@ a {
 :root {
   --button-color: black;
   --shadowbuppleLanding: inset 0 0 0 9px #ffffff4d;
-  --primary-color: rgb(255, 247, 0);
+  --primary-color: #228b22f2;
+  --secondary-color:#32CD32;
   --primary-color-shadow: rgb(255, 247, 0, 45%);
   --biggest-font-size: clamp(2.25rem, 1.125rem + 5.1429vw, 5.625rem);
   --h1-font-size: clamp(1.75rem, 1.4167rem + 1.5238vw, 2.75rem);
@@ -134,3 +135,16 @@ a {
   color: white !important;
 }
 
+.scroll-up{
+  text-transform: uppercase;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  cursor: pointer;
+  z-index: 10000;
+  background-color:  var(--secondary-color);
+  transition: .5s;
+}
+.scroll-up:hover{
+  background-color: var(--primary-color);
+}

@@ -1,20 +1,13 @@
-import { Box } from "@mui/system";
 import Services from "./Components/Services/Services";
+import Contact from "./Components/Contact/Contact";
+import ScrollUp from "./Components/ScrollUP/ScrollUp";
 
 function App() {
   return (
     <>
+      <ScrollUp />
       <Services />
-
-      {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}>
-        <Box className="card"></Box>
-      </Box> */}
+      <Contact />
     </>
   );
 }

@@ -59,8 +59,8 @@ function ServiceCard(Props) {
             variant="contained"
             href={"#"}
             sx={{
-              bgcolor: "#228b22f2",
-              "&:hover": { bgcolor: "#32CD32" },
+              bgcolor: "var(--primary-color)",
+              "&:hover": { bgcolor: "var(--secondary-color)" },
               p: "8px 25px",
               fontSize: {
                 xs: "14px",
@@ -73,8 +73,8 @@ function ServiceCard(Props) {
             variant="contained"
             href={"#"}
             sx={{
-              bgcolor: "#228b22f2",
-              "&:hover": { bgcolor: "#32CD32" },
+              bgcolor: "var(--primary-color)",
+              "&:hover": { bgcolor: "var(--secondary-color)" },
               p: "8px 25px",
               fontSize: {
                 xs: "14px",
