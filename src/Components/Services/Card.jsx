@@ -46,10 +46,7 @@ function ServiceCard(Props) {
           </Typography>
           <Typography
             textAlign="start"
-            fontSize={{
-              xs: "var(--xs-text-fontSize)",
-              md: "var(--lg-text-fontSize)",
-            }}
+            fontSize="var( --text-fontSize)"
             className="text">
             {desc}
           </Typography>

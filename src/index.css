@@ -47,6 +47,7 @@ a {
   --shadowbuppleLanding: inset 0 0 0 9px #ffffff4d;
   --primary-color: #228b22f2;
   --secondary-color:#32CD32;
+  --third-color:#244b46;
   --primary-color-shadow: rgb(255, 247, 0, 45%);
   --biggest-font-size: clamp(2.25rem, 1.125rem + 5.1429vw, 5.625rem);
   --h1-font-size: clamp(1.75rem, 1.4167rem + 1.5238vw, 2.75rem);
@@ -64,8 +65,9 @@ a {
   --primary-padding:60px;
   --lg-title-fontSize:26px;
   --xs-title-fontSize:20px;
-  --lg-text-fontSize:18px;
-  --xs-text-fontSize:16px;
+  --lg-title-second-font-fontSize:36px;
+  --xs-title-second-fontfontSize:26px;
+  --text-fontSize:16px;
 }
 .light-theme {
   --shadowbuppleLanding: inset 0 0 0 9px #0000004d;
@@ -82,7 +84,7 @@ a {
   --text-color: hsl(0, 0%, 10%);
   --bg-color-alt: rgb(219, 222, 180);
 }
-
+/* ------------------------ Card Service---------------------------------- */
 .css-mh8x07-MuiPaper-root-MuiCard-root{
   padding: 16px ;
 }
@@ -134,6 +136,7 @@ a {
 .card:hover .text{
   color: white !important;
 }
+/* ------------------------ Scroll Button---------------------------------- */
 
 .scroll-up{
   text-transform: uppercase;
@@ -147,4 +150,20 @@ a {
 }
 .scroll-up:hover{
   background-color: var(--primary-color);
+}
+/* ------------------------ Footer ---------------------------------- */
+/* .footer{
+  padding:20px;
+  background-color:rgb(240, 247, 241);
+  display:flex;
+  justify-content:space-between
+} */
+.footer .title{
+  font-family: var(--second-font);
+  color:var(--primary-color);
+  font-weight: bold;
+}
+.footer .box{
+  flex-basis: calc((100% - 5%) / 3);
+  align-items: center;
 }
