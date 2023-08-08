@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 
 function Services() {
   return (
-    <Box py={"var(--primary-padding)"}>
+    <Box
+      sx={{
+        backgroundColor: "#0a1411",
+      }}
+      py={"var(--primary-padding)"}>
       <Container>
         <Grid container spacing={3}>
           {infoCard.map((info, index) => (

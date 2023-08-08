@@ -18,6 +18,7 @@ function ServiceCard(Props) {
     <Card
       className="card"
       sx={{
+        background: "#000",
         maxWidth: "100%",
         height: "100%",
         display: "flex",
@@ -65,10 +66,11 @@ function ServiceCard(Props) {
         </CardContent>
         <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
           <Button
-            variant="contained"
+            variant="outlined"
             href={"#"}
             sx={{
-              bgcolor: "var(--primary-color)",
+              borderColor: "var(--primary-color)",
+              color: "white",
               "&:hover": { bgcolor: "var(--secondary-color)" },
               p: "8px 25px",
               fontSize: {

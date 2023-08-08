@@ -6,9 +6,9 @@ import "swiper/css/pagination";
 import { Pagination, EffectFade } from "swiper/modules";
 import nn from "../../assets/tree-736885_1280.jpg";
 import mm from "../../assets/digital_camera_photo-1080x675.jpg";
-import image1 from "../../assets/1 (1).jpg";
-import image2 from "../../assets/1 (2).jpg";
-import imag3 from "../../assets/1 (3).jpg";
+import image1 from "../../assets/1.jpg";
+import image2 from "../../assets/2.jpg";
+import imag3 from "../../assets/3.jpg";
 import landingShabe from "../../assets/blob-scene-haikei.svg";
 
 import {
@@ -132,7 +132,7 @@ const Landing = () => {
                               sx={{
                                 textShadow: "var(--textShdowLanding)",
                               }}>
-                              Logo
+                              Servo
                             </Typography>
                             <Typography
                               component={motion.p}
