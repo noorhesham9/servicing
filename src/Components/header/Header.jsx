@@ -4,9 +4,41 @@ import "./header.css";
 import { useState } from "react";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
+
+import { useRef } from "react";
+import { motion, useCycle } from "framer-motion";
+import { useDimensions } from "./use-Dimensions";
+import { MenuToggle } from "./MenuToggle";
+
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(0px at 256px 38px)",
+    transition: {
+      // delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+    },
+  },
+};
+
 const Header = () => {
+  // const [showMenu, setShowMenu] = useState(false);
   const [themeWhite, setThemeWhite] = useState(true);
   const [langEnglish, setLangEnglish] = useState(true);
+
+  const [isOpen, toggleOpen] = useCycle(false, true);
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
+
   const ThemeHandler = () => {
     setThemeWhite(!themeWhite);
   };
@@ -26,7 +58,7 @@ const Header = () => {
         height: "75px",
       }}>
       <Container
-        className="flex spaceBetween "
+        className="flex spaceBetween containHeader "
         sx={{
           height: "100%",
           alignItems: "center",
@@ -44,8 +76,8 @@ const Header = () => {
             color: "--title-color",
           }}>
           <List
+            className="listLInks_Header"
             sx={{
-              display: "flex",
               justifyContent: "center",
               alignItems: "center",
               letterSpacing: "0.6px",
@@ -108,6 +140,27 @@ const Header = () => {
             }}>
             {themeWhite ? <WbSunnyIcon /> : <Brightness3Icon />}
           </IconButton>
+
+          <motion.nav
+            initial={false}
+            className={isOpen ? "open" : "closed"}
+            animate={isOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}>
+            <MenuToggle toggle={() => toggleOpen()} />
+            <motion.div
+              style={{
+                overflow: "hidden",
+                background: "#0a1411",
+                position: "absolute",
+                height: "100vh",
+                right: "0",
+                zIndex: "-1",
+                top: "0",
+              }}
+              className="background"
+              variants={sidebar}></motion.div>
+          </motion.nav>
         </Box>
       </Container>
     </Box>
