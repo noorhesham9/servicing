@@ -51,6 +51,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "labtop",
   },
   {
     id: 2,
@@ -59,6 +60,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "washingmachine",
   },
   {
     id: 3,
@@ -67,6 +69,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "labtop",
   },
   {
     id: 4,
@@ -75,6 +78,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "labtop",
   },
   {
     id: 5,
@@ -83,6 +87,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "labtop",
   },
   {
     id: 6,
@@ -91,6 +96,7 @@ export const infoCard = [
     desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
     bOne: "More",
     bTwo: "Contact",
+    route: "labtop",
   },
 ];
 export const firstContactInfo = [

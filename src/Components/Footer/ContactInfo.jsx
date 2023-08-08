@@ -13,7 +13,7 @@ function ContactInfo() {
         }}>
         Contact Information
       </Typography>
-      <Stack>
+      <Stack alignItems={{ xs: "center", sm: "flex-start" }}>
         {firstContactInfo.map((info) => (
           <Stack key={info.id} direction="row" alignItems="center">
             <IconButton>

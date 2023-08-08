@@ -5,6 +5,9 @@ import Services from "./Components/Services/Services";
 import Contact from "./Components/Contact/Contact";
 import ScrollUp from "./Components/ScrollUP/ScrollUp";
 import Footer from "./Components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import ServicePage from "./Pages/Service/ServicePage";
 
 function App() {
   return (
@@ -12,8 +15,11 @@ function App() {
       <Header />
       <Landing />
       <ScrollUp />
-      <Services />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="labtop" element={<ServicePage />} />
+      </Routes>
+      {/* <Contact /> */}
       <Footer />
     </>
   );

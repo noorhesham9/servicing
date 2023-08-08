@@ -9,9 +9,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { Box } from "@mui/system";
+import { Link } from "react-router-dom";
 function ServiceCard(Props) {
   const { info } = Props;
-  const { id, img, title, desc, bOne, bTwo } = info;
+  const { id, img, title, desc, bOne, bTwo, route } = info;
 
   return (
     <Card
@@ -23,6 +24,7 @@ function ServiceCard(Props) {
         flexDirection: "column",
         justifyContent: "space-between",
         zIndex: "100",
+        position: "relative",
       }}>
       {/* <CardMedia component="img" height="250px" image={img} alt={title} /> */}
       <CardMedia sx={{ display: "flex", alignSelf: "start", p: "16px" }}>
@@ -33,6 +35,16 @@ function ServiceCard(Props) {
         />
       </CardMedia>
       <Box>
+        <Link
+          to={route}
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            width: "100%",
+            height: "100%",
+          }}
+        />
         <CardContent>
           <Typography
             fontWeight="bold"

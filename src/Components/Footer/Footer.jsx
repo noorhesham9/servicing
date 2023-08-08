@@ -17,7 +17,8 @@ function Footer() {
           p="20px"
           className="footer"
           display="flex"
-          justifyContent="space-between">
+          justifyContent="space-between"
+          flexDirection={{ xs: "column", sm: "row" }}>
           <Stack className="box">
             <Typography
               className="title"
@@ -27,7 +28,10 @@ function Footer() {
               }}>
               logo
             </Typography>
-            <Typography fontSize="14px" color="black">
+            <Typography
+              fontSize="14px"
+              color="black"
+              textAlign={{ xs: "center", sm: "start" }}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Voluptatibus facere modi possimus dignissimos, aliquam nobis
               eaque? Voluptatem magnam quisquam rem.
@@ -42,22 +46,27 @@ function Footer() {
               }}>
               Services
             </Typography>
-            {infoCard.map((info) => (
-              <Stack key={info.id} alignItems="center" direction="row">
-                <IconButton>
-                  <ArrowForwardIcon sx={{ color: "var(--third-color)" }} />
-                </IconButton>
-                <Button
-                  href="#"
-                  sx={{
-                    color: "black",
-                    textTransform: "capitalize",
-                    "&:hover": { color: "var(--primary-color)" },
-                  }}>
-                  {info.title}
-                </Button>
-              </Stack>
-            ))}
+            <Stack
+              direction={{ xs: "row", sm: "column" }}
+              flexWrap="wrap"
+              justifyContent="space-between">
+              {infoCard.map((info) => (
+                <Stack key={info.id} alignItems="center" direction="row">
+                  <IconButton>
+                    <ArrowForwardIcon sx={{ color: "var(--third-color)" }} />
+                  </IconButton>
+                  <Button
+                    href="#"
+                    sx={{
+                      color: "black",
+                      textTransform: "capitalize",
+                      "&:hover": { color: "var(--primary-color)" },
+                    }}>
+                    {info.title}
+                  </Button>
+                </Stack>
+              ))}
+            </Stack>
           </Stack>
           {/* <Stack className="box">
             <Typography
@@ -73,12 +82,19 @@ function Footer() {
         </Box>
       </Container>
       <Box sx={{ borderTop: "1px solid var(--primary-color)", p: "20px" }}>
-        <Typography color="black">
-          © 2023 Created by: Q-Blink Developers
+        <Typography color="black" textAlign="center">
+          © 2023 All Right Reserved Created by:{" "}
+          <a
+            href="https://q-blink.netlify.app/#home"
+            target="blank"
+            style={{ color: "var(--third-color)" }}>
+            Q-Blink
+          </a>{" "}
+          Company
         </Typography>
       </Box>
     </Box>
   );
 }
-
+//  nice to meet you مينجالابا
 export default Footer;
