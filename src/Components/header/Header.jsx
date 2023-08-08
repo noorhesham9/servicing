@@ -26,9 +26,10 @@ const Header = () => {
         height: "75px",
       }}>
       <Container
-        className="flex spaceBetween alignCenter"
+        className="flex spaceBetween "
         sx={{
           height: "100%",
+          alignItems: "center",
         }}>
         <Link to="#home" className="logo">
           Logo
