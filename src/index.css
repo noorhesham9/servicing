@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -42,12 +42,13 @@ a {
 .background-primary-color {
   background-color: var(--primary-color);
 }
+
 :root {
   --button-color: black;
   --shadowbuppleLanding: inset 0 0 0 9px #ffffff4d;
   --primary-color: #228b22f2;
-  --secondary-color:#32CD32;
-  --third-color:#244b46;
+  --secondary-color: #32cd32;
+  --third-color: #244b46;
   --primary-color-shadow: rgb(255, 247, 0, 45%);
   --biggest-font-size: clamp(2.25rem, 1.125rem + 5.1429vw, 5.625rem);
   --h1-font-size: clamp(1.75rem, 1.4167rem + 1.5238vw, 2.75rem);
@@ -58,18 +59,20 @@ a {
   --bg-color-alt: hsl(220, 100%, 1%);
   --container-color: hsl(217, 18%, 14%);
   --border-color: hsl(210, 2%, 65%);
-  --body-font: "Jost", sans-serif;
+  --body-font: "Roboto Mono", monospace;
   --second-font: "Caveat", cursive;
   --shadow: 5px 5px rgb(255 255 255 / 10%);
-  --transition: cubic-bezier(0.3, 0, 0.3, 1);
-  --primary-padding:60px;
-  --lg-title-fontSize:26px;
-  --xs-title-fontSize:20px;
-  --lg-title-second-font-fontSize:36px;
-  --xs-title-second-font-fontSize:26px;
-  --text-fontSize:16px;
+  --transition: 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+  --primary-padding: 60px;
+  --lg-title-fontSize: 26px;
+  --xs-title-fontSize: 20px;
+  --lg-title-second-font-fontSize: 36px;
+  --xs-title-second-fontfontSize: 26px;
+  --text-fontSize: 16px;
 }
+
 .light-theme {
+  --header-color: hsl(120, 100%, 25%, 0.4);
   --shadowbuppleLanding: inset 0 0 0 9px #0000004d;
   --textShdowLanding: 2px 2px hsl(0deg 0% 100%), -2px 2px hsl(0, 0%, 0%),
     2px -2px hsl(0deg 0% 100%), -2px -2px hsl(0, 0%, 0%),
@@ -77,21 +80,29 @@ a {
   --container-color: rgb(253, 255, 227);
   --button-color: white;
   --shadow: 5px 5px rgba(0, 0, 0, 10%);
-  --primary-color: rgb(1, 68, 70);
-  --primary-color-shadow: rgb(1, 68, 70, 45%);
+  --primary-color: rgb(1, 120, 72);
+  --primary-color-shadow: hsl(120, 100%, 79%, 50%);
+  --primary-color-second: #93ff93;
   --bg-color: rgb(226, 227, 218);
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 10%);
   --bg-color-alt: rgb(219, 222, 180);
 }
+
+.flex {
+  display: flex !important;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+
 /* ------------------------ Card Service---------------------------------- */
-.css-mh8x07-MuiPaper-root-MuiCard-root{
-  padding: 16px ;
+.css-mh8x07-MuiPaper-root-MuiCard-root {
+  padding: 16px;
 }
 
 .card {
   position: relative;
-
 }
 
 .card::after {
@@ -132,23 +143,23 @@ a {
     transform: translateX(100%);
   }
 }
-.card:hover .icon ,
-.card:hover .text{
+.card:hover .icon,
+.card:hover .text {
   color: white !important;
 }
 /* ------------------------ Scroll Button---------------------------------- */
 
-.scroll-up{
+.scroll-up {
   text-transform: uppercase;
   position: fixed;
   right: 20px;
   bottom: 30px;
   cursor: pointer;
   z-index: 10000;
-  background-color:  var(--secondary-color);
-  transition: .5s;
+  background-color: var(--secondary-color);
+  transition: 0.5s;
 }
-.scroll-up:hover{
+.scroll-up:hover {
   background-color: var(--primary-color);
 }
 /* ------------------------ Footer ---------------------------------- */
@@ -158,12 +169,12 @@ a {
   display:flex;
   justify-content:space-between
 } */
-.footer .title{
+.footer .title {
   font-family: var(--second-font);
-  color:var(--primary-color);
+  color: var(--primary-color);
   font-weight: bold;
 }
-.footer .box{
+.footer .box {
   flex-basis: calc((100% - 5%) / 3);
   align-items: center;
 }
