@@ -19,7 +19,7 @@ function ContactInfo() {
             <IconButton>
               <info.icon sx={{ color: "var(--third-color)" }} />
             </IconButton>
-            <Typography color="black" herf="#">
+            <Typography color="white" herf="#">
               {info.info}
             </Typography>
           </Stack>

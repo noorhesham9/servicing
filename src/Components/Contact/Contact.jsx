@@ -7,7 +7,11 @@ import SocialMedia from "./SocialMedia";
 
 const Contact = () => {
   return (
-    <Box id="contacts" className=" section__gradient-1" py="100px">
+    <Box
+      id="contacts"
+      className=" section__gradient-1"
+      py="var(--primary-padding)"
+      bgcolor="var(--bg-color)">
       <Typography
         mb={"20px"}
         textAlign={"center"}
@@ -15,7 +19,7 @@ const Contact = () => {
         fontSize={{ sm: "50px", xs: "30px" }}
         fontWeight="bold"
         fontFamily="var(--second-font)">
-        <span style={{ color: "var(--primary-color)" }}>Contact</span> US
+        <span style={{ color: "white" }}>Contact</span> US
       </Typography>
       <Container>
         <motion.div variants={slideIn("left", "tween", 0.2, 1)}>
@@ -28,7 +32,7 @@ const Contact = () => {
             <Box
               className="background-Color"
               sx={{
-                bgcolor: "var(--container-color)",
+                bgcolor: "rgb(202 255 189 / 09%)",
                 p: "35px 30px!important",
                 color: "white",
                 width: "100%",

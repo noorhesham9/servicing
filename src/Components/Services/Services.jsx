@@ -1,4 +1,4 @@
-import { Grid, Box, Container } from "@mui/material";
+import { Grid, Box, Container, Typography } from "@mui/material";
 import { infoCard } from "../../Constants";
 import ServiceCard from "./Card";
 import { motion } from "framer-motion";
@@ -11,13 +11,15 @@ function Services() {
       }}
       py={"var(--primary-padding)"}>
       <Container>
+        <Typography className="head-title">Services</Typography>
         <Grid container spacing={3}>
           {infoCard.map((info, index) => (
             <Grid
               item
               key={info.id}
               xs={12}
-              sm={4}
+              md={4}
+              sm={6}
               sx={{
                 display: "flex",
                 flexDirection: "column",
