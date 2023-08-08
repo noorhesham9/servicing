@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +28,9 @@ h3 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
 }
-
+body {
+  height: 3000px;
+}
 ul {
   list-style: none;
 }
@@ -42,6 +44,7 @@ a {
 .background-primary-color {
   background-color: var(--primary-color);
 }
+
 :root {
   --button-color: black;
   --shadowbuppleLanding: inset 0 0 0 9px #ffffff4d;
@@ -56,13 +59,14 @@ a {
   --bg-color-alt: hsl(220, 100%, 1%);
   --container-color: hsl(217, 18%, 14%);
   --border-color: hsl(210, 2%, 65%);
-  --body-font: "Jost", sans-serif;
+  --body-font: "Roboto Mono", monospace;
   --second-font: "Caveat", cursive;
   --shadow: 5px 5px rgb(255 255 255 / 10%);
-  --transition: cubic-bezier(0.3, 0, 0.3, 1);
-
+  --transition: 0.4s cubic-bezier(0.3, 0, 0.3, 1);
 }
+
 .light-theme {
+  --header-color: hsl(120, 100%, 25%, 0.4);
   --shadowbuppleLanding: inset 0 0 0 9px #0000004d;
   --textShdowLanding: 2px 2px hsl(0deg 0% 100%), -2px 2px hsl(0, 0%, 0%),
     2px -2px hsl(0deg 0% 100%), -2px -2px hsl(0, 0%, 0%),
@@ -70,10 +74,21 @@ a {
   --container-color: rgb(253, 255, 227);
   --button-color: white;
   --shadow: 5px 5px rgba(0, 0, 0, 10%);
-  --primary-color: rgb(1, 68, 70);
-  --primary-color-shadow: rgb(1, 68, 70, 45%);
+  --primary-color: rgb(1, 120, 72);
+  --primary-color-shadow: hsl(120, 100%, 79%, 50%);
+  --primary-color-second: #93ff93;
   --bg-color: rgb(226, 227, 218);
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 10%);
   --bg-color-alt: rgb(219, 222, 180);
+}
+
+.flex {
+  display: flex !important;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+.alignCenter {
+  align-items: center;
 }

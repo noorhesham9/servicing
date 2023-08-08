@@ -1,0 +1,45 @@
+.logo {
+  font-family: var(--second-font);
+  font-size: 40px;
+  color: var(--title-color);
+  text-shadow: 2px 2px var(--primary-color-shadow);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.logo:hover {
+  color: var(--primary-color);
+}
+
+.linknav {
+  opacity: 0.5;
+  transition: var(--transition);
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.linknav:hover {
+  opacity: 1;
+  font-weight: 500;
+  color: var(--title-color);
+}
+.linknav:hover::before {
+  width: 70%;
+}
+.linknav::before {
+  transition: var(--transition);
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: -2px;
+  left: 0;
+}
+
+.header {
+  z-index: 1000;
+  background-color: var(--header-color);
+  box-shadow: 2px 2px var(--primary-color-shadow);
+}/*# sourceMappingURL=header.css.map */
