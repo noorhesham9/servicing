@@ -11,22 +11,7 @@ import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 function Footer() {
   return (
-    <Box
-      sx={{
-        backgroundColor: "#0a1411",
-        position: "relative",
-      }}>
-      <Box
-        sx={{
-          width: "350px",
-          height: "350px",
-          background: "rgba(202, 255, 189, 0.4)",
-          opacity: 0.4,
-          filter: "blur(200px)",
-          position: "absolute",
-          top: "-5%",
-          left: "-5%",
-        }}></Box>
+    <Box sx={{ bgcolor: "#0a1411" }}>
       <Container>
         <Box
           p="20px"
@@ -45,7 +30,7 @@ function Footer() {
             </Typography>
             <Typography
               fontSize="14px"
-              color="black"
+              color="white"
               textAlign={{ xs: "center", sm: "start" }}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Voluptatibus facere modi possimus dignissimos, aliquam nobis
@@ -73,7 +58,7 @@ function Footer() {
                   <Button
                     href="#"
                     sx={{
-                      color: "black",
+                      color: "white",
                       textTransform: "capitalize",
                       "&:hover": { color: "var(--primary-color)" },
                     }}>
@@ -97,7 +82,7 @@ function Footer() {
         </Box>
       </Container>
       <Box sx={{ borderTop: "1px solid var(--primary-color)", p: "20px" }}>
-        <Typography color="black" textAlign="center">
+        <Typography color="white" textAlign="center">
           © 2023 All Right Reserved Created by:{" "}
           <a
             href="https://q-blink.netlify.app/#home"

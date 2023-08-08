@@ -60,7 +60,7 @@ a {
   --h5-font-size: 22px;
   --title-color: hsl(0, 0%, 100%);
   --text-color: hsl(0, 0%, 90%);
-  --bg-color: hsl(216, 100%, 5%);
+  --bg-color: #0a1411;
   --bg-color-alt: hsl(220, 100%, 1%);
   --container-color: hsl(217, 18%, 14%);
   --border-color: hsl(210, 2%, 65%);
@@ -72,7 +72,7 @@ a {
   --lg-title-fontSize: 26px;
   --xs-title-fontSize: 20px;
   --lg-title-second-font-fontSize: 36px;
-  --xs-title-second-fontfontSize: 26px;
+  --xs-title-second-font-fontSize: 26px;
   --text-fontSize: 16px;
   --textShdowLanding: 2px 2px hsl(0, 0%, 0%), -2px 2px hsl(0, 0%, 100%),
     2px -2px hsl(0, 0%, 0%), -2px -2px hsl(0, 0%, 100%),
@@ -105,6 +105,15 @@ a {
 }
 
 /* ------------------------ Card Service---------------------------------- */
+
+.head-title{
+  color: white;
+  font-weight: bold;
+  padding:30px 0;
+  font-family: var(--second-font) !important;
+  font-size: 65px !important;
+  text-align: center;
+}
 .css-mh8x07-MuiPaper-root-MuiCard-root {
   padding: 16px;
   color: white !important;
@@ -208,7 +217,7 @@ border-radius: 20px;
 } */
 .footer .title {
   font-family: var(--second-font);
-  color: var(--primary-color);
+  color: white;
   font-weight: bold;
 }
 .footer .box {
