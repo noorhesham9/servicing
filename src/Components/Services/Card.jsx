@@ -15,27 +15,16 @@ function ServiceCard(Props) {
   const { id, img, title, desc, bOne, bTwo, route } = info;
 
   return (
-    <Card
-      className="card"
-      sx={{
-        background: "#000",
-        maxWidth: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        zIndex: "100",
-        position: "relative",
-      }}>
+    <Card className="card">
       {/* <CardMedia component="img" height="250px" image={img} alt={title} /> */}
-      <CardMedia sx={{ display: "flex", alignSelf: "start", p: "16px" }}>
+      <CardMedia sx={{ display: "flex", alignSelf: "center", pt: "40px" }}>
         <FontAwesomeIcon
           icon={faLaptop}
-          style={{ color: "#2b8b22", fontSize: "50px", textAlign: "start" }}
+          style={{ color: "#2b8b22", fontSize: "50px" }}
           className="icon"
         />
       </CardMedia>
-      <Box>
+      <Box display="flex" flexDirection="column" alignItems="center">
         <Link
           to={route}
           style={{
@@ -49,23 +38,27 @@ function ServiceCard(Props) {
         <CardContent>
           <Typography
             fontWeight="bold"
-            textAlign="start"
+            textAlign="center"
             fontSize={{
-              xs: "var(  --xs-title-fontSize)",
-              md: "var( --lg-title-fontSize)",
+              xs: "var(--xs-title-second-font-fontSize)",
+              md: "var(--lg-title-second-font-fontSize)",
             }}
+            fontFamily="var(--second-font)"
             className="text">
             {title}
           </Typography>
           <Typography
-            textAlign="start"
+            textAlign="center"
             fontSize="var( --text-fontSize)"
-            className="text">
+            className="text"
+            py="5px">
             {desc}
           </Typography>
         </CardContent>
-        <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+        <CardActions
+          sx={{ display: "flex", justifyContent: "space-between", pb: "40px" }}>
           <Button
+            className="btn"
             variant="outlined"
             href={"#"}
             sx={{
@@ -81,12 +74,10 @@ function ServiceCard(Props) {
             {bOne}
           </Button>
           <Button
-            variant="contained"
+            className="btn"
+            variant="outlined"
             href={"#"}
             sx={{
-              bgcolor: "var(--primary-color)",
-              "&:hover": { bgcolor: "var(--secondary-color)" },
-              p: "8px 25px",
               fontSize: {
                 xs: "14px",
                 md: "16px",
