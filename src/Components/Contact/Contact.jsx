@@ -4,33 +4,6 @@ import { motion } from "framer-motion";
 import { slideIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc/index";
 import SocialMedia from "./SocialMedia";
-import { Shape } from "../../Constants";
-
-// const socailmedia=[
-//     {
-//         name:'GitHub',
-//         icon:GitHub
-//     },
-//     {
-//         name:'LinkedIn',
-//         icon:LinkedIn
-//     },
-//     {
-//         name:'GitHub',
-//         icon:Twitter
-//     },
-//     {
-//         name:'WhatsApp',
-//         icon:WhatsApp
-//     },
-//     {
-//         name:'InstagramIcon',
-//         icon:Instagram
-//     },
-//     {
-
-//     }
-// ]
 
 const Contact = () => {
   return (
