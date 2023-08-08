@@ -23,83 +23,87 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import "swiper/css/effect-fade";
 
-const data = [
-  {
-    id: 1,
-    image: nn,
-    title: "maintainence",
-    color: "#0a1411",
-    initial: () => {
-      return zoomInlanding1().hidden;
-    },
-    animate: () => {
-      return zoomInlanding1().show;
-    },
-  },
-  {
-    id: 2,
-    image: mm,
-    title: "website macker",
-    color: "#0a1411",
-    initial: () => {
-      return zoomInlanding2().hidden;
-    },
-    animate: () => {
-      return zoomInlanding2().show;
-    },
-  },
-  {
-    id: 3,
-    image: image1,
-    color: "#0a1411",
-    title: "fridge",
-    initial: () => {
-      return zoomInlanding3().hidden;
-    },
-    animate: () => {
-      return zoomInlanding3().show;
-    },
-  },
-  {
-    id: 4,
-    image: image2,
-    title: "washing machine",
-    color: "#0a1411",
-    initial: () => {
-      return zoomInlanding1().hidden;
-    },
-    animate: () => {
-      return zoomInlanding1().show;
-    },
-  },
-  {
-    id: 5,
-    image: imag3,
-    title: "screens",
-    color: "#0a1411",
-    initial: () => {
-      return zoomInlanding2().hidden;
-    },
-    animate: () => {
-      return zoomInlanding2().show;
-    },
-  },
-  {
-    id: 6,
-    image: imag3,
-    title: "screens",
-    initial: () => {
-      return zoomInlanding3().hidden;
-    },
-    animate: () => {
-      return zoomInlanding3().show;
-    },
-  },
-];
+// const data = [
+//   {
+//     id: 1,
+//     image: nn,
+//     title: "maintainence",
+//     color: "#0a1411",
+//     initial: () => {
+//       return zoomInlanding1().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding1().show;
+//     },
+//   },
+//   {
+//     id: 2,
+//     image: mm,
+//     title: "website macker",
+//     color: "#0a1411",
+//     initial: () => {
+//       return zoomInlanding2().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding2().show;
+//     },
+//   },
+//   {
+//     id: 3,
+//     image: image1,
+//     color: "#0a1411",
+//     title: "fridge",
+//     initial: () => {
+//       return zoomInlanding3().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding3().show;
+//     },
+//   },
+//   {
+//     id: 4,
+//     image: image2,
+//     title: "washing machine",
+//     color: "#0a1411",
+//     initial: () => {
+//       return zoomInlanding1().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding1().show;
+//     },
+//   },
+//   {
+//     id: 5,
+//     image: imag3,
+//     title: "screens",
+//     color: "#0a1411",
+//     initial: () => {
+//       return zoomInlanding2().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding2().show;
+//     },
+//   },
+//   {
+//     id: 6,
+//     image: imag3,
+//     title: "screens",
+//     initial: () => {
+//       return zoomInlanding3().hidden;
+//     },
+//     animate: () => {
+//       return zoomInlanding3().show;
+//     },
+//   },
+// ];
 
 const Landing2 = () => {
   return (
     <Box
+      sx={{
+        backgroundColor: `#0a1411`,
+        position: "relative",
+      }}
       height={"100vh"}
       width={"100%"}
       justifyContent={"center"}
@@ -107,9 +111,16 @@ const Landing2 = () => {
       className="landing">
       <Box
         sx={{
-          backgroundColor: `#0a1411`,
-        }}
-        className="flex contianerLanding">
+          width: "440px",
+          height: "440px",
+          background: "rgba(202, 255, 189, 0.4)",
+          opacity: 0.4,
+          filter: "blur(200px)",
+          position: "absolute",
+          top: "-2%",
+          left: "-5%",
+        }}></Box>
+      <Box className="flex contianerLanding">
         <Box
           sx={{
             flex: "0 0 50%",
