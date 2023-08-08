@@ -1,4 +1,4 @@
-import { Grid, Box, Container } from "@mui/material";
+import { Grid, Box, Container, Hidden } from "@mui/material";
 import { infoCard } from "../../Constants";
 import ServiceCard from "./Card";
 import { motion } from "framer-motion";

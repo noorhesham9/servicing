@@ -11,7 +11,22 @@ import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 function Footer() {
   return (
-    <Box sx={{ bgcolor: "rgb(240, 247, 241)" }}>
+    <Box
+      sx={{
+        backgroundColor: "#0a1411",
+        position: "relative",
+      }}>
+      <Box
+        sx={{
+          width: "350px",
+          height: "350px",
+          background: "rgba(202, 255, 189, 0.4)",
+          opacity: 0.4,
+          filter: "blur(200px)",
+          position: "absolute",
+          top: "-5%",
+          left: "-5%",
+        }}></Box>
       <Container>
         <Box
           p="20px"
