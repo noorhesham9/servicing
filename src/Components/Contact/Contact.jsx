@@ -11,7 +11,21 @@ const Contact = () => {
       id="contacts"
       className=" section__gradient-1"
       py="var(--primary-padding)"
-      bgcolor="var(--bg-color)">
+      bgcolor="var(--bg-color)"
+      sx={{
+        backgroundColor: "#0a1411",
+      }}>
+      <Box
+        sx={{
+          width: "440px",
+          height: "440px",
+          background: "rgba(202, 255, 189, 0.4)",
+          opacity: 0.4,
+          filter: "blur(200px)",
+          position: "absolute",
+          top: "-2%",
+          left: "-5%",
+        }}></Box>
       <Typography
         mb={"20px"}
         textAlign={"center"}
