@@ -7,19 +7,18 @@ import {
   Button,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLaptop } from "@fortawesome/free-solid-svg-icons";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 function ServiceCard(Props) {
   const { info } = Props;
-  const { id, img, title, desc, bOne, bTwo, route } = info;
+  const { id, icon, title, desc, bOne, bTwo, route } = info;
 
   return (
     <Card className="card">
       {/* <CardMedia component="img" height="250px" image={img} alt={title} /> */}
       <CardMedia sx={{ display: "flex", alignSelf: "center", pt: "40px" }}>
         <FontAwesomeIcon
-          icon={faLaptop}
+          icon={icon}
           style={{ color: "#2b8b22", fontSize: "50px" }}
           className="icon"
         />
@@ -27,6 +26,7 @@ function ServiceCard(Props) {
       <Box display="flex" flexDirection="column" alignItems="center">
         <Link
           to={route}
+          className="card-link"
           style={{
             position: "absolute",
             top: 0,

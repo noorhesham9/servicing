@@ -28,13 +28,10 @@ function Footer() {
               }}>
               logo
             </Typography>
-            <Typography
-              fontSize="14px"
-              color="white"
-              textAlign={{ xs: "center", sm: "start" }}>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Voluptatibus facere modi possimus dignissimos, aliquam nobis
-              eaque? Voluptatem magnam quisquam rem.
+            <Typography color="white" textAlign={{ xs: "center", sm: "start" }}>
+              As a service company, we fix your problems. We provide a wide
+              range of services for laptops, computers, home repairs, and
+              electrical devices, catering to all your needs
             </Typography>
           </Stack>
           <Stack className="box">
@@ -83,7 +80,7 @@ function Footer() {
       </Container>
       <Box sx={{ borderTop: "1px solid var(--primary-color)", p: "20px" }}>
         <Typography color="white" textAlign="center">
-          © 2023 All Right Reserved Created by:{" "}
+          © 2023 All Right Reserved | Created by:{" "}
           <a
             href="https://q-blink.netlify.app/#home"
             target="blank"

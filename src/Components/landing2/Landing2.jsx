@@ -148,8 +148,8 @@ const Landing2 = () => {
             initial={ButtonLAnding(0.5).hidden}
             animate={ButtonLAnding(0.5).show}
             className="brief">
-            Instead of waiting weeks, now you can lock a rate, share some
-            financial info, and get a loan Commitment Letter within the next
+            We provide a wide range of services for laptops, computers, home
+            repairs, and electrical devices, catering to all your needs.
           </Typography>
           <Box
             sx={{

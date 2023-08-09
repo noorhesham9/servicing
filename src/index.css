@@ -193,6 +193,13 @@ border-radius: 20px;
     background-position: left bottom;
     color: white;
 }
+@media (max-width:991px) {
+  .card-link{
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
 /* ------------------------ Scroll Button---------------------------------- */
 
 .scroll-up {
@@ -223,4 +230,19 @@ border-radius: 20px;
 .footer .box {
   flex-basis: calc((100% - 5%) / 3);
   align-items: center;
+}
+/* --------------------layer----------------------------------- */
+.layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a141185;
+  z-index: -1;
+}
+/* ------------------------------link--------------------------- */
+.link{
+  font-weight:500;
+  color: white;
 }
