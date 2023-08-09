@@ -111,7 +111,7 @@ const Landing2 = () => {
       className="landing">
       <Box
         sx={{
-          width: "440px",
+          width: { xs: "0px", sm: "440px" },
           height: "440px",
           background: "rgba(202, 255, 189, 0.4)",
           opacity: 0.4,
@@ -157,10 +157,13 @@ const Landing2 = () => {
             </Typography>
             <Box
               sx={{
+                flexWrap: "wrap",
                 paddingTop: "15px",
                 display: "flex",
+                width: "100%",
                 justifyContent: "center",
                 gap: "25px",
+                maxWidth: "100%",
               }}>
               <Button
                 component={motion.div}
