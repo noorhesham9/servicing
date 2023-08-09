@@ -60,7 +60,7 @@ export const infoCard = [
     desc: "Quick and quality laptop repair for any issue. Hardware or software, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "Laptop",
+    route: "/Laptop",
   },
   {
     id: 2,
@@ -69,7 +69,7 @@ export const infoCard = [
     desc: "Fast and reliable mobile phone repair for any issue. Android or iPhone, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "mobile-phones",
+    route: "/mobile-phones",
   },
   {
     id: 3,
@@ -78,7 +78,7 @@ export const infoCard = [
     desc: "Quick and quality computer device repair for any issue. Desktop or laptop, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "computer",
+    route: "/computer",
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export const infoCard = [
     desc: "Fast and reliable screen repair for any problem. Cracked or broken, we can fix it with reasonable and honest prices. Call us now and get it done well.",
     bOne: "More",
     bTwo: "Contact",
-    route: "screens",
+    route: "/screens",
   },
   {
     id: 5,
@@ -96,7 +96,7 @@ export const infoCard = [
     desc: "Prompt and professional home electric device repair for any issue. Washing machine or refrigerator...., we can fix it with fair  prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "electric-devices",
+    route: "/electric-devices",
   },
   {
     id: 6,
@@ -105,7 +105,7 @@ export const infoCard = [
     desc: "Speedy and expert home repair for any problem. Plumbing or carpentry...., we can fix it with honest and reasonable prices. Call us now and get it done well.",
     bOne: "More",
     bTwo: "Contact",
-    route: "home-repairs",
+    route: "/home-repairs",
   },
 ];
 export const firstContactInfo = [

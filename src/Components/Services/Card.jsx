@@ -9,10 +9,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
+import { motion, useIsPresent } from "framer-motion";
 function ServiceCard(Props) {
   const { info } = Props;
   const { id, icon, title, desc, bOne, bTwo, route } = info;
-
+  const isPresent = useIsPresent();
   return (
     <Card className="card">
       {/* <CardMedia component="img" height="250px" image={img} alt={title} /> */}
@@ -56,7 +57,11 @@ function ServiceCard(Props) {
           </Typography>
         </CardContent>
         <CardActions
-          sx={{ display: "flex", justifyContent: "space-between", pb: "40px" }}>
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            pb: "40px",
+          }}>
           <Button
             className="btn"
             variant="outlined"
@@ -64,7 +69,6 @@ function ServiceCard(Props) {
             sx={{
               borderColor: "var(--primary-color)",
               color: "white",
-              "&:hover": { bgcolor: "var(--secondary-color)" },
               p: "8px 25px",
               fontSize: {
                 xs: "14px",
@@ -87,6 +91,16 @@ function ServiceCard(Props) {
           </Button>
         </CardActions>
       </Box>
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{
+          scaleX: 0,
+          transition: { duration: 0.7, ease: "circOut" },
+        }}
+        exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
+      />
     </Card>
   );
 }

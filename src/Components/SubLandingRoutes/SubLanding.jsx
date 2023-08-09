@@ -1,10 +1,11 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion";
 import { ButtonLAnding, Logolanding } from "../../utils/motion";
 
 function SubLanding(Props) {
   const { title, img } = Props;
+  const isPresent = useIsPresent();
 
   return (
     <Box
@@ -44,6 +45,13 @@ function SubLanding(Props) {
           </Typography>
         </Stack>
       </Stack>
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
+      />
     </Box>
   );
 }

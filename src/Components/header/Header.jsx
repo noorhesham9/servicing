@@ -6,7 +6,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { Link as LinkRouter } from "react-router-dom";
 import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
+import { motion, useCycle, useIsPresent } from "framer-motion";
 import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
@@ -79,6 +79,8 @@ const Header = () => {
   const langHandler = () => {
     setLangEnglish(!langEnglish);
   };
+  const isPresent = useIsPresent();
+
   return (
     <Box
       width={"100%"}
@@ -277,6 +279,16 @@ const Header = () => {
           </motion.nav>
         </Box>
       </Container>
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{
+          scaleX: 0,
+          transition: { duration: 0.7, ease: "circOut" },
+        }}
+        exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
+      />
     </Box>
   );
 };
