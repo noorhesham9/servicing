@@ -54,7 +54,7 @@ function App() {
           }
         />
       </Routes>
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </>
   );
