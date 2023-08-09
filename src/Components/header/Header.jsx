@@ -6,7 +6,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { Link as LinkRouter } from "react-router-dom";
 import { useRef } from "react";
-import { motion, useCycle } from "framer-motion";
+import { delay, motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
@@ -34,15 +34,21 @@ const sidebar = {
 };
 const services = {
   open: {
-    height: "267px",
+    opacity: 1,
+    y: "0px",
     transition: {
       duration: 0.6,
     },
   },
   closed: {
-    height: "0px",
+    display: "none",
+    y: "-50px",
+    opacity: 0,
     transition: {
-      duration: 0.4,
+      display: {
+        delay: 0.8,
+      },
+      duration: 0.6,
     },
   },
 };
@@ -63,7 +69,6 @@ const services2 = {
 };
 
 const Header = () => {
-  // const [showMenu, setShowMenu] = useState(false);
   const [themeWhite, setThemeWhite] = useState(true);
   const [langEnglish, setLangEnglish] = useState(true);
 
@@ -139,8 +144,12 @@ const Header = () => {
                 <List className="sevicesListBox">
                   {infoCard.map(({ id, route, title }) => {
                     return (
-                      <ListItem className="ListItemServices" key={id}>
-                        <LinkRouter className="LInkRouterServices" to={route}>
+                      <ListItem
+                        className="ListItemServices desktopnavservice"
+                        key={id}>
+                        <LinkRouter
+                          className="LInkRouterServices desktopnavserviceLInk"
+                          to={route}>
                           {title}
                         </LinkRouter>
                       </ListItem>
