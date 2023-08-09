@@ -20,6 +20,12 @@
   font-size: 16px;
 }
 
+.desktopnavservice {
+  padding: 8px 1px !important;
+  font-size: 14px;
+  text-align: center;
+}
+
 .link__nav {
   padding-left: 15px;
 }
@@ -34,6 +40,10 @@
 .LInkRouterServices:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.desktopnavserviceLInk {
+  text-align: center;
 }
 
 .blusServices {
@@ -179,6 +189,7 @@
 }
 
 .sevicesBox {
+  width: 100%;
   background-color: #0a1411;
   box-shadow: 0 0px 11px 0px rgba(255, 255, 255, 0.1), -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
   border-radius: 20px;
@@ -194,5 +205,5 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 10px 5px;
+  padding: 40px 7px 5px;
 }/*# sourceMappingURL=header.css.map */

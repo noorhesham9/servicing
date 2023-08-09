@@ -111,7 +111,7 @@ const Landing2 = () => {
       className="landing">
       <Box
         sx={{
-          width: "440px",
+          width: { xs: "0px", sm: "440px" },
           height: "440px",
           background: "rgba(202, 255, 189, 0.4)",
           opacity: 0.4,
@@ -120,61 +120,69 @@ const Landing2 = () => {
           top: "-2%",
           left: "-5%",
         }}></Box>
-      <Box className="flex contianerLanding">
-        <Box
-          sx={{
-            flex: "0 0 50%",
-            textAlign: "center",
-          }}>
-          <Typography
-            className="logoLAnding"
-            component={motion.p}
-            initial={Logolanding().hidden}
-            animate={Logolanding().show}
-            sx={{
-              textShadow: "var(--textShdowLanding)",
-            }}>
-            Servo
-          </Typography>
-          <Typography
-            component={motion.p}
-            initial={ButtonLAnding(0.25).hidden}
-            animate={ButtonLAnding(0.25).show}
-            className="title">
-            maintainence
-          </Typography>
-          <Typography
-            component={motion.p}
-            initial={ButtonLAnding(0.5).hidden}
-            animate={ButtonLAnding(0.5).show}
-            className="brief">
-            We provide a wide range of services for laptops, computers, home
-            repairs, and electrical devices, catering to all your needs.
-          </Typography>
+      <Container
+        sx={{
+          height: "100%",
+        }}>
+        <Box className="flex contianerLanding">
           <Box
             sx={{
-              paddingTop: "15px",
-              display: "flex",
-              justifyContent: "center",
-              gap: "25px",
+              maxWidth: "670px",
+              textAlign: "center",
             }}>
-            <Button
-              component={motion.div}
-              initial={ButtonLAnding(0.75).hidden}
-              animate={ButtonLAnding(0.75).show}
-              className="servicesButtonLanding">
-              <Link to="#services">Services</Link>
-            </Button>
-            <Button
-              component={motion.div}
-              initial={ButtonLAnding(0.75).hidden}
-              animate={ButtonLAnding(0.75).show}
-              className="contactButtonLanding">
-              <Link to="#contact">Contact Us</Link>
-            </Button>
+            <Typography
+              className="logoLAnding"
+              component={motion.p}
+              initial={Logolanding().hidden}
+              animate={Logolanding().show}
+              sx={{
+                textShadow: "var(--textShdowLanding)",
+              }}>
+              Servo
+            </Typography>
+            <Typography
+              component={motion.p}
+              initial={ButtonLAnding(0.25).hidden}
+              animate={ButtonLAnding(0.25).show}
+              className="title">
+              maintainence
+            </Typography>
+            <Typography
+              component={motion.p}
+              initial={ButtonLAnding(0.5).hidden}
+              animate={ButtonLAnding(0.5).show}
+              className="brief">
+              We provide a wide range of services for laptops, computers, home
+              repairs, and electrical devices, catering to all your needs.
+            </Typography>
+            <Box
+              sx={{
+                flexWrap: "wrap",
+                paddingTop: "15px",
+                display: "flex",
+                width: "100%",
+                justifyContent: "center",
+                gap: "25px",
+                maxWidth: "100%",
+              }}>
+              <Button
+                component={motion.div}
+                initial={ButtonLAnding(0.75).hidden}
+                animate={ButtonLAnding(0.75).show}
+                className="servicesButtonLanding">
+                <Link to="#services">Services</Link>
+              </Button>
+              <Button
+                component={motion.div}
+                initial={ButtonLAnding(0.75).hidden}
+                animate={ButtonLAnding(0.75).show}
+                className="contactButtonLanding">
+                <Link to="#contact">Contact Us</Link>
+              </Button>
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 };
