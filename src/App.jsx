@@ -16,12 +16,12 @@ function App() {
     <>
       <Header />
       {/* <Landing /> */}
-      {/* <Landing2 /> */}
-      <SubLanding />
+      <Landing2 />
+      {/* <SubLanding /> */}
       <ScrollUp />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="Laptop" element={<ServicePage title="Laptop" />} />
+        <Route path="/" element={<ServicePage title="Laptop" />} />
       </Routes>
       {/* <Contact /> */}
       <Footer />

@@ -11,6 +11,56 @@
   color: var(--primary-color);
 }
 
+.servicesLink_nav {
+  z-index: 2;
+  position: relative;
+}
+
+.ListItemServices {
+  font-size: 16px;
+}
+
+.link__nav {
+  padding-left: 15px;
+}
+
+.LInkRouterServices {
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+.LInkRouterServices:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.blusServices {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  position: relative;
+  z-index: 20;
+  padding-left: 8px;
+  opacity: 0.8;
+}
+
+.containsevrviceLinks {
+  overflow: hidden;
+}
+
+.blusServices2 {
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+  color: var(--text-color);
+  position: relative;
+  z-index: 20;
+  padding-left: 8px;
+  opacity: 0.8;
+}
+
 .linknav {
   opacity: 0.5;
   transition: var(--transition);
@@ -28,6 +78,33 @@
   width: 70%;
 }
 .linknav::before {
+  transition: var(--transition);
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: -2px;
+  left: 0;
+}
+
+.linknavNH {
+  transition: var(--transition);
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 22px;
+}
+.linknavNH:hover {
+  opacity: 1;
+  font-weight: 500;
+  color: var(--title-color);
+}
+.linknavNH:hover::before {
+  width: 70%;
+}
+.linknavNH::before {
   transition: var(--transition);
   content: "";
   position: absolute;
@@ -68,6 +145,10 @@
   transition: var(--transition);
 }
 
+.closedToggle {
+  box-shadow: 0 0px 8px 3px rgba(255, 255, 255, 0.1), -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
+}
+
 .nav__button {
   display: none;
   justify-content: center;
@@ -88,6 +169,30 @@
   }
 }
 .background {
+  box-shadow: 0 0px 20px 4px rgba(255, 255, 255, 0.1), -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
   width: 300px;
   max-width: 100%;
+}
+
+.servicesListItem {
+  position: relative;
+}
+
+.sevicesBox {
+  background-color: #0a1411;
+  box-shadow: 0 0px 11px 0px rgba(255, 255, 255, 0.1), -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: -8px;
+  left: 0;
+}
+.sevicesBox .sevicesListBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 10px 5px;
 }/*# sourceMappingURL=header.css.map */

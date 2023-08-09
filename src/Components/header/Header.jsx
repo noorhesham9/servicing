@@ -1,15 +1,19 @@
 import { Box, Container, IconButton, List, ListItem } from "@mui/material";
-import { Link } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 import "./header.css";
 import { useState } from "react";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
-
+import { Link as LinkRouter } from "react-router-dom";
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
+import { infoCard } from "../../Constants";
 
+const Height = () => {
+  return `${infoCard.length * 37}px`;
+};
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -22,10 +26,38 @@ const sidebar = {
   closed: {
     clipPath: "circle(0px at 256px 38px)",
     transition: {
-      // delay: 0.5,
       type: "spring",
       stiffness: 400,
       damping: 40,
+    },
+  },
+};
+const services = {
+  open: {
+    height: "267px",
+    transition: {
+      duration: 0.6,
+    },
+  },
+  closed: {
+    height: "0px",
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
+const services2 = {
+  open: {
+    height: `${Height()}`,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: {
+    height: "0px",
+    transition: {
+      duration: 0.6,
     },
   },
 };
@@ -36,6 +68,8 @@ const Header = () => {
   const [langEnglish, setLangEnglish] = useState(true);
 
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [servicesOpen, PlusOpen] = useCycle(false, true);
+  const [servicesOpen2, PlusOpen2] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
@@ -63,9 +97,9 @@ const Header = () => {
           height: "100%",
           alignItems: "center",
         }}>
-        <Link to="#home" className="logo">
+        <LinkScroll to="#home" className="logo">
           Logo
-        </Link>
+        </LinkScroll>
 
         <Box
           sx={{
@@ -83,27 +117,50 @@ const Header = () => {
               letterSpacing: "0.6px",
             }}>
             <ListItem>
-              <Link className="homeLink_nav linknav" to="#home">
+              <LinkScroll className="homeLink_nav linknav" to="#home">
                 Home
-              </Link>
+              </LinkScroll>
             </ListItem>
-            <ListItem>
-              <Link className="servicesLink_nav linknav" to="#services">
+            <ListItem className="servicesListItem">
+              <LinkScroll className="servicesLink_nav linknav" to="#services">
                 Services
-              </Link>
+              </LinkScroll>
+              <div href="#" className="blusServices" onClick={PlusOpen}>
+                {servicesOpen ? "-" : "+"}
+              </div>
+
+              <Box
+                component={motion.div}
+                variants={services}
+                className={
+                  servicesOpen ? "open sevicesBox" : "closed sevicesBox"
+                }
+                animate={servicesOpen ? "open" : "closed"}>
+                <List className="sevicesListBox">
+                  {infoCard.map(({ id, route, title }) => {
+                    return (
+                      <ListItem className="ListItemServices" key={id}>
+                        <LinkRouter className="LInkRouterServices" to={route}>
+                          {title}
+                        </LinkRouter>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </Box>
             </ListItem>
             <ListItem>
-              <Link className="contactusLink_nav linknav" to="#contactus">
+              <LinkScroll className="contactusLink_nav linknav" to="#contactus">
                 ContactUS
-              </Link>
+              </LinkScroll>
             </ListItem>
           </List>
           <IconButton
+            className={isOpen ? "openToggle " : "closedToggle "}
             onClick={langHandler}
             sx={{
-              color: "var(--button-color)",
+              color: "white",
               fontFamily: "var(--second-font)",
-              backgroundColor: "var(--primary-color)",
               width: "40px",
               height: "40px",
               fontSize: "20px",
@@ -111,26 +168,20 @@ const Header = () => {
               justifyContent: "center",
               alignItems: "center",
               transition: "var(--transition)",
-              boxShadow: "1.5px 1.5px var(--primary-color-shadow)",
-              "&:hover": {
-                color: "var(--title-color)",
-                backgroundColor: "transparent",
-              },
             }}>
             {langEnglish ? "EN" : "AR"}
           </IconButton>
           <IconButton
+            className={isOpen ? "openToggle " : "closedToggle "}
             onClick={ThemeHandler}
             sx={{
-              boxShadow: "1.5px 1.5px var(--primary-color-shadow)",
-              color: "var(--button-color)",
-              fontFamily: "var(--second-font)",
-              backgroundColor: "var(--primary-color)",
+              color: "white",
               width: "40px",
               height: "40px",
               fontSize: "20px",
               display: "flex",
               justifyContent: "center",
+
               alignItems: "center",
               transition: "var(--transition)",
               "&:hover": {
@@ -147,7 +198,12 @@ const Header = () => {
             animate={isOpen ? "open" : "closed"}
             custom={height}
             ref={containerRef}>
-            <MenuToggle toggle={() => toggleOpen()} />
+            <MenuToggle
+              toggle={() => toggleOpen()}
+              className={
+                isOpen ? "openToggle nav__button" : "closedToggle nav__button"
+              }
+            />
             <motion.div
               style={{
                 overflow: "hidden",
@@ -159,7 +215,65 @@ const Header = () => {
                 top: "0",
               }}
               className="background"
-              variants={sidebar}></motion.div>
+              variants={sidebar}>
+              <Box
+                style={{
+                  fontSize: "50px",
+                  width: "100%",
+                  height: "100%",
+                  padding: "80px 0",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}>
+                <List
+                  sx={{
+                    padding: "20px",
+                    letterSpacing: "0.6px",
+                  }}>
+                  <ListItem>
+                    <LinkScroll className="homeLink_nav linknavNH" to="#home">
+                      Home
+                    </LinkScroll>
+                  </ListItem>
+                  <ListItem>
+                    <LinkScroll
+                      className="servicesLink_nav linknavNH"
+                      to="#services">
+                      Services
+                    </LinkScroll>
+                    <div href="#" className="blusServices2" onClick={PlusOpen2}>
+                      {servicesOpen2 ? "-" : "+"}
+                    </div>
+                  </ListItem>
+
+                  <motion.div
+                    variants={services2}
+                    animate={servicesOpen2 ? "open" : "closed"}
+                    className={"containsevrviceLinks"}>
+                    {infoCard.map(({ id, route, title }) => {
+                      return (
+                        <ListItem className="ListItemServices" key={id}>
+                          <LinkRouter
+                            className="LInkRouterServices link__nav"
+                            to={route}>
+                            {title}
+                          </LinkRouter>
+                        </ListItem>
+                      );
+                    })}
+                  </motion.div>
+                  <ListItem>
+                    <LinkScroll
+                      className="contactusLink_nav linknavNH"
+                      to="#contactus">
+                      ContactUS
+                    </LinkScroll>
+                  </ListItem>
+                </List>
+              </Box>
+            </motion.div>
           </motion.nav>
         </Box>
       </Container>

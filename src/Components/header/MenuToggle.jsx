@@ -10,19 +10,8 @@ const Path = (props) => (
   />
 );
 
-{
-  /* <div>
-  <div
-    className={`${showMenu ? "nav__toggle nav__opened" : "nav__toggle"}`}
-    onClick={() => setShowMenu(!showMenu)}>
-    <span></span>
-    <span></span>
-  </div>
-</div>; */
-}
-
-export const MenuToggle = ({ toggle }) => (
-  <button className="nav__button" onClick={toggle}>
+export const MenuToggle = ({ toggle, className }) => (
+  <button className={className} onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         stroke="white"
