@@ -32,7 +32,6 @@ export const LandingImage = () => {
   );
 };
 
-import { serv01, serv02, serv03, serv04, serv05, serv06 } from "../assets";
 import {
   Facebook,
   Twitter,
@@ -43,60 +42,70 @@ import {
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import {
+  faLaptop,
+  faMobileScreenButton,
+  faComputer,
+  faDisplay,
+  faFan,
+  faScrewdriverWrench,
+} from "@fortawesome/free-solid-svg-icons";
+import { homeRepair } from "../assets";
+
 export const infoCard = [
   {
     id: 1,
-    img: serv01,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faLaptop,
+    title: "Laptop",
+    desc: "Quick and quality laptop repair for any issue. Hardware or software, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
     route: "Laptop",
   },
   {
     id: 2,
-    img: serv02,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faMobileScreenButton,
+    title: "Mobile Phones",
+    desc: "Fast and reliable mobile phone repair for any issue. Android or iPhone, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "washingmachine",
+    route: "mobile-phones",
   },
   {
     id: 3,
-    img: serv03,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faComputer,
+    title: "Computer",
+    desc: "Quick and quality computer device repair for any issue. Desktop or laptop, we can fix it with affordable and fair prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "Laptop",
+    route: "computer",
   },
   {
     id: 4,
-    img: serv04,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faDisplay,
+    title: "Screens",
+    desc: "Fast and reliable screen repair for any problem. Cracked or broken, we can fix it with reasonable and honest prices. Call us now and get it done well.",
     bOne: "More",
     bTwo: "Contact",
-    route: "Laptop",
+    route: "screens",
   },
   {
     id: 5,
-    img: serv05,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faFan,
+    title: "Electric Devices",
+    desc: "Prompt and professional home electric device repair for any issue. Washing machine or refrigerator...., we can fix it with fair  prices. Call us now and get it done right.",
     bOne: "More",
     bTwo: "Contact",
-    route: "labtop",
+    route: "electric-devices",
   },
   {
     id: 6,
-    img: serv06,
-    title: "Laptops",
-    desc: "Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis temporeperfe rendis  explicabo.",
+    icon: faScrewdriverWrench,
+    title: "Home Repairs",
+    desc: "Speedy and expert home repair for any problem. Plumbing or carpentry...., we can fix it with honest and reasonable prices. Call us now and get it done well.",
     bOne: "More",
     bTwo: "Contact",
-    route: "labtop",
+    route: "home-repairs",
   },
 ];
 export const firstContactInfo = [

@@ -2,6 +2,7 @@ import { Grid, Box, Container, Typography } from "@mui/material";
 import { infoCard } from "../../Constants";
 import ServiceCard from "./Card";
 import { motion } from "framer-motion";
+import { Logolanding } from "../../utils/motion";
 
 function Services() {
   return (
@@ -11,7 +12,13 @@ function Services() {
       }}
       py={"var(--primary-padding)"}>
       <Container>
-        <Typography className="head-title">Services</Typography>
+        <Typography
+          className="head-title"
+          component={motion.p}
+          initial={Logolanding().hidden}
+          animate={Logolanding().show}>
+          Services
+        </Typography>
         <Grid container spacing={3}>
           {infoCard.map((info, index) => (
             <Grid
