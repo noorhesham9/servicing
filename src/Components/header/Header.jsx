@@ -34,6 +34,7 @@ const sidebar = {
 };
 const services = {
   open: {
+    display: "block",
     opacity: 1,
     y: "0px",
     transition: {
@@ -135,6 +136,9 @@ const Header = () => {
               </div>
 
               <Box
+                sx={{
+                  display: "none",
+                }}
                 component={motion.div}
                 variants={services}
                 className={
