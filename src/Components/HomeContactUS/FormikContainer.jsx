@@ -1,8 +1,10 @@
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import FormikControl from "./FormikControl";
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, Snackbar } from "@mui/material";
 import axios from "axios";
+import Alert from "@mui/material/Alert";
+import { useState } from "react";
 import "./form.css";
 const initialValues = {
   Fname: "",
@@ -24,27 +26,39 @@ const validationSchema = Yup.object({
   message: Yup.string().required("Required !"),
 });
 
-const handleSubmit = (values, { resetForm }) => {
-  axios
-    .post(
-      "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
-      values
-    )
-    .then(() => {
-      resetForm({
-        Fname: "",
-        Lname: "",
-        email: "",
-        phone: "",
-        location: "",
-        mainSubject: "maintainence",
-        subject: "",
-        message: "",
-      });
-    });
-};
-
 function FormikContainer() {
+  const [open, setOpen] = useState(false);
+  const [openerror, setOpenerror] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+    setOpenerror(false);
+  };
+
+  const handleSubmit = (values, { resetForm }) => {
+    axios
+      .post(
+        "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
+        values
+      )
+      .then(() => {
+        setOpen(true);
+        resetForm({
+          Fname: "",
+          Lname: "",
+          email: "",
+          phone: "",
+          location: "",
+          mainSubject: "maintainence",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((e) => {
+        setOpenerror(true);
+      });
+  };
+
   return (
     <Formik
       initialValues={initialValues}
@@ -127,6 +141,29 @@ function FormikContainer() {
                 }}>
                 submit
               </Button>
+              <Snackbar
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}>
+                <Alert
+                  onClose={handleClose}
+                  severity="success"
+                  sx={{ width: "100%" }}>
+                  The message was received successfully
+                </Alert>
+              </Snackbar>
+
+              <Snackbar
+                open={openerror}
+                autoHideDuration={6000}
+                onClose={handleClose}>
+                <Alert
+                  onClose={handleClose}
+                  severity="error"
+                  sx={{ width: "100%" }}>
+                  There is an error, please send an e-mail
+                </Alert>
+              </Snackbar>
             </Stack>
           </Form>
         );
