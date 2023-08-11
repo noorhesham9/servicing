@@ -1,0 +1,60 @@
+.textsContain {
+  p {
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+.readmore {
+  position: relative;
+  margin-bottom: 30px !important;
+}
+.buttooon {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.thanks {
+  //   text-align: center;
+  font-weight: 600 !important;
+  letter-spacing: 0.017em !important;
+  text-shadow: 3px 3px 2px var(--primary-color-shadow);
+}
+.marginBetweenbuttons {
+  // margin-left: 25px;
+  margin-left: 20px !important;
+}
+
+@media (max-width: 500px) {
+  .AboutUS {
+    text-align: center;
+  }
+
+  .buttooon {
+    margin-top: 25px;
+    justify-content: center;
+  }
+  .thanks {
+    text-align: center;
+  }
+  .ourworksandbook {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column !important;
+    .ourWorks {
+      margin-left: 0 !important;
+    }
+    .marginBetweenbuttons {
+      margin-left: 0px !important;
+    }
+    .bookaCall,
+    .ourWorks {
+      width: 130px;
+
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+}

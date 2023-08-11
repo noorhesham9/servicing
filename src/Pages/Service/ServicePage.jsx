@@ -1,3 +1,4 @@
+import About from "../../Components/About/About";
 import Contact from "../../Components/Contact/Contact";
 import ServCardInfo from "../../Components/ServCardInfo/ServCardInfo";
 import SubLanding from "../../Components/SubLandingRoutes/SubLanding";
@@ -10,6 +11,8 @@ function ServicePage(Props) {
     <>
       <Header home="route" />
       <SubLanding title={title} img={img} />
+      <About />
+      {/* <Contact /> */}
       <HomeContact name="contactus" services={services} />
     </>
   );

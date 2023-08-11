@@ -6,19 +6,23 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import ContactInfo from "./ContactInfo";
+
 import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link, useLocation } from "react-router-dom";
 function Footer() {
   return (
-    <Box sx={{ bgcolor: "#0a1411" }}>
+    <Box
+      sx={{ bgcolor: "#0a1411" }}
+      p="50px 0  0"
+      borderTop="1px solid rgb(202 255 189 / 9%);">
       <Container>
         <Box
-          p="20px"
+          pb="50px"
           className="footer"
           display="flex"
           justifyContent="space-between"
-          flexDirection={{ xs: "column", sm: "row" }}>
+          flexDirection={{ xs: "column", md: "row" }}>
           <Stack className="box">
             <Typography
               className="title"
@@ -28,7 +32,10 @@ function Footer() {
               }}>
               logo
             </Typography>
-            <Typography color="white" textAlign={{ xs: "center", sm: "start" }}>
+            <Typography
+              color="white"
+              textAlign="center"
+              pb={{ xs: "20px", md: "0" }}>
               As a service company, we fix your problems. We provide a wide
               range of services for laptops, computers, home repairs, and
               electrical devices, catering to all your needs
@@ -44,41 +51,35 @@ function Footer() {
               Services
             </Typography>
             <Stack
-              direction={{ xs: "row", sm: "column" }}
+              direction={{ xs: "column", sm: "row" }}
               flexWrap="wrap"
-              justifyContent="space-between">
+              justifyContent="center">
               {infoCard.map((info) => (
-                <Stack key={info.id} alignItems="center" direction="row">
+                <Stack
+                  alignItems="center"
+                  direction="row"
+                  key={info.id}
+                  flexBasis={{ lg: "33%", md: "44%", xs: "100%", sm: "33%" }}>
                   <IconButton>
                     <ArrowForwardIcon sx={{ color: "var(--third-color)" }} />
                   </IconButton>
-                  <Button
-                    href="#"
-                    sx={{
-                      color: "white",
-                      textTransform: "capitalize",
-                      "&:hover": { color: "var(--primary-color)" },
-                    }}>
-                    {info.title}
-                  </Button>
+                  <Link to={info.route}>
+                    <Button
+                      sx={{
+                        color: "white",
+                        textTransform: "capitalize",
+                        "&:hover": { color: "var(--primary-color)" },
+                      }}>
+                      {info.title}
+                    </Button>
+                  </Link>
                 </Stack>
               ))}
             </Stack>
           </Stack>
-          {/* <Stack className="box">
-            <Typography
-              className="title"
-              fontSize={{
-                xs: "var(--xs-title-fontSize)",
-                md: "var(--lg-title-fontSize)",
-              }}>
-              About
-            </Typography>
-          </Stack> */}
-          <ContactInfo />
         </Box>
       </Container>
-      <Box sx={{ borderTop: "1px solid var(--primary-color)", p: "20px" }}>
+      <Box sx={{ borderTop: "1px solid rgb(202 255 189 / 9%);", p: "25px" }}>
         <Typography color="white" textAlign="center">
           © 2023 All Right Reserved | Created by:{" "}
           <a
