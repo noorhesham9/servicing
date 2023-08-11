@@ -11,7 +11,7 @@ function ServicePage(Props) {
     <>
       <Header home="route" />
       <SubLanding title={title} img={img} />
-      <About />
+      {/* <About /> */}
       {/* <Contact /> */}
       <HomeContact name="contactus" services={services} />
     </>
