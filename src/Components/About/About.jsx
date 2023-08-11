@@ -47,7 +47,7 @@ function About() {
             Choose your Plan
           </Typography>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           variants={fadeIn("", "", 0.1, 1)}
           style={{
             color: "var( --text-color)",
@@ -65,7 +65,6 @@ function About() {
             {info.two}
           </Typography>
 
-          {/* aniamte ..... */}
           <AnimatePresence>
             <motion.div
               className={expanded ? "expand textsContain" : "textsContain"}
@@ -155,7 +154,7 @@ function About() {
               Book a Call
             </Button>
           </Link>
-        </Stack>
+        </Stack> */}
       </Container>
     </Box>
   );

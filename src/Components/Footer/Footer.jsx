@@ -9,7 +9,7 @@ import {
 
 import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <Box
