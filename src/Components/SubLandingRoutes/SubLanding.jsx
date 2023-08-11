@@ -40,15 +40,18 @@ function SubLanding(Props) {
             Home
           </Link>{" "}
           |{" "}
-          <Typography className="link" color="rgb(250,250,250,.6)">
+          <Typography
+            className="link"
+            color="rgb(250,250,250,.6)"
+            fontFamily="var(--body-font)">
             {title}
           </Typography>
         </Stack>
       </Stack>
       <motion.div
         initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        animate={{ scaleX: 0, transition: { duration: 0.7, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.7, ease: "circIn" } }}
         style={{ originX: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />

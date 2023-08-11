@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 function ServiceCard(Props) {
   const { info } = Props;
-  const { id, icon, title, desc, bOne, bTwo, route } = info;
+  const { icon, title, desc, bOne, bTwo, route } = info;
   const isPresent = useIsPresent();
   return (
     <Card className="card">
@@ -62,33 +62,37 @@ function ServiceCard(Props) {
             justifyContent: "space-between",
             pb: "40px",
           }}>
-          <Button
-            className="btn"
-            variant="outlined"
-            href={"#"}
-            sx={{
-              borderColor: "var(--primary-color)",
-              color: "white",
-              p: "8px 25px",
-              fontSize: {
-                xs: "14px",
-                md: "16px",
-              },
-            }}>
-            {bOne}
-          </Button>
-          <Button
-            className="btn"
-            variant="outlined"
-            href={"#"}
-            sx={{
-              fontSize: {
-                xs: "14px",
-                md: "16px",
-              },
-            }}>
-            {bTwo}
-          </Button>
+          <Link to={route}>
+            <Button
+              className="btn"
+              variant="outlined"
+              href={"#"}
+              sx={{
+                borderColor: "var(--primary-color)",
+                color: "white",
+                p: "8px 25px",
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
+              }}>
+              {bOne}
+            </Button>
+          </Link>
+          <Link to={`${route}#contacts`}>
+            <Button
+              className="btn"
+              variant="outlined"
+              href={"#"}
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  md: "16px",
+                },
+              }}>
+              {bTwo}
+            </Button>
+          </Link>
         </CardActions>
       </Box>
       <motion.div

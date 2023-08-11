@@ -55,7 +55,14 @@ function App() {
     },
   ]);
   const location = useLocation();
+  function ScrollToTop() {
+    const location = useLocation();
 
+    React.useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location]);
+    return null;
+  }
   return (
     <motion.div
       initial="hidden"
@@ -65,6 +72,7 @@ function App() {
       <Header />
       <ScrollUp />
       <AnimatePresence mode="wait">
+        <ScrollToTop />
         {React.cloneElement(element, { key: location.pathname })}
       </AnimatePresence>
       {/* <Contact /> */}

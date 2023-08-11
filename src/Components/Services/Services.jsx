@@ -19,8 +19,8 @@ function Services() {
           animate={Logolanding().show}>
           Services
         </Typography>
-        <Grid container spacing={3}>
-          {infoCard.map((info, index) => (
+        <Grid container spacing={2}>
+          {infoCard.map((info) => (
             <Grid
               item
               key={info.id}

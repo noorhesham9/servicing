@@ -6,7 +6,7 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { Link as LinkRouter } from "react-router-dom";
 import { useRef } from "react";
-import { delay, motion, useCycle, useIsPresent } from "framer-motion";
+import { motion, useCycle, useIsPresent } from "framer-motion";
 import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
