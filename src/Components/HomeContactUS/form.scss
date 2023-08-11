@@ -1,0 +1,98 @@
+// .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+//   border-radius: 10px !important;
+// }
+
+// .css-1ny4w68-MuiFormControl-root-MuiTextField-root {
+//   border-radius: 10px !important;
+// }
+.contact__information {
+  background-color: #0a1411;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0px 4px rgb(255 255 255 / 10%),
+    inset -1px 0px 2.26765px rgb(255 255 255 / 21%) !important;
+  height: 500px;
+
+  .headtitle {
+    font-family: var(--second-font);
+    font-size: 30px;
+
+    margin-bottom: 15px;
+  }
+  .adviceContact {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  .socialcontacts {
+    display: flex;
+  }
+  .mailorPhoneorGPs {
+    gap: 10px;
+  }
+  .mailorPhoneorGPs {
+    padding: 18px 0;
+    color: white;
+    .mailorPhoneorGPstext {
+      color: white;
+      font-size: 17px;
+    }
+  }
+}
+.FnameAndLname,
+.emailandphone {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  .form-control {
+    flex: 0 0 47%;
+  }
+}
+
+.css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--third-color) !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: var(--text-color) !important;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--third-color) !important;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+  color: var(--third-color) !important;
+}
+.css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: var(--third-color) !important;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  color: var(--text-color) !important;
+}
+@media (max-width: 600px) {
+  .FnameAndLname,
+  .emailandphone {
+    gap: 0px;
+    .form-control {
+      flex: 0 0 100%;
+    }
+  }
+}
+.inpuuuutField {
+  // background-color: red;
+}
+.optionServices {
+  border-radius: 10px !important;
+}
+.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+  color: white;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiMenu-paper.MuiPopover-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  box-shadow: 0 0px 4px rgb(255 255 255 / 10%),
+    inset -1px 0px 2.26765px rgb(255 255 255 / 21%) !important;
+  background-color: #0a1411;
+}

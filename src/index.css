@@ -178,15 +178,19 @@ a {
 .card:hover .text {
   color: white !important;
 }
-.card .btn{
-border-color:var(--primary-color) !important;
-color: white;
-padding: 8px 25px;
-background: linear-gradient(to right ,var(--primary-color) 50%, transparent 50%);
-background-size: 200% 90%;
-background-position: right bottom;
-transition:.4s;
-border-radius: 20px;
+.card .btn {
+  border-color: var(--primary-color) !important;
+  color: white;
+  padding: 8px 25px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 50%,
+    transparent 50%
+  );
+  background-size: 200% 90%;
+  background-position: right bottom;
+  transition: 0.4s;
+  border-radius: 20px;
 }
 .card .btn:hover {
   background-position: left bottom;
@@ -253,6 +257,6 @@ border-radius: 20px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:var(--bg-color);
+  background-color: var(--bg-color);
   z-index: 2000;
 }

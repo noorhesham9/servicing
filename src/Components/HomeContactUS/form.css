@@ -1,0 +1,92 @@
+.contact__information {
+  background-color: #0a1411;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0px 4px rgba(255, 255, 255, 0.1), inset -1px 0px 2.26765px rgba(255, 255, 255, 0.21) !important;
+  height: 500px;
+}
+.contact__information .headtitle {
+  font-family: var(--second-font);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.contact__information .adviceContact {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+.contact__information .socialcontacts {
+  display: flex;
+}
+.contact__information .mailorPhoneorGPs {
+  gap: 10px;
+}
+.contact__information .mailorPhoneorGPs {
+  padding: 18px 0;
+  color: white;
+}
+.contact__information .mailorPhoneorGPs .mailorPhoneorGPstext {
+  color: white;
+  font-size: 17px;
+}
+
+.FnameAndLname,
+.emailandphone {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+.FnameAndLname .form-control,
+.emailandphone .form-control {
+  flex: 0 0 47%;
+}
+
+.css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--third-color) !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  color: var(--text-color) !important;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--third-color) !important;
+}
+
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
+  color: var(--third-color) !important;
+}
+
+.css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--third-color) !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  color: var(--text-color) !important;
+}
+
+@media (max-width: 600px) {
+  .FnameAndLname,
+  .emailandphone {
+    gap: 0px;
+  }
+  .FnameAndLname .form-control,
+  .emailandphone .form-control {
+    flex: 0 0 100%;
+  }
+}
+.optionServices {
+  border-radius: 10px !important;
+}
+
+.MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
+  color: white;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiMenu-paper.MuiPopover-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  box-shadow: 0 0px 4px rgba(255, 255, 255, 0.1), inset -1px 0px 2.26765px rgba(255, 255, 255, 0.21) !important;
+  background-color: #0a1411;
+}/*# sourceMappingURL=form.css.map */

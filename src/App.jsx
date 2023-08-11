@@ -22,6 +22,7 @@ import {
   mobile,
   screen,
 } from "./assets";
+import HomeContact from "./Components/HomeContactUS/HomeContact";
 
 function App() {
   const element = useRoutes([
@@ -75,7 +76,6 @@ function App() {
         <ScrollToTop />
         {React.cloneElement(element, { key: location.pathname })}
       </AnimatePresence>
-      {/* <Contact /> */}
       <Footer />
     </motion.div>
   );

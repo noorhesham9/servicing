@@ -39,6 +39,7 @@ import {
   Telegram,
   WhatsApp,
 } from "@mui/icons-material";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -126,14 +127,19 @@ export const firstContactInfo = [
   },
 ];
 export const secondContactInfo = [
-  {
-    id: 1,
-    icon: Telegram,
-    info: "",
-  },
+  // {
+  //   id: 1,
+  //   icon: Telegram,
+  //   info: "",
+  // },
+  // {
+  //   id: 2,
+  //   icon: WhatsApp,
+  //   info: "",
+  // },
   {
     id: 2,
-    icon: WhatsApp,
+    icon: InstagramIcon,
     info: "",
   },
   {

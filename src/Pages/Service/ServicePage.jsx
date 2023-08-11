@@ -2,7 +2,7 @@ import About from "../../Components/About/About";
 import Contact from "../../Components/Contact/Contact";
 import ServCardInfo from "../../Components/ServCardInfo/ServCardInfo";
 import SubLanding from "../../Components/SubLandingRoutes/SubLanding";
-
+import HomeContact from "../../Components/HomeContactUS/HomeContact";
 function ServicePage(Props) {
   const { title, img } = Props;
   return (
@@ -10,6 +10,7 @@ function ServicePage(Props) {
       <SubLanding title={title} img={img} />
       <About />
       {/* <Contact /> */}
+      <HomeContact />
     </>
   );
 }
