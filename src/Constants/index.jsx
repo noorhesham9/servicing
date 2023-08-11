@@ -165,3 +165,38 @@ export const info = {
     "Our team has years of experience in web development, and we pride ourselves on staying up-to-date with the latest trends and technologies in the industry. We use cutting-edge tools and techniques to create websites that are fast, responsive, and optimized for search engines. Our expertise in frontend development includes HTML, CSS, JavaScript, and experience using the React framework.",
   four: "At Q-Blink, we believe that building strong relationships with our clients is key to our success. We take the time to understand your business and your goals, and we work collaboratively with you to create a website that meets your specific needs. Whether you are looking to launch a brand new website or update an existing one or fix any bugs in your website, we are here to help.",
 };
+export const infoPlanCard = [
+  {
+    id: 1,
+    title: "On Home",
+    subtitle: "advanced Feature ",
+    features: [
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+    ],
+  },
+  {
+    id: 2,
+    title: "On Site",
+    subtitle: "Basic Feature",
+    features: [
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+      "Basic chat support",
+    ],
+  },
+];
+// id: 5,
+// icon: faFan,
+// title: "Electric Devices",
+// desc: "Prompt and professional home electric device repair for any issue. Washing machine or refrigerator...., we can fix it with fair  prices. Call us now and get it done right.",
+// bOne: "More",
+// bTwo: "Contact",
+// route: "/electric-devices",

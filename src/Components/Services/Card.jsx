@@ -79,11 +79,11 @@ function ServiceCard(Props) {
               {bOne}
             </Button>
           </Link>
-          <Link to={`${route}#contacts`}>
+          <Link to={`${route}`}>
             <Button
               className="btn"
               variant="outlined"
-              href={"#"}
+              href={"#contacts"}
               sx={{
                 fontSize: {
                   xs: "14px",

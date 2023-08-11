@@ -36,14 +36,14 @@ function SubLanding(Props) {
           component={motion.div}
           initial={ButtonLAnding(0.25).hidden}
           animate={ButtonLAnding(0.25).show}>
-          <Link to="/" className="link">
-            Home
-          </Link>{" "}
-          |{" "}
-          <Typography
-            className="link"
-            color="rgb(250,250,250,.6)"
-            fontFamily="var(--body-font)">
+          <Typography className="link" color="rgb(250,250,250,.6)">
+            <Link to="/" className="link">
+              Home
+            </Link>
+          </Typography>
+
+          {" | "}
+          <Typography className="link" color="rgb(250,250,250,.6)">
             {title}
           </Typography>
         </Stack>
