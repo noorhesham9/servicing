@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 import { Field } from "formik";
 import { infoCard } from "../../Constants";
 const Choose = (Props) => {
-  const { className, title, name, ...rest } = Props;
+  const { className, title, name, services, ...rest } = Props;
   const [value, setVAlue] = useState("");
 
   const handleChange = (event) => {
@@ -17,6 +17,7 @@ const Choose = (Props) => {
   return (
     <Box>
       <FormControl
+        disabled={services === undefined ? false : true}
         sx={{
           m: "10px 0",
           color: "var(--text-color) !important",
@@ -49,6 +50,7 @@ const Choose = (Props) => {
               },
           }}
           labelId="demo-simple-select-label"
+          value={services === "undefined" ? "" : services}
           as={Select}
           name={name}
           required

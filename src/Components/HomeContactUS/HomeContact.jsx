@@ -2,13 +2,17 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import FormikContainer from "./FormikContainer";
 import { motion } from "framer-motion";
 import { slideIn, textVariant } from "../../utils/motion";
-import { SectionWrapper } from "../../hoc/index";
 import { IconButton } from "@mui/material";
 import { firstContactInfo, secondContactInfo } from "../../Constants";
 
-const HomeContact = () => {
+import { staggerContainer } from "../../utils/motion";
+
+const HomeContact = (Props) => {
+  const { name, services } = Props;
+
   return (
     <Box
+      name={name}
       id="contacts"
       className=" section__gradient-1"
       py="var(--primary-padding)"
@@ -20,6 +24,7 @@ const HomeContact = () => {
       <Box
         sx={{
           width: "440px",
+          maxWidth: "100%",
           height: "440px",
           background: "rgba(202, 255, 189, 0.4)",
           opacity: 0.4,
@@ -58,50 +63,61 @@ const HomeContact = () => {
           }}>
           <Box
             component={motion.div}
-            variants={slideIn("left", "tween", 0.2, 1)}
             sx={{
               height: "563.500px",
               width: { md: "33.33333333%", xs: "100%" },
               flex: { md: " 0 0 33.33333333%", xs: "0 0 100%" },
             }}
-            className="contact__information">
-            <Box>
-              <Typography className="headtitle">Contact Information</Typography>
-              <Typography className="adviceContact">
-                Fill up the form and our Team will get back to you within 24
-                hours
-              </Typography>
+            variants={staggerContainer()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}>
+            <Box
+              component={motion.div}
+              variants={slideIn("left", "tween", 0.2, 1)}
+              sx={{
+                Width: "100%",
+                height: "563.500px",
+              }}
+              className="contact__information">
+              <Box>
+                <Typography className="headtitle">
+                  Contact Information
+                </Typography>
+                <Typography className="adviceContact">
+                  Fill up the form and our Team will get back to you within 24
+                  hours
+                </Typography>
+              </Box>
+              <Stack direction="column" className="mailPhoneGPsContainer">
+                {firstContactInfo.map((info) => (
+                  <Stack
+                    className="mailorPhoneorGPs"
+                    key={info.id}
+                    direction={"row"}>
+                    <info.icon sx={{ color: "var(--third-color)" }} />
+                    <Typography
+                      className="mailorPhoneorGPstext"
+                      color="black"
+                      herf="#">
+                      {info.info}
+                    </Typography>
+                  </Stack>
+                ))}
+              </Stack>
+
+              <Stack
+                className="socialcontacts"
+                direction="row"
+                alignItems="center">
+                {secondContactInfo.map((info) => (
+                  <IconButton key={info.id}>
+                    <info.icon sx={{ color: "var(--third-color)" }} />
+                  </IconButton>
+                ))}
+              </Stack>
             </Box>
-
-            <Stack direction="column" className="mailPhoneGPsContainer">
-              {firstContactInfo.map((info) => (
-                <Stack
-                  className="mailorPhoneorGPs"
-                  key={info.id}
-                  direction={"row"}>
-                  <info.icon sx={{ color: "var(--third-color)" }} />
-                  <Typography
-                    className="mailorPhoneorGPstext"
-                    color="black"
-                    herf="#">
-                    {info.info}
-                  </Typography>
-                </Stack>
-              ))}
-            </Stack>
-
-            <Stack
-              className="socialcontacts"
-              direction="row"
-              alignItems="center">
-              {secondContactInfo.map((info) => (
-                <IconButton key={info.id}>
-                  <info.icon sx={{ color: "var(--third-color)" }} />
-                </IconButton>
-              ))}
-            </Stack>
           </Box>
-
           <Box
             className="background-Color"
             sx={{
@@ -110,7 +126,7 @@ const HomeContact = () => {
               width: { md: "66.666666%", xs: "100%" },
               flex: { md: " 0 0 66.666666%", xs: " 0 0 100%" },
             }}>
-            <FormikContainer />
+            <FormikContainer services={services} />
           </Box>
         </Stack>
       </Container>
@@ -118,4 +134,4 @@ const HomeContact = () => {
   );
 };
 
-export default SectionWrapper(HomeContact);
+export default HomeContact;

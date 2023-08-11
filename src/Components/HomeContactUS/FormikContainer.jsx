@@ -26,7 +26,7 @@ const validationSchema = Yup.object({
   message: Yup.string().required("Required !"),
 });
 
-function FormikContainer() {
+function FormikContainer({ services }) {
   const [open, setOpen] = useState(false);
   const [openerror, setOpenerror] = useState(false);
 
@@ -54,7 +54,7 @@ function FormikContainer() {
           message: "",
         });
       })
-      .catch((e) => {
+      .catch(() => {
         setOpenerror(true);
       });
   };
@@ -112,6 +112,7 @@ function FormikContainer() {
                 title="Location"
               />
               <FormikControl
+                services={services}
                 className="optionServices"
                 control="choose"
                 name="subject"

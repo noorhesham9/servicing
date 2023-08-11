@@ -89,4 +89,17 @@
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiMenu-paper.MuiPopover-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
   box-shadow: 0 0px 4px rgba(255, 255, 255, 0.1), inset -1px 0px 2.26765px rgba(255, 255, 255, 0.21) !important;
   background-color: #0a1411;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon {
+  color: white;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.Mui-disabled.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.MuiSelect-select.MuiSelect-outlined.Mui-disabled.MuiInputBase-input.MuiOutlinedInput-input.Mui-disabled.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  color: white !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
 }/*# sourceMappingURL=form.css.map */

@@ -19,7 +19,7 @@ import {
   zoomInlanding2,
   zoomInlanding3,
 } from "../../utils/motion";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import { Link } from "react-scroll";
 import "swiper/css/effect-fade";
 
@@ -100,6 +100,7 @@ import "swiper/css/effect-fade";
 const Landing2 = () => {
   return (
     <Box
+      name="home"
       sx={{
         backgroundColor: `#0a1411`,
         position: "relative",
@@ -170,14 +171,18 @@ const Landing2 = () => {
                 initial={ButtonLAnding(0.75).hidden}
                 animate={ButtonLAnding(0.75).show}
                 className="servicesButtonLanding">
-                <Link to="#services">Services</Link>
+                <Link smooth={true} duration={800} to="services">
+                  Services
+                </Link>
               </Button>
               <Button
                 component={motion.div}
                 initial={ButtonLAnding(0.75).hidden}
                 animate={ButtonLAnding(0.75).show}
                 className="contactButtonLanding">
-                <Link to="#contact">Contact Us</Link>
+                <Link smooth={true} duration={800} to="contactus">
+                  Contact Us
+                </Link>
               </Button>
             </Box>
           </Box>

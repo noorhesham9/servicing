@@ -32,27 +32,47 @@ function App() {
     },
     {
       path: "/Laptop",
-      element: <ServicePage title="Laptop" img={laptop02} />,
+      element: <ServicePage title="Laptop" img={laptop02} services="Laptop" />,
     },
     {
       path: "/Computer",
-      element: <ServicePage title="Computer" img={computer} />,
+      element: (
+        <ServicePage title="Computer" img={computer} services="Computer" />
+      ),
     },
     {
       path: "/mobile-phones",
-      element: <ServicePage title="Mobile Phones" img={mobile} />,
+      element: (
+        <ServicePage
+          title="Mobile Phones"
+          img={mobile}
+          services="Mobile Phones"
+        />
+      ),
     },
     {
       path: "/screens",
-      element: <ServicePage title="Screens" img={screen} />,
+      element: <ServicePage title="Screens" img={screen} services="Screens" />,
     },
     {
       path: "/home-repairs",
-      element: <ServicePage title="Home Repairs" img={homeRepair} />,
+      element: (
+        <ServicePage
+          title="Home Repairs"
+          img={homeRepair}
+          services="Home Repairs"
+        />
+      ),
     },
     {
       path: "/electric-devices",
-      element: <ServicePage title="Electric Devices" img={electricDevices} />,
+      element: (
+        <ServicePage
+          title="Electric Devices"
+          img={electricDevices}
+          services="Electric Devices"
+        />
+      ),
     },
   ]);
   const location = useLocation();
@@ -63,7 +83,6 @@ function App() {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
-      <Header />
       <ScrollUp />
       <AnimatePresence mode="wait">
         {React.cloneElement(element, { key: location.pathname })}

@@ -127,8 +127,17 @@
 
 .header {
   z-index: 1000;
-  background-color: var(--header-color);
   box-shadow: 2px 2px var(--primary-color-shadow);
+  border-radius: 0;
+}
+
+.headernotTop {
+  background-color: #0a1411;
+  box-shadow: 0 0px 4px rgba(255, 255, 255, 0.1), inset -1px 0px 2.26765px rgba(255, 255, 255, 0.21) !important;
+}
+
+.headerTop {
+  background-color: transparent;
 }
 
 .listLInks_Header {

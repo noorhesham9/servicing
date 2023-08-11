@@ -5,8 +5,14 @@ import { useState } from "react";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import Brightness3Icon from "@mui/icons-material/Brightness3";
 import { Link as LinkRouter } from "react-router-dom";
-import { useRef } from "react";
-import { delay, motion, useCycle, useIsPresent } from "framer-motion";
+import { useRef, useEffect } from "react";
+import {
+  delay,
+  easeInOut,
+  motion,
+  useCycle,
+  useIsPresent,
+} from "framer-motion";
 import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
@@ -69,10 +75,20 @@ const services2 = {
   },
 };
 
-const Header = () => {
+const Header = ({ home }) => {
+  const [top, settop] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) {
+        settop(false);
+      } else {
+        settop(true);
+      }
+    });
+  }, []);
+
   const [themeWhite, setThemeWhite] = useState(true);
   const [langEnglish, setLangEnglish] = useState(true);
-
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [servicesOpen, PlusOpen] = useCycle(false, true);
   const [servicesOpen2, PlusOpen2] = useCycle(false, true);
@@ -90,13 +106,10 @@ const Header = () => {
   return (
     <Box
       width={"100%"}
-      borderRadius={"10px"}
-      className="header"
+      className={top ? "header headerTop" : "header headernotTop"}
       position={"fixed"}
       sx={{
         transition: "var(--transition)",
-        borderTopLeftRadius: "0",
-        borderTopRightRadius: "0",
         height: "75px",
       }}>
       <Container
@@ -105,9 +118,15 @@ const Header = () => {
           height: "100%",
           alignItems: "center",
         }}>
-        <LinkScroll to="#home" className="logo">
-          Logo
-        </LinkScroll>
+        {home === "route" ? (
+          <LinkRouter to="/" className="logo">
+            Logo
+          </LinkRouter>
+        ) : (
+          <LinkScroll smooth={true} duration={800} to="home" className="logo">
+            Logo
+          </LinkScroll>
+        )}
 
         <Box
           sx={{
@@ -125,12 +144,26 @@ const Header = () => {
               letterSpacing: "0.6px",
             }}>
             <ListItem>
-              <LinkScroll className="homeLink_nav linknav" to="#home">
-                Home
-              </LinkScroll>
+              {home === "route" ? (
+                <LinkRouter className="homeLink_nav linknav" to="/">
+                  Home
+                </LinkRouter>
+              ) : (
+                <LinkScroll
+                  smooth={true}
+                  duration={800}
+                  className="homeLink_nav linknav"
+                  to="home">
+                  Home
+                </LinkScroll>
+              )}
             </ListItem>
             <ListItem className="servicesListItem">
-              <LinkScroll className="servicesLink_nav linknav" to="#services">
+              <LinkScroll
+                smooth={true}
+                duration={800}
+                className="servicesLink_nav linknav"
+                to="services">
                 Services
               </LinkScroll>
               <div href="#" className="blusServices" onClick={PlusOpen}>
@@ -154,6 +187,7 @@ const Header = () => {
                         className="ListItemServices desktopnavservice"
                         key={id}>
                         <LinkRouter
+                          onClick={PlusOpen}
                           className="LInkRouterServices desktopnavserviceLInk"
                           to={route}>
                           {title}
@@ -165,7 +199,11 @@ const Header = () => {
               </Box>
             </ListItem>
             <ListItem>
-              <LinkScroll className="contactusLink_nav linknav" to="#contactus">
+              <LinkScroll
+                smooth={true}
+                duration={800}
+                className="contactusLink_nav linknav"
+                to="contactus">
                 ContactUS
               </LinkScroll>
             </ListItem>
@@ -196,7 +234,6 @@ const Header = () => {
               fontSize: "20px",
               display: "flex",
               justifyContent: "center",
-
               alignItems: "center",
               transition: "var(--transition)",
               "&:hover": {
@@ -248,14 +285,31 @@ const Header = () => {
                     letterSpacing: "0.6px",
                   }}>
                   <ListItem>
-                    <LinkScroll className="homeLink_nav linknavNH" to="#home">
-                      Home
-                    </LinkScroll>
+                    {home === "route" ? (
+                      <LinkRouter
+                        onClick={toggleOpen}
+                        className="homeLink_nav linknavNH"
+                        to="/">
+                        Home
+                      </LinkRouter>
+                    ) : (
+                      <LinkScroll
+                        onClick={toggleOpen}
+                        smooth={true}
+                        duration={800}
+                        className="homeLink_nav linknavNH"
+                        to="home">
+                        Home
+                      </LinkScroll>
+                    )}
                   </ListItem>
                   <ListItem>
                     <LinkScroll
+                      onClick={toggleOpen}
+                      smooth={true}
+                      duration={800}
                       className="servicesLink_nav linknavNH"
-                      to="#services">
+                      to="services">
                       Services
                     </LinkScroll>
                     <div href="#" className="blusServices2" onClick={PlusOpen2}>
@@ -271,6 +325,7 @@ const Header = () => {
                       return (
                         <ListItem className="ListItemServices" key={id}>
                           <LinkRouter
+                            onClick={toggleOpen}
                             className="LInkRouterServices link__nav"
                             to={route}>
                             {title}
@@ -281,8 +336,11 @@ const Header = () => {
                   </motion.div>
                   <ListItem>
                     <LinkScroll
+                      onClick={toggleOpen}
+                      smooth={true}
+                      duration={800}
                       className="contactusLink_nav linknavNH"
-                      to="#contactus">
+                      to="contactus">
                       ContactUS
                     </LinkScroll>
                   </ListItem>

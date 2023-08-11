@@ -2,12 +2,15 @@ import Contact from "../../Components/Contact/Contact";
 import ServCardInfo from "../../Components/ServCardInfo/ServCardInfo";
 import SubLanding from "../../Components/SubLandingRoutes/SubLanding";
 import HomeContact from "../../Components/HomeContactUS/HomeContact";
+import Header from "../../Components/header/Header";
+
 function ServicePage(Props) {
-  const { title, img } = Props;
+  const { title, img, services } = Props;
   return (
     <>
+      <Header home="route" />
       <SubLanding title={title} img={img} />
-      <HomeContact />
+      <HomeContact name="contactus" services={services} />
     </>
   );
 }

@@ -7,6 +7,7 @@ import { Logolanding } from "../../utils/motion";
 function Services() {
   return (
     <Box
+      name="services"
       sx={{
         backgroundColor: "#0a1411",
       }}
