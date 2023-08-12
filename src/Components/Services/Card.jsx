@@ -14,9 +14,9 @@ function ServiceCard(Props) {
   const { info } = Props;
   const { icon, title, desc, bOne, bTwo, route } = info;
   const isPresent = useIsPresent();
+
   return (
     <Card className="card">
-      {/* <CardMedia component="img" height="250px" image={img} alt={title} /> */}
       <CardMedia sx={{ display: "flex", alignSelf: "center", pt: "40px" }}>
         <FontAwesomeIcon
           icon={icon}
@@ -66,7 +66,6 @@ function ServiceCard(Props) {
             <Button
               className="btn"
               variant="outlined"
-              href={"#"}
               sx={{
                 borderColor: "var(--primary-color)",
                 color: "white",
@@ -79,11 +78,10 @@ function ServiceCard(Props) {
               {bOne}
             </Button>
           </Link>
-          <Link to={`${route}`}>
+          <Link to={`${route}#contacts`}>
             <Button
               className="btn"
               variant="outlined"
-              href={"#contacts"}
               sx={{
                 fontSize: {
                   xs: "14px",

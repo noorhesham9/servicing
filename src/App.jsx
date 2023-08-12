@@ -91,9 +91,10 @@ function App() {
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
       <ScrollUp />
+
       <AnimatePresence mode="wait">
-        <ScrollToTop />
         {React.cloneElement(element, { key: location.pathname })}
+        <ScrollToTop />
       </AnimatePresence>
       <Footer />
     </motion.div>
