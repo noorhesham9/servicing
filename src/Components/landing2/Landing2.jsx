@@ -166,24 +166,24 @@ const Landing2 = () => {
                 gap: "25px",
                 maxWidth: "100%",
               }}>
-              <Button
-                component={motion.div}
-                initial={ButtonLAnding(0.75).hidden}
-                animate={ButtonLAnding(0.75).show}
-                className="servicesButtonLanding">
-                <Link smooth={true} duration={800} to="services">
+              <Link smooth={true} duration={800} to="services">
+                <Button
+                  component={motion.div}
+                  initial={ButtonLAnding(0.75).hidden}
+                  animate={ButtonLAnding(0.75).show}
+                  className="servicesButtonLanding">
                   Services
-                </Link>
-              </Button>
-              <Button
-                component={motion.div}
-                initial={ButtonLAnding(0.75).hidden}
-                animate={ButtonLAnding(0.75).show}
-                className="contactButtonLanding">
-                <Link smooth={true} duration={800} to="contactus">
+                </Button>
+              </Link>
+              <Link smooth={true} duration={800} to="contactus">
+                <Button
+                  component={motion.div}
+                  initial={ButtonLAnding(0.75).hidden}
+                  animate={ButtonLAnding(0.75).show}
+                  className="contactButtonLanding">
                   Contact Us
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>
