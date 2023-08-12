@@ -33,9 +33,7 @@ function Services() {
                 flexDirection: "column",
                 textAlign: "center",
               }}>
-              <motion.div>
-                <ServiceCard info={info} />
-              </motion.div>
+              <ServiceCard info={info} />
             </Grid>
           ))}
         </Grid>
