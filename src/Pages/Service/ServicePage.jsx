@@ -6,13 +6,13 @@ import Header from "../../Components/header/Header";
 import Plan from "../../Components/Plan/Plan";
 import { useEffect, useState } from "react";
 function ServicePage(Props) {
-  const { title, img, services } = Props;
   const [plan, setPlan] = useState("");
+  const { title, img, services, t, i18n } = Props;
   return (
     <>
-      <Header home="route" />
+      <Header home="route" i18n={i18n} t={t} />
       <SubLanding title={title} img={img} />
-      <Plan setPlan={setPlan} />
+      <Plan t={t} setPlan={setPlan} />
       {/* <About /> */}
       {/* <Contact /> */}
       <HomeContact name="contactus" services={services} plan={plan} />

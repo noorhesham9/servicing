@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import { infoPlanCard } from "../../Constants";
 import PlanCard from "./PlanCard";
 import { textVariant } from "../../utils/motion";
-function Plan({ setPlan }) {
+function Plan(Props) {
+  const { t, setPlan } = Props;
   return (
     <Box
       id="plan"
@@ -39,7 +40,7 @@ function Plan({ setPlan }) {
               //     textAlign: "center",
               //   }}
             >
-              <PlanCard info={info} setPlan={setPlan} />
+              <PlanCard info={info} setPlan={setPlan} t={t} />
             </Grid>
           ))}
         </Grid>

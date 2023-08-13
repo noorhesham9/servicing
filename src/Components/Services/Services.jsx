@@ -4,7 +4,8 @@ import ServiceCard from "./Card";
 import { motion } from "framer-motion";
 import { Logolanding } from "../../utils/motion";
 
-function Services() {
+function Services(Props) {
+  const { t } = Props;
   return (
     <Box
       name="services"
@@ -18,7 +19,22 @@ function Services() {
           component={motion.p}
           initial={Logolanding().hidden}
           animate={Logolanding().show}>
-          Services
+          {t("landingBtnOne")}
+        </Typography>
+        <Typography
+          textAlign="center"
+          color="rgb(250,250,250,.6)"
+          fontSize="24"
+          mb="20px">
+          {t("servicesPlaces")}
+          <span style={{ color: "white", fontWeight: "bold" }}>
+            {t("placeOne")}
+          </span>{" "}
+          {t("andWordPlaceServices")}{" "}
+          <span style={{ color: "white", fontWeight: "bold" }}>
+            {" "}
+            {t("placeTwo")}
+          </span>
         </Typography>
         <Grid container spacing={2}>
           {infoCard.map((info) => (
@@ -33,7 +49,7 @@ function Services() {
                 flexDirection: "column",
                 textAlign: "center",
               }}>
-              <ServiceCard info={info} />
+              <ServiceCard info={info} t={t} />
             </Grid>
           ))}
         </Grid>

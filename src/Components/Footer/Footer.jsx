@@ -10,7 +10,8 @@ import {
 import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
-function Footer() {
+function Footer(Props) {
+  const { t } = Props;
   return (
     <Box
       sx={{ bgcolor: "#0a1411" }}
@@ -36,9 +37,7 @@ function Footer() {
               color="white"
               textAlign="center"
               pb={{ xs: "20px", md: "0" }}>
-              As a service company, we fix your problems. We provide a wide
-              range of services for laptops, computers, home repairs, and
-              electrical devices, catering to all your needs
+              {t("WebsiteDescriptionFooter")}
             </Typography>
           </Stack>
           <Stack className="box">
@@ -48,7 +47,7 @@ function Footer() {
                 xs: "var(--xs-title-second-font-fontSize)",
                 md: "var(--lg-title-second-font-fontSize)",
               }}>
-              Services
+              {t("landingBtnOne")}
             </Typography>
             <Stack
               direction={{ xs: "column", sm: "row" }}
@@ -70,7 +69,7 @@ function Footer() {
                         textTransform: "capitalize",
                         "&:hover": { color: "var(--primary-color)" },
                       }}>
-                      {info.title}
+                      {t(info.title)}
                     </Button>
                   </Link>
                 </Stack>

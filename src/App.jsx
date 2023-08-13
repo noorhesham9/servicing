@@ -5,11 +5,9 @@ import Services from "./Components/Services/Services";
 import Contact from "./Components/Contact/Contact";
 import ScrollUp from "./Components/ScrollUP/ScrollUp";
 import Footer from "./Components/Footer/Footer";
-import { Route, Routes, useLocation, useRoutes } from "react-router-dom";
+import { useLocation, useRoutes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import ServicePage from "./Pages/Service/ServicePage";
-import Landing2 from "./Components/landing2/Landing2";
-import SubLanding from "./Components/SubLandingRoutes/SubLanding";
 import { AnimatePresence } from "framer-motion";
 import * as React from "react";
 import { motion } from "framer-motion";
@@ -22,22 +20,37 @@ import {
   mobile,
   screen,
 } from "./assets";
-import HomeContact from "./Components/HomeContactUS/HomeContact";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const { t, i18n } = useTranslation();
   const element = useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element: <Home t={t} i18n={i18n} />,
     },
     {
       path: "/Laptop",
-      element: <ServicePage title="Laptop" img={laptop02} services="Laptop" />,
+      element: (
+        <ServicePage
+          title="Laptop"
+          img={laptop02}
+          services="Laptop"
+          t={t}
+          i18n={i18n}
+        />
+      ),
     },
     {
       path: "/Computer",
       element: (
-        <ServicePage title="Computer" img={computer} services="Computer" />
+        <ServicePage
+          title="Computer"
+          img={computer}
+          services="Computer"
+          t={t}
+          i18n={i18n}
+        />
       ),
     },
     {
@@ -47,12 +60,22 @@ function App() {
           title="Mobile Phones"
           img={mobile}
           services="Mobile Phones"
+          i18n={i18n}
+          t={t}
         />
       ),
     },
     {
       path: "/screens",
-      element: <ServicePage title="Screens" img={screen} services="Screens" />,
+      element: (
+        <ServicePage
+          title="Screens"
+          img={screen}
+          services="Screens"
+          t={t}
+          i18n={i18n}
+        />
+      ),
     },
     {
       path: "/home-repairs",
@@ -61,6 +84,8 @@ function App() {
           title="Home Repairs"
           img={homeRepair}
           services="Home Repairs"
+          t={t}
+          i18n={i18n}
         />
       ),
     },
@@ -71,6 +96,8 @@ function App() {
           title="Electric Devices"
           img={electricDevices}
           services="Electric Devices"
+          t={t}
+          i18n={i18n}
         />
       ),
     },
@@ -91,12 +118,11 @@ function App() {
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
       <ScrollUp />
-
       <AnimatePresence mode="wait">
         {React.cloneElement(element, { key: location.pathname })}
         <ScrollToTop />
       </AnimatePresence>
-      <Footer />
+      <Footer t={t} />
     </motion.div>
   );
 }
