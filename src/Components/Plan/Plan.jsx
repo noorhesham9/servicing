@@ -5,7 +5,8 @@ import { infoPlanCard } from "../../Constants";
 import PlanCard from "./PlanCard";
 import { textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
-function Plan() {
+function Plan(Props) {
+  const { t } = Props;
   return (
     <Box
       id="plan"
@@ -41,7 +42,7 @@ function Plan() {
               //     textAlign: "center",
               //   }}
             >
-              <PlanCard info={info} />
+              <PlanCard info={info} t={t} />
             </Grid>
           ))}
         </Grid>
@@ -50,4 +51,4 @@ function Plan() {
   );
 }
 
-export default SectionWrapper(Plan, "about");
+export default Plan;

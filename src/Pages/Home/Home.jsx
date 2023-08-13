@@ -1,14 +1,14 @@
-import { Box } from "@mui/material";
 import Services from "../../Components/Services/Services";
 import Landing2 from "../../Components/landing2/Landing2";
 import HomeContact from "../../Components/HomeContactUS/HomeContact";
 import Header from "../../Components/header/Header";
-function Home() {
+function Home(Props) {
+  const { t, i18n } = Props;
   return (
     <>
-      <Header home="scroll" />
-      <Landing2 />
-      <Services />
+      <Header home="scroll" i18n={i18n} t={t} />
+      <Landing2 t={t} />
+      <Services t={t} />
       <HomeContact name="contactus" />
     </>
   );

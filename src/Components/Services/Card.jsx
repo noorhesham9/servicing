@@ -11,7 +11,7 @@ import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 function ServiceCard(Props) {
-  const { info } = Props;
+  const { info, t } = Props;
   const { icon, title, desc, bOne, bTwo, route } = info;
   const isPresent = useIsPresent();
 
@@ -46,14 +46,14 @@ function ServiceCard(Props) {
             }}
             fontFamily="var(--second-font)"
             className="text">
-            {title}
+            {t(title)}
           </Typography>
           <Typography
             textAlign="center"
             fontSize="var( --text-fontSize)"
             className="text"
             py="5px">
-            {desc}
+            {t(desc)}
           </Typography>
         </CardContent>
         <CardActions
@@ -70,12 +70,13 @@ function ServiceCard(Props) {
                 borderColor: "var(--primary-color)",
                 color: "white",
                 p: "8px 25px",
+                textTransform: "capitalize",
                 fontSize: {
                   xs: "14px",
                   md: "16px",
                 },
               }}>
-              {bOne}
+              {t(bOne)}
             </Button>
           </Link>
           <Link to={`${route}#contacts`}>
@@ -83,12 +84,13 @@ function ServiceCard(Props) {
               className="btn"
               variant="outlined"
               sx={{
+                textTransform: "capitalize",
                 fontSize: {
                   xs: "14px",
                   md: "16px",
                 },
               }}>
-              {bTwo}
+              {t(bTwo)}
             </Button>
           </Link>
         </CardActions>

@@ -75,7 +75,13 @@ const services2 = {
   },
 };
 
-const Header = ({ home }) => {
+const Header = (Props) => {
+  const { home, i18n, t } = Props;
+  const changeLang = () => {
+    i18n.changeLanguage(langEnglish ? "ar" : "en");
+    setLangEnglish(!langEnglish);
+  };
+
   const [top, settop] = useState(true);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -98,9 +104,9 @@ const Header = ({ home }) => {
   const ThemeHandler = () => {
     setThemeWhite(!themeWhite);
   };
-  const langHandler = () => {
-    setLangEnglish(!langEnglish);
-  };
+  // const langHandler = () => {
+  //   setLangEnglish(!langEnglish);
+  // };
   const isPresent = useIsPresent();
 
   return (
@@ -190,7 +196,7 @@ const Header = ({ home }) => {
                           onClick={PlusOpen}
                           className="LInkRouterServices desktopnavserviceLInk"
                           to={route}>
-                          {title}
+                          {t(title)}
                         </LinkRouter>
                       </ListItem>
                     );
@@ -210,7 +216,7 @@ const Header = ({ home }) => {
           </List>
           <IconButton
             className={isOpen ? "openToggle " : "closedToggle "}
-            onClick={langHandler}
+            onClick={changeLang}
             sx={{
               color: "white",
               fontFamily: "var(--second-font)",
@@ -222,7 +228,7 @@ const Header = ({ home }) => {
               alignItems: "center",
               transition: "var(--transition)",
             }}>
-            {langEnglish ? "EN" : "AR"}
+            {langEnglish ? "AR" : "EN"}
           </IconButton>
           <IconButton
             className={isOpen ? "openToggle " : "closedToggle "}

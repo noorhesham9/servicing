@@ -14,7 +14,8 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { motion, useIsPresent } from "framer-motion";
 import { Link } from "react-scroll";
 function PlanCard(Props) {
-  const { info } = Props;
+  const { info, t } = Props;
+
   const { title, subtitle, features } = info;
   return (
     <Card
@@ -58,7 +59,7 @@ function PlanCard(Props) {
                   <IconButton>
                     <CheckCircleIcon sx={{ color: "white" }} />
                   </IconButton>
-                  <Typography>{info}</Typography>
+                  <Typography>{t(info)}</Typography>
                 </Stack>
               </Grid>
             ))}

@@ -10,7 +10,6 @@ import image1 from "../../assets/1.jpg";
 import image2 from "../../assets/2.jpg";
 import imag3 from "../../assets/3.jpg";
 import landingShabe from "../../assets/blob-scene-haikei.svg";
-
 import {
   Logolanding,
   ButtonLAnding,
@@ -97,7 +96,8 @@ import "swiper/css/effect-fade";
 //   },
 // ];
 
-const Landing2 = () => {
+const Landing2 = (Props) => {
+  const { t } = Props;
   return (
     <Box
       name="home"
@@ -146,15 +146,14 @@ const Landing2 = () => {
               initial={ButtonLAnding(0.25).hidden}
               animate={ButtonLAnding(0.25).show}
               className="title">
-              maintainence
+              {t("title")}
             </Typography>
             <Typography
               component={motion.p}
               initial={ButtonLAnding(0.5).hidden}
               animate={ButtonLAnding(0.5).show}
               className="brief">
-              We provide a wide range of services for laptops, computers, home
-              repairs, and electrical devices, catering to all your needs.
+              {t("WebsiteDescriptionLanding")}
             </Typography>
             <Box
               sx={{
@@ -172,7 +171,7 @@ const Landing2 = () => {
                 animate={ButtonLAnding(0.75).show}
                 className="servicesButtonLanding">
                 <Link smooth={true} duration={800} to="services">
-                  Services
+                  {t("landingBtnOne")}
                 </Link>
               </Button>
               <Button
@@ -181,7 +180,7 @@ const Landing2 = () => {
                 animate={ButtonLAnding(0.75).show}
                 className="contactButtonLanding">
                 <Link smooth={true} duration={800} to="contactus">
-                  Contact Us
+                  {t("landingBtnTwo")}
                 </Link>
               </Button>
             </Box>
