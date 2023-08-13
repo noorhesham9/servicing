@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -13,7 +13,13 @@ const Choose = (Props) => {
   const handleChange = (event) => {
     setVAlue(event.target.value);
   };
-
+  useEffect(() => {
+    if (services === undefined) {
+      setVAlue("");
+    } else {
+      setVAlue(services);
+    }
+  }, []);
   return (
     <Box>
       <FormControl
@@ -32,7 +38,6 @@ const Choose = (Props) => {
             "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
               borderColor: "var(--primary-color)",
             },
-
             "& label": { color: "var(--text-color)" },
             "& input": {
               borderColor: "var(--third-color)",
@@ -50,7 +55,8 @@ const Choose = (Props) => {
               },
           }}
           labelId="demo-simple-select-label"
-          value={services === "undefined" ? "" : services}
+          onChange={handleChange}
+          value={value}
           as={Select}
           name={name}
           required

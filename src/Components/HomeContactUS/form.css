@@ -102,4 +102,40 @@
 .MuiSelect-select.MuiSelect-outlined.Mui-disabled.MuiInputBase-input.MuiOutlinedInput-input.Mui-disabled.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   color: white !important;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+}
+
+.radioControl {
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 10px;
+}
+.radioControl .GroubLabel {
+  padding: 10px;
+  color: white;
+  transition: var(--transition);
+}
+.radioControl .GroubLabel.Mui-focused {
+  color: var(--third-color) !important;
+}
+.radioControl .RadioGroub {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+.radioControl .RadioGroub .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: var(--transition);
+}
+.radioControl .RadioGroub .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root:hover {
+  color: var(--third-color) !important;
+}
+.radioControl .RadioGroub .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+  transition: var(--transition);
+  color: var(--primary-color);
+}
+.radioControl .RadioGroub .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked ~ .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+  color: var(--primary-color) !important;
+}
+.radioControl:hover .GroubLabel {
+  color: var(--third-color) !important;
 }/*# sourceMappingURL=form.css.map */

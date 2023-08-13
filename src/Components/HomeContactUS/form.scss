@@ -106,3 +106,41 @@
   color: white !important;
   -webkit-text-fill-color: rgb(255, 255, 255, 0.4);
 }
+
+.radioControl {
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 10px;
+  .GroubLabel {
+    padding: 10px;
+    color: white;
+    transition: var(--transition);
+    &.Mui-focused {
+      color: var(--third-color) !important;
+    }
+  }
+  .RadioGroub {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
+      width: fit-content;
+      transition: var(--transition);
+      &:hover {
+        color: var(--third-color) !important;
+      }
+
+      .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+        transition: var(--transition);
+        ~ .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+          color: var(--primary-color) !important;
+        }
+        color: var(--primary-color);
+      }
+    }
+  }
+  &:hover {
+    .GroubLabel {
+      color: var(--third-color) !important;
+    }
+  }
+}

@@ -6,10 +6,13 @@ import { IconButton } from "@mui/material";
 import { firstContactInfo, secondContactInfo } from "../../Constants";
 
 import { staggerContainer } from "../../utils/motion";
+import { useState } from "react";
+
+// import Button from "@mui/material";
 
 const HomeContact = (Props) => {
-  const { name, services } = Props;
-
+  const { name, services, plan } = Props;
+  // const [plan, setPaln] = useState("");
   return (
     <Box
       name={name}
@@ -126,7 +129,19 @@ const HomeContact = (Props) => {
               width: { md: "66.666666%", xs: "100%" },
               flex: { md: " 0 0 66.666666%", xs: " 0 0 100%" },
             }}>
-            <FormikContainer services={services} />
+            {/* <IconButton
+              onClick={() => {
+                setPaln("On Site");
+              }}>
+              onsite
+            </IconButton>
+            <IconButton
+              onClick={() => {
+                setPaln("On Home");
+              }}>
+              omHome
+            </IconButton> */}
+            <FormikContainer services={services} Plan={plan} />
           </Box>
         </Stack>
       </Container>

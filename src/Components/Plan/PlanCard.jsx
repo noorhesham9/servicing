@@ -14,8 +14,9 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { motion, useIsPresent } from "framer-motion";
 import { Link } from "react-scroll";
 function PlanCard(Props) {
-  const { info } = Props;
+  const { info, setPlan } = Props;
   const { title, subtitle, features } = info;
+  // console.log(setPlan);
   return (
     <Card
       className="card"
@@ -67,6 +68,9 @@ function PlanCard(Props) {
 
         <CardActions sx={{ py: "20px" }}>
           <Link
+            onClick={() => {
+              setPlan(title);
+            }}
             smooth={true}
             duration={800}
             to="contacts"

@@ -15,6 +15,7 @@ const initialValues = {
   mainSubject: "maintainence",
   subject: "",
   message: "",
+  plan: "",
 };
 const validationSchema = Yup.object({
   Fname: Yup.string().required("Required !"),
@@ -24,9 +25,10 @@ const validationSchema = Yup.object({
   location: Yup.string(),
   subject: Yup.string().required("Required !"),
   message: Yup.string().required("Required !"),
+  // plan: Yup.string().required("Required !"),
 });
 
-function FormikContainer({ services }) {
+function FormikContainer({ services, Plan }) {
   const [open, setOpen] = useState(false);
   const [openerror, setOpenerror] = useState(false);
 
@@ -36,27 +38,27 @@ function FormikContainer({ services }) {
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    axios
-      .post(
-        "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
-        values
-      )
-      .then(() => {
-        setOpen(true);
-        resetForm({
-          Fname: "",
-          Lname: "",
-          email: "",
-          phone: "",
-          location: "",
-          mainSubject: "maintainence",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch(() => {
-        setOpenerror(true);
-      });
+    // axios
+    //   .post(
+    //     "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
+    //     values
+    //   )
+    //   .then(() => {
+    //     setOpen(true);
+    //     resetForm({
+    //       Fname: "",
+    //       Lname: "",
+    //       email: "",
+    //       phone: "",
+    //       location: "",
+    //       mainSubject: "maintainence",
+    //       subject: "",
+    //       message: "",
+    //     });
+    //   })
+    //   .catch(() => {
+    //     setOpenerror(true);
+    //   });
   };
 
   return (
@@ -117,6 +119,14 @@ function FormikContainer({ services }) {
                 control="choose"
                 name="subject"
                 title="subject"
+              />
+              <FormikControl
+                plan={Plan}
+                required
+                // className="planInput"
+                control="radio"
+                name="plan"
+                title="plan"
               />
               <FormikControl
                 control="textarea"

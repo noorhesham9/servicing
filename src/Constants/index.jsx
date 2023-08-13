@@ -169,7 +169,7 @@ export const infoPlanCard = [
   {
     id: 1,
     title: "On Home",
-    subtitle: "advanced Feature ",
+    subtitle: "advanced Feature",
     features: [
       "Basic chat support",
       "Basic chat support",

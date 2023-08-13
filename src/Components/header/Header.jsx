@@ -224,7 +224,7 @@ const Header = ({ home }) => {
             }}>
             {langEnglish ? "EN" : "AR"}
           </IconButton>
-          <IconButton
+          {/* <IconButton
             className={isOpen ? "openToggle " : "closedToggle "}
             onClick={ThemeHandler}
             sx={{
@@ -242,7 +242,7 @@ const Header = ({ home }) => {
               },
             }}>
             {themeWhite ? <WbSunnyIcon /> : <Brightness3Icon />}
-          </IconButton>
+          </IconButton> */}
 
           <motion.nav
             initial={false}

@@ -4,8 +4,7 @@ import { motion } from "framer-motion";
 import { infoPlanCard } from "../../Constants";
 import PlanCard from "./PlanCard";
 import { textVariant } from "../../utils/motion";
-import { SectionWrapper } from "../../hoc";
-function Plan() {
+function Plan({ setPlan }) {
   return (
     <Box
       id="plan"
@@ -19,7 +18,6 @@ function Plan() {
             sx={{
               textAlign: "center",
               marginBottom: "20px",
-
               fontSize: { sm: "50px", xs: "30px" },
               fontWeight: "bold",
               fontFamily: "var(--second-font)",
@@ -41,7 +39,7 @@ function Plan() {
               //     textAlign: "center",
               //   }}
             >
-              <PlanCard info={info} />
+              <PlanCard info={info} setPlan={setPlan} />
             </Grid>
           ))}
         </Grid>
@@ -50,4 +48,4 @@ function Plan() {
   );
 }
 
-export default SectionWrapper(Plan, "about");
+export default Plan;

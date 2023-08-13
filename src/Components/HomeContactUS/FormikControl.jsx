@@ -1,7 +1,7 @@
 import Choose from "./Choose";
 import Input from "./Input";
 import TextArea from "./TextArea";
-
+import Radiooo from "./Radio";
 function FormikControl(Props) {
   const { control, ...rest } = Props;
   switch (control) {
@@ -11,6 +11,8 @@ function FormikControl(Props) {
       return <TextArea {...rest} />;
     case "choose":
       return <Choose {...rest} />;
+    case "radio":
+      return <Radiooo {...rest} />;
 
     default:
       return null;
