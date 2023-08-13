@@ -12,7 +12,7 @@ function Home(Props) {
       <Header home="scroll" i18n={i18n} t={t} />
       <Landing2 t={t} />
       <Services t={t} />
-      <Plan setPlan={setPlan} />
+      <Plan setPlan={setPlan} t={t} />
       <HomeContact name="contactus" plan={plan} />
     </>
   );
