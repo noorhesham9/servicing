@@ -11,7 +11,7 @@ import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 function Footer(Props) {
-  const { t, lang } = Props;
+  const { t, lang, setConatctButton } = Props;
   return (
     <Box
       sx={{ bgcolor: "#0a1411" }}
@@ -63,7 +63,11 @@ function Footer(Props) {
                   <IconButton>
                     <ArrowForwardIcon sx={{ color: "var(--third-color)" }} />
                   </IconButton>
-                  <Link to={info.route}>
+                  <Link
+                    onClick={() => {
+                      setConatctButton(false);
+                    }}
+                    to={info.route}>
                     <Button
                       sx={{
                         color: "white",

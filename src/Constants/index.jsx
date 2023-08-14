@@ -45,6 +45,7 @@ import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import {
   faLaptop,
+  faPlay,
   faMobileScreenButton,
   faComputer,
   faDisplay,
@@ -74,6 +75,7 @@ export const infoCard = [
     bTwo: "cardServiceBtnTwo",
     route: "/mobile-phones",
   },
+
   {
     id: 3,
     icon: faComputer,
@@ -113,6 +115,16 @@ export const infoCard = [
     bOne: "cardServiceBtnOne",
     bTwo: "cardServiceBtnTwo",
     route: "/home-repairs",
+  },
+  {
+    id: 7,
+    useTitle: "Gaming Console",
+    icon: faPlay,
+    title: "gamingconsoleTitle",
+    desc: "gamingconsoleDescription",
+    bOne: "cardServiceBtnOne",
+    bTwo: "cardServiceBtnTwo",
+    route: "/gaming-console",
   },
 ];
 export const firstContactInfo = [

@@ -76,7 +76,7 @@ const services2 = {
 };
 
 const Header = (Props) => {
-  const { home, i18n, t, lang, setlang } = Props;
+  const { home, i18n, t, lang, setlang, setConatctButton } = Props;
   const changeLang = () => {
     i18n.changeLanguage(langEnglish ? "ar" : "en");
     setlang(!lang);
@@ -127,11 +127,23 @@ const Header = (Props) => {
           alignItems: "center",
         }}>
         {home === "route" ? (
-          <LinkRouter to="/" className="logo">
+          <LinkRouter
+            onClick={() => {
+              setConatctButton(false);
+            }}
+            to="/"
+            className="logo">
             Logo
           </LinkRouter>
         ) : (
-          <LinkScroll smooth={true} duration={800} to="home" className="logo">
+          <LinkScroll
+            onClick={() => {
+              setConatctButton(false);
+            }}
+            smooth={true}
+            duration={800}
+            to="home"
+            className="logo">
             Logo
           </LinkScroll>
         )}
@@ -154,6 +166,9 @@ const Header = (Props) => {
             <ListItem>
               {home === "route" ? (
                 <LinkRouter
+                  onClick={() => {
+                    setConatctButton(false);
+                  }}
                   className={` servicesLink_nav  ${
                     lang ? "english-text  linknav" : "arabic-text linknavAR"
                   }`}
@@ -162,6 +177,9 @@ const Header = (Props) => {
                 </LinkRouter>
               ) : (
                 <LinkScroll
+                  onClick={() => {
+                    setConatctButton(false);
+                  }}
                   smooth={true}
                   duration={800}
                   className={` servicesLink_nav  ${
@@ -172,7 +190,104 @@ const Header = (Props) => {
                 </LinkScroll>
               )}
             </ListItem>
-            <ListItem className="servicesListItem">
+
+            {home === "route" ? (
+              <ListItem className="servicesListItem">
+                <a
+                  onClick={PlusOpen}
+                  className={` servicesLink_nav  ${
+                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                  }`}>
+                  {t("landingBtnOne")}
+                </a>
+
+                <div href="#" className="blusServices" onClick={PlusOpen}>
+                  {servicesOpen ? "-" : "+"}
+                </div>
+
+                <Box
+                  sx={{
+                    display: "none",
+                  }}
+                  component={motion.div}
+                  variants={services}
+                  className={
+                    servicesOpen ? "open sevicesBox" : "closed sevicesBox"
+                  }
+                  animate={servicesOpen ? "open" : "closed"}>
+                  <List className="sevicesListBox">
+                    {infoCard.map(({ id, route, title }) => {
+                      return (
+                        <ListItem
+                          onClick={() => {
+                            setConatctButton(false);
+                          }}
+                          className={` ListItemServices desktopnavservice  ${
+                            lang ? "english-text  " : "arabic-text "
+                          }`}
+                          key={id}>
+                          <LinkRouter
+                            onClick={PlusOpen}
+                            className="LInkRouterServices desktopnavserviceLInk"
+                            to={route}>
+                            {t(title)}
+                          </LinkRouter>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
+                </Box>
+              </ListItem>
+            ) : (
+              <ListItem className="servicesListItem">
+                <LinkScroll
+                  onClick={() => {
+                    setConatctButton(false);
+                  }}
+                  smooth={true}
+                  duration={800}
+                  className={` servicesLink_nav  ${
+                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                  }`}
+                  to="services">
+                  {t("landingBtnOne")}
+                </LinkScroll>
+                <div href="#" className="blusServices" onClick={PlusOpen}>
+                  {servicesOpen ? "-" : "+"}
+                </div>
+
+                <Box
+                  sx={{
+                    display: "none",
+                  }}
+                  component={motion.div}
+                  variants={services}
+                  className={
+                    servicesOpen ? "open sevicesBox" : "closed sevicesBox"
+                  }
+                  animate={servicesOpen ? "open" : "closed"}>
+                  <List className="sevicesListBox">
+                    {infoCard.map(({ id, route, title }) => {
+                      return (
+                        <ListItem
+                          className={` ListItemServices desktopnavservice  ${
+                            lang ? "english-text  " : "arabic-text "
+                          }`}
+                          key={id}>
+                          <LinkRouter
+                            onClick={PlusOpen}
+                            className="LInkRouterServices desktopnavserviceLInk"
+                            to={route}>
+                            {t(title)}
+                          </LinkRouter>
+                        </ListItem>
+                      );
+                    })}
+                  </List>
+                </Box>
+              </ListItem>
+            )}
+            {/* <ListItem className="servicesListItem">
               <LinkScroll
                 smooth={true}
                 duration={800}
@@ -215,7 +330,8 @@ const Header = (Props) => {
                   })}
                 </List>
               </Box>
-            </ListItem>
+            </ListItem> */}
+
             <ListItem>
               <LinkScroll
                 smooth={true}
