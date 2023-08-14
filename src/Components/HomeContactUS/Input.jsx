@@ -2,18 +2,17 @@ import { Field } from "formik";
 import { Stack, TextField } from "@mui/material";
 import { useState } from "react";
 function Input(Props) {
-  const { title, required, name, ...rest } = Props;
-
+  const { title, required, name, lang, ...rest } = Props;
   return (
     <Stack className="form-control">
       <Field
-        className="inpuuuutField"
+        className={` inpuuuutField ${lang ? "english-text" : " arabic-text"}`}
         name={name}
         id={name}
         {...rest}
         as={TextField}
         required={required}
-        label={`Enter Your ${title}`}
+        label={`${title}`}
         sx={{
           "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
             borderColor: "var(--primary-color)",
@@ -25,6 +24,9 @@ function Input(Props) {
             {
               borderColor: "var(--third-color)",
             },
+          "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
+            fontFamily: "inherit",
+          },
 
           m: "10px 0",
           "& label": { color: "var(--text-color)" },

@@ -36,16 +36,14 @@ function Footer(Props) {
             <Typography
               color="white"
               textAlign="center"
-              pb={{ xs: "20px", md: "0" }}
-              className={` ${lang ? "english-text" : " arabic-text"}`}>
+              className={` title ${lang ? "english-text" : " arabic-text"}`}
+              pb={{ xs: "20px", md: "0" }}>
               {t("WebsiteDescriptionFooter")}
             </Typography>
           </Stack>
           <Stack className="box">
             <Typography
-              className={` title ${
-                lang ? "english-heading" : " arabic-heading"
-              }`}
+              className={` title ${lang ? "english-text" : " arabic-text"}`}
               fontSize={{
                 xs: "var(--xs-title-second-font-fontSize)",
                 md: "var(--lg-title-second-font-fontSize)",

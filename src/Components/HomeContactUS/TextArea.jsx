@@ -39,7 +39,7 @@ function TextArea(Props) {
               borderColor: "var(--third-color) !important",
             },
         }}
-        label={`Enter your ${title}`}
+        label={`${title}`}
         multiline
         rows={5}
       />

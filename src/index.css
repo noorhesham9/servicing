@@ -107,7 +107,6 @@ a {
 /* ------------------- Arabic ----------------------- */
 .arabic-text{
   font-family: var(--rtl-body-font-f) !important;
-  /* font-size: 24px !important;   */
 }
 .arabic-heading{
   font-family: var(--rtl-heading-font-f) !important;
@@ -285,7 +284,7 @@ font-family: var(--body-font) !important;
 .link {
   font-weight: 500;
   color: white;
-  font-family: var(--body-font) !important;
+  font-size: 18px;
 }
 /* ---------------- */
 .privacy-screen {

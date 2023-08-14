@@ -36,6 +36,21 @@
     "featureFour":"A receipt contract",
     "featureFive":"free devilary",
     "featureSix":"free devilary",
+    "contactSubTitle":"Any question or remarks? Just Write us a message",
+    "contactFirstName":"Enter Your First Name",
+    "contactLastName":"Enter Your Last Name",
+    "contactEmail":"Enter Your Email",
+    "contactPhone":"Enter Your Phone Number",
+    "contactLocation":"Enter Your Location",
+    "contactSubject":"Choose Subject",
+    "contactPlan":"Choose Your Plan",
+    "contactMessage":"Write Your Message About the problem",
+    "contactSubmit":"Submit",
+    "contactInformation":"Contact Information",
+    "contactSubInformation":"Fill up the form and our Team will get back to you within 24 hours",
+    "contactmessageReceived":"The message was received successfully",
+    "contactmessageError":" There is an error, please send an e-mail",
     "footerRights ":"© 2023 All Right Reserved | Created by: Q-Blink Company"
+    
 
 }

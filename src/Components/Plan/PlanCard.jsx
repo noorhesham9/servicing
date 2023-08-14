@@ -29,12 +29,13 @@ function PlanCard(Props) {
             <Typography
               fontWeight="bold"
               textAlign={{ xs: "center", md: "start" }}
-              className={`text ${lang ? "english-heading" : " arabic-heading"}`}
+              className={` text ${
+                lang ? "english-heading" : " arabic-heading"
+              }`}
               fontSize={{
                 xs: "var(--xs-title-second-font-fontSize)",
                 md: "var(--lg-title-second-font-fontSize)",
-              }}
-              fontFamily="var(--second-font)">
+              }}>
               {t(title)}
             </Typography>
             <Typography
@@ -42,7 +43,7 @@ function PlanCard(Props) {
               color="rgb(250,250,250,.6)"
               fontSize="14px"
               pt="7px"
-              className={`  ${lang ? "english-text" : " arabic-text"}`}>
+              className={` ${lang ? " english-text " : " arabic-text "}`}>
               {t(subtitle)}
             </Typography>
           </Stack>
@@ -50,7 +51,7 @@ function PlanCard(Props) {
             textAlign={{ xs: "center", md: "start" }}
             fontSize="var( --xs-title-fontSize)"
             p="50px 0 10px"
-            className={` text ${lang ? "english-text" : " arabic-text"}`}>
+            className={` text ${lang ? " english-text " : " arabic-text "}`}>
             {t("featuresTitle")}
           </Typography>
           <Grid container spacing={1}>

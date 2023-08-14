@@ -11,7 +11,7 @@ import { useState } from "react";
 // import Button from "@mui/material";
 
 const HomeContact = (Props) => {
-  const { name, services, plan, setPlan } = Props;
+  const { name, services, plan, setPlan, t, lang } = Props;
 
   return (
     <Box
@@ -42,11 +42,13 @@ const HomeContact = (Props) => {
         color="var(--title-color)"
         fontSize={{ sm: "50px", xs: "30px" }}
         fontWeight="bold"
-        fontFamily="var(--second-font)">
-        <span style={{ color: "white" }}>Contact</span> US
+        className={` ${lang ? "english-heading" : " arabic-heading"}`}>
+        {t("landingBtnTwo")}
       </Typography>
-      <Typography sx={{ textAlign: "center", fontSize: "18px" }}>
-        Any question or remarks? Just Write us a message
+      <Typography
+        sx={{ textAlign: "center" }}
+        className={` ${lang ? "english-text" : " arabic-text"}`}>
+        {t("contactSubTitle")}
       </Typography>
       <Container sx={{ padding: "15px !important" }}>
         <Stack
@@ -84,12 +86,17 @@ const HomeContact = (Props) => {
               }}
               className="contact__information">
               <Box>
-                <Typography className="headtitle">
-                  Contact Information
+                <Typography
+                  className={` headtitle ${
+                    lang ? "english-heading" : " arabic-text"
+                  }`}>
+                  {t("contactInformation")}
                 </Typography>
-                <Typography className="adviceContact">
-                  Fill up the form and our Team will get back to you within 24
-                  hours
+                <Typography
+                  className={` adviceContact ${
+                    lang ? "english-text" : " arabic-text"
+                  }`}>
+                  {t("contactSubInformation")}
                 </Typography>
               </Box>
               <Stack direction="column" className="mailPhoneGPsContainer">
@@ -145,6 +152,8 @@ const HomeContact = (Props) => {
               services={services}
               Plan={plan}
               setPlan={setPlan}
+              t={t}
+              lang={lang}
             />
           </Box>
         </Stack>

@@ -28,7 +28,9 @@ const validationSchema = Yup.object({
   plan: Yup.string().required("Required !"),
 });
 
-function FormikContainer({ services, Plan, setPlan }) {
+function FormikContainer(Props) {
+  const { services, Plan, setPlan, t, lang } = Props;
+
   {
     services === undefined
       ? (initialValues.subject = "")
@@ -78,15 +80,17 @@ function FormikContainer({ services, Plan, setPlan }) {
                   control="input"
                   name="Fname"
                   type="text"
-                  title="First name"
+                  title={t("contactFirstName")}
                   required
+                  lang={lang}
                 />
                 <FormikControl
                   control="input"
                   name="Lname"
                   type="text"
-                  title="Last name"
+                  title={t("contactLastName")}
                   required
+                  lang={lang}
                 />
               </Stack>
 
@@ -95,29 +99,34 @@ function FormikContainer({ services, Plan, setPlan }) {
                   control="input"
                   name="email"
                   type="email"
-                  title="Email"
+                  title={t("contactEmail")}
                   required
+                  lang={lang}
                 />
                 <FormikControl
                   control="input"
                   name="phone"
                   type="phone"
-                  title="Phone"
+                  title={t("contactPhone")}
                   required
+                  lang={lang}
                 />
               </Stack>
               <FormikControl
                 control="input"
                 name="location"
                 type="text"
-                title="Location"
+                title={t("contactLocation")}
+                lang={lang}
               />
               <FormikControl
                 services={services}
                 className="optionServices"
                 control="choose"
                 name="subject"
-                title="subject"
+                title={t("contactSubject")}
+                t={t}
+                lang={lang}
               />
               <FormikControl
                 plan={Plan}
@@ -125,16 +134,20 @@ function FormikContainer({ services, Plan, setPlan }) {
                 // className="planInput"
                 control="radio"
                 name="plan"
-                title="plan"
+                title={t("contactPlan")}
+                t={t}
+                lang={lang}
               />
               <FormikControl
                 control="textarea"
                 name="message"
-                title="message"
+                title={t("contactMessage")}
+                lang={lang}
               />
               <Button
                 type="submit"
                 variant="contained"
+                className={` ${lang ? "english-text" : " arabic-text"}`}
                 sx={{
                   fontSize: "18px",
                   fontWeight: "bold",
@@ -149,7 +162,7 @@ function FormikContainer({ services, Plan, setPlan }) {
                   p: "10px",
                   borderRadius: "10px",
                 }}>
-                submit
+                {t("contactSubmit")}
               </Button>
               <Snackbar
                 open={open}
@@ -159,7 +172,7 @@ function FormikContainer({ services, Plan, setPlan }) {
                   onClose={handleClose}
                   severity="success"
                   sx={{ width: "100%" }}>
-                  The message was received successfully
+                  {t("contactmessageReceived")}
                 </Alert>
               </Snackbar>
 
@@ -171,7 +184,7 @@ function FormikContainer({ services, Plan, setPlan }) {
                   onClose={handleClose}
                   severity="error"
                   sx={{ width: "100%" }}>
-                  There is an error, please send an e-mail
+                  {t("contactmessageError")}
                 </Alert>
               </Snackbar>
             </Stack>

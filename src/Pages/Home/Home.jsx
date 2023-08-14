@@ -13,7 +13,7 @@ function Home(Props) {
       <Landing2 t={t} lang={lang} setlang={setlang} />
       <Services t={t} lang={lang} />
       <Plan setPlan={setPlan} t={t} lang={lang} />
-      <HomeContact name="contactus" plan={plan} />
+      <HomeContact name="contactus" plan={plan} t={t} lang={lang} />
     </>
   );
 }

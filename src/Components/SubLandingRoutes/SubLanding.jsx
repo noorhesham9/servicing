@@ -4,7 +4,7 @@ import { motion, useIsPresent } from "framer-motion";
 import { ButtonLAnding, Logolanding } from "../../utils/motion";
 
 function SubLanding(Props) {
-  const { title, img, lang } = Props;
+  const { title, img, lang, t } = Props;
   const isPresent = useIsPresent();
 
   return (
@@ -24,27 +24,30 @@ function SubLanding(Props) {
       <Box className="layer"></Box>
       <Stack alignItems="center">
         <Typography
-          className="head-title"
           component={motion.p}
           initial={Logolanding().hidden}
-          animate={Logolanding().show}>
-          {title}
+          animate={Logolanding().show}
+          className={` head-title ${lang ? "english-text" : " arabic-text"}`}>
+          {t(title)}
         </Typography>
         <Stack
           direction="row"
           alignItems="center"
           component={motion.div}
           initial={ButtonLAnding(0.25).hidden}
-          animate={ButtonLAnding(0.25).show}>
+          animate={ButtonLAnding(0.25).show}
+          className={`${lang ? "english-text" : " arabic-text"}`}>
           <Typography className="link" color="rgb(250,250,250,.6)">
             <Link to="/" className="link">
-              Home
+              {t("home")}
             </Link>
           </Typography>
 
           {" | "}
-          <Typography className="link" color="rgb(250,250,250,.6)">
-            {title}
+          <Typography
+            color="rgb(250,250,250,.6)"
+            className={` link ${lang ? "english-text" : " arabic-text"}`}>
+            {t(title)}
           </Typography>
         </Stack>
       </Stack>

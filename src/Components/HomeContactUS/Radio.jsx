@@ -17,8 +17,8 @@ import { infoPlanCard } from "../../Constants";
 //   },
 // ];
 
-const Radiooo = (props) => {
-  const { name, plan, ...rest } = props;
+const Radiooo = (Props) => {
+  const { name, plan, t, title, ...rest } = Props;
   const [checked, setChecked] = useState("");
   useEffect(() => {
     setChecked(plan);
@@ -31,7 +31,7 @@ const Radiooo = (props) => {
         }}
         className="GroubLabel"
         id="demo-radio-buttons-group-label">
-        Choose Your Plan{" "}
+        {t(title)}
       </FormLabel>
 
       <Field

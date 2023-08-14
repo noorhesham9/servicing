@@ -41,7 +41,7 @@ function Plan(Props) {
               //     textAlign: "center",
               //   }}
             >
-              <PlanCard info={info} setPlan={setPlan} t={t} />
+              <PlanCard info={info} setPlan={setPlan} t={t} lang={lang} />
             </Grid>
           ))}
         </Grid>

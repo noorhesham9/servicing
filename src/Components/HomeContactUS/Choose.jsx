@@ -8,7 +8,7 @@ import { Field } from "formik";
 import { infoCard } from "../../Constants";
 import { Subject } from "@mui/icons-material";
 const Choose = (Props) => {
-  const { className, title, name, services, ...rest } = Props;
+  const { className, title, name, services, t, ...rest } = Props;
   const [value, setVAlue] = useState("");
   const handleChange = (event) => {
     setVAlue(event.target.value);
@@ -30,9 +30,7 @@ const Choose = (Props) => {
         }}
         required
         fullWidth>
-        <InputLabel id="demo-simple-select-label">
-          Choose your {title}
-        </InputLabel>
+        <InputLabel id="demo-simple-select-label">{t(title)}</InputLabel>
 
         {services === undefined ? (
           <Field
