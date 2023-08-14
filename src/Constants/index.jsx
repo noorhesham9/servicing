@@ -119,7 +119,7 @@ export const infoCard = [
   {
     id: 7,
     useTitle: "Gaming Console",
-    icon: <FontAwesomeIcon icon="fa-brands fa-playstation" />,
+    icon: faPlay,
     title: "gamingconsoleTitle",
     desc: "gamingconsoleDescription",
     bOne: "cardServiceBtnOne",

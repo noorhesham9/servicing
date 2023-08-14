@@ -6,15 +6,27 @@ import { IconButton } from "@mui/material";
 import { firstContactInfo, secondContactInfo } from "../../Constants";
 
 import { staggerContainer } from "../../utils/motion";
-import { useState } from "react";
+import { createRef, useEffect, useRef, useState } from "react";
 
 // import Button from "@mui/material";
 
 const HomeContact = (Props) => {
-  const { name, services, plan, setPlan } = Props;
+  const conatctRef = useRef(null);
 
+  const { name, services, plan, setPlan, contactButton } = Props;
+
+  useEffect(() => {
+    if (contactButton === undefined || contactButton === false) {
+      return;
+    } else {
+      setTimeout(() => {
+        return conatctRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    }
+  }, [contactButton]);
   return (
     <Box
+      ref={conatctRef}
       name={name}
       id="contacts"
       className=" section__gradient-1"

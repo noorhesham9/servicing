@@ -8,13 +8,21 @@ import {
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box } from "@mui/system";
-import { Link } from "react-router-dom";
+import { Link as LinkRouter } from "react-router-dom";
+import { Link as LInkScroll, Scroll } from "react-scroll";
 import { motion, useIsPresent } from "framer-motion";
+import { use } from "i18next";
+import { useEffect } from "react";
 function ServiceCard(Props) {
-  const { info, t, lang } = Props;
+  const { info, t, lang, setConatctButton } = Props;
   const { icon, title, desc, bOne, bTwo, route } = info;
   const isPresent = useIsPresent();
 
+  // const scrollHandler = () => {
+  //   setTimeout(()=>{
+  //     ref.current?.scrollIntoView({ behavior: 'smooth' });
+  //   },1200)
+  // };
   return (
     <Card className="card">
       <CardMedia sx={{ display: "flex", alignSelf: "center", pt: "40px" }}>
@@ -25,7 +33,7 @@ function ServiceCard(Props) {
         />
       </CardMedia>
       <Box display="flex" flexDirection="column" alignItems="center">
-        <Link
+        <LinkRouter
           to={route}
           className="card-link"
           style={{
@@ -62,7 +70,7 @@ function ServiceCard(Props) {
             justifyContent: "space-between",
             pb: "40px",
           }}>
-          <Link to={route}>
+          <LinkRouter to={route}>
             <Button
               className={` btn ${lang ? "english-text" : " arabic-text"}`}
               variant="outlined"
@@ -78,8 +86,9 @@ function ServiceCard(Props) {
               }}>
               {t(bOne)}
             </Button>
-          </Link>
-          <Link to={`${route}#contacts`}>
+          </LinkRouter>
+
+          <LinkRouter to={route} onClick={() => setConatctButton(true)}>
             <Button
               className={` btn ${lang ? "english-text" : " arabic-text"}`}
               variant="outlined"
@@ -92,7 +101,7 @@ function ServiceCard(Props) {
               }}>
               {t(bTwo)}
             </Button>
-          </Link>
+          </LinkRouter>
         </CardActions>
       </Box>
       <motion.div

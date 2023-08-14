@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Logolanding } from "../../utils/motion";
 
 function Services(Props) {
-  const { t, lang } = Props;
+  const { t, lang, setConatctButton } = Props;
   return (
     <Box
       name="services"
@@ -52,7 +52,12 @@ function Services(Props) {
                 flexDirection: "column",
                 textAlign: "center",
               }}>
-              <ServiceCard info={info} t={t} lang={lang} />
+              <ServiceCard
+                info={info}
+                t={t}
+                lang={lang}
+                setConatctButton={setConatctButton}
+              />
             </Grid>
           ))}
         </Grid>
