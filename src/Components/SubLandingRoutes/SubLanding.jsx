@@ -4,7 +4,7 @@ import { motion, useIsPresent } from "framer-motion";
 import { ButtonLAnding, Logolanding } from "../../utils/motion";
 
 function SubLanding(Props) {
-  const { title, img } = Props;
+  const { title, img, lang } = Props;
   const isPresent = useIsPresent();
 
   return (

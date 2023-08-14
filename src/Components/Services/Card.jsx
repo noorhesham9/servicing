@@ -11,7 +11,7 @@ import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 import { motion, useIsPresent } from "framer-motion";
 function ServiceCard(Props) {
-  const { info, t } = Props;
+  const { info, t, lang } = Props;
   const { icon, title, desc, bOne, bTwo, route } = info;
   const isPresent = useIsPresent();
 
@@ -45,13 +45,13 @@ function ServiceCard(Props) {
               md: "var(--lg-title-second-font-fontSize)",
             }}
             fontFamily="var(--second-font)"
-            className="text">
+            className={` text ${lang ? "english-heading" : " arabic-heading"}`}>
             {t(title)}
           </Typography>
           <Typography
             textAlign="center"
             fontSize="var( --text-fontSize)"
-            className="text"
+            className={` text ${lang ? "english-text" : " arabic-text"}`}
             py="5px">
             {t(desc)}
           </Typography>
@@ -64,7 +64,7 @@ function ServiceCard(Props) {
           }}>
           <Link to={route}>
             <Button
-              className="btn"
+              className={` btn ${lang ? "english-text" : " arabic-text"}`}
               variant="outlined"
               sx={{
                 borderColor: "var(--primary-color)",
@@ -81,7 +81,7 @@ function ServiceCard(Props) {
           </Link>
           <Link to={`${route}#contacts`}>
             <Button
-              className="btn"
+              className={` btn ${lang ? "english-text" : " arabic-text"}`}
               variant="outlined"
               sx={{
                 textTransform: "capitalize",

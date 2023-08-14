@@ -11,7 +11,7 @@ import { infoCard } from "../../Constants";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 function Footer(Props) {
-  const { t } = Props;
+  const { t, lang } = Props;
   return (
     <Box
       sx={{ bgcolor: "#0a1411" }}
@@ -36,13 +36,16 @@ function Footer(Props) {
             <Typography
               color="white"
               textAlign="center"
-              pb={{ xs: "20px", md: "0" }}>
+              pb={{ xs: "20px", md: "0" }}
+              className={` ${lang ? "english-text" : " arabic-text"}`}>
               {t("WebsiteDescriptionFooter")}
             </Typography>
           </Stack>
           <Stack className="box">
             <Typography
-              className="title"
+              className={` title ${
+                lang ? "english-heading" : " arabic-heading"
+              }`}
               fontSize={{
                 xs: "var(--xs-title-second-font-fontSize)",
                 md: "var(--lg-title-second-font-fontSize)",
@@ -68,7 +71,8 @@ function Footer(Props) {
                         color: "white",
                         textTransform: "capitalize",
                         "&:hover": { color: "var(--primary-color)" },
-                      }}>
+                      }}
+                      className={` ${lang ? "english-text" : " arabic-text"}`}>
                       {t(info.title)}
                     </Button>
                   </Link>

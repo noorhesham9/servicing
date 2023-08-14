@@ -1,4 +1,6 @@
 {
+    "home":"الرئيسية",
+    "ContactUS":"اتصل بنا",
     "title":"صيانه",
     "landingBtnOne":"الخدمات",
     "landingBtnTwo":"اتصل بنا",
@@ -22,10 +24,17 @@
     "homeRepairstitle":"تصليحات منزليه",
     "cardServiceBtnOne":"المزيد",
     "cardServiceBtnTwo":"اتصل بنا",
-    "featureOne":"d",
-    "featureTwo":"d",
-    "featureThree":"d",
-    "featureFour":"d",
-    "featureFive":"d",
-    "featureSix":"d"
+    "onHome":"في البيت",
+    "onSite":"في مكان الإصلاح",
+    "featuresTitle":"المميزات",
+    "subFeaturesTitleHome":"المتخصص سيأتي اليك لاصلاح مشكلتك في المنزل",
+    "subFeaturesTitleSite":"الاصلاح سيكون بمقر التصليح",
+    "featuresBtn":"ابدأ",
+    "featureOne":"ضمان لمدة 3 أشهر",
+    "featureTwo":"أقل الأسعار في السوق",
+    "featureThree":"تسليم سريع من 1 إلى 3 أيام",
+    "featureFour":"عقد استلام",
+    "featureFive":"توصيل مجاني",
+    "featureSix":"d",
+    "footerRights ":"© 2023 All Right Reserved | Created by: Q-Blink Company"
 }

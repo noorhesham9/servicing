@@ -5,10 +5,11 @@ import { infoPlanCard } from "../../Constants";
 import PlanCard from "./PlanCard";
 import { textVariant } from "../../utils/motion";
 function Plan(Props) {
-  const { t, setPlan } = Props;
+  const { t, setPlan, lang } = Props;
   return (
     <Box
       id="plan"
+      sx={{ direction: lang ? "ltr" : " rtl" }}
       className="section__gradient-2"
       py="var(--primary-padding)"
       bgcolor="var(--bg-color)">
