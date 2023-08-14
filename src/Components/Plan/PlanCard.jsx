@@ -16,9 +16,7 @@ import { Link } from "react-scroll";
 function PlanCard(Props) {
   const { info, setPlan, t, lang } = Props;
 
-  console.log(t);
   const { title, subtitle, features } = info;
-  // console.log(setPlan);
   return (
     <Card
       className="card"

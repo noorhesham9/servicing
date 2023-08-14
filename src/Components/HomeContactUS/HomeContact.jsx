@@ -11,8 +11,8 @@ import { useState } from "react";
 // import Button from "@mui/material";
 
 const HomeContact = (Props) => {
-  const { name, services, plan } = Props;
-  // const [plan, setPaln] = useState("");
+  const { name, services, plan, setPlan } = Props;
+
   return (
     <Box
       name={name}
@@ -141,7 +141,11 @@ const HomeContact = (Props) => {
               }}>
               omHome
             </IconButton> */}
-            <FormikContainer services={services} Plan={plan} />
+            <FormikContainer
+              services={services}
+              Plan={plan}
+              setPlan={setPlan}
+            />
           </Box>
         </Stack>
       </Container>
