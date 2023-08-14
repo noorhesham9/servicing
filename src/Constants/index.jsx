@@ -186,8 +186,8 @@ export const info = {
 export const infoPlanCard = [
   {
     id: 1,
-    title: "On Home",
-    subtitle: "advanced Feature",
+    title: "onHome",
+    subtitle: "subFeaturesTitleHome",
     features: [
       "featureOne",
       "featureTwo",
@@ -199,8 +199,8 @@ export const infoPlanCard = [
   },
   {
     id: 2,
-    title: "On Site",
-    subtitle: "Basic Feature",
+    title: "onSite",
+    subtitle: "subFeaturesTitleSite",
     features: [
       "featureOne",
       "featureTwo",

@@ -76,9 +76,10 @@ const services2 = {
 };
 
 const Header = (Props) => {
-  const { home, i18n, t } = Props;
+  const { home, i18n, t, lang, setlang } = Props;
   const changeLang = () => {
     i18n.changeLanguage(langEnglish ? "ar" : "en");
+    setlang(!lang);
     setLangEnglish(!langEnglish);
   };
 
@@ -117,6 +118,7 @@ const Header = (Props) => {
       sx={{
         transition: "var(--transition)",
         height: "75px",
+        // direction: lang ? "ltr" : "rtl",
       }}>
       <Container
         className="flex spaceBetween containHeader "
@@ -151,16 +153,22 @@ const Header = (Props) => {
             }}>
             <ListItem>
               {home === "route" ? (
-                <LinkRouter className="homeLink_nav linknav" to="/">
-                  Home
+                <LinkRouter
+                  className={` servicesLink_nav  ${
+                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                  }`}
+                  to="/">
+                  {t("home")}
                 </LinkRouter>
               ) : (
                 <LinkScroll
                   smooth={true}
                   duration={800}
-                  className="homeLink_nav linknav"
+                  className={` servicesLink_nav  ${
+                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                  }`}
                   to="home">
-                  Home
+                  {t("home")}
                 </LinkScroll>
               )}
             </ListItem>
@@ -168,9 +176,11 @@ const Header = (Props) => {
               <LinkScroll
                 smooth={true}
                 duration={800}
-                className="servicesLink_nav linknav"
+                className={` servicesLink_nav  ${
+                  lang ? "english-text  linknav" : "arabic-text linknavAR"
+                }`}
                 to="services">
-                Services
+                {t("landingBtnOne")}
               </LinkScroll>
               <div href="#" className="blusServices" onClick={PlusOpen}>
                 {servicesOpen ? "-" : "+"}
@@ -190,7 +200,9 @@ const Header = (Props) => {
                   {infoCard.map(({ id, route, title }) => {
                     return (
                       <ListItem
-                        className="ListItemServices desktopnavservice"
+                        className={` ListItemServices desktopnavservice  ${
+                          lang ? "english-text  " : "arabic-text "
+                        }`}
                         key={id}>
                         <LinkRouter
                           onClick={PlusOpen}
@@ -208,9 +220,11 @@ const Header = (Props) => {
               <LinkScroll
                 smooth={true}
                 duration={800}
-                className="contactusLink_nav linknav"
+                className={` servicesLink_nav  ${
+                  lang ? "english-text  linknav" : "arabic-text linknavAR"
+                }`}
                 to="contactus">
-                ContactUS
+                {t("ContactUS")}
               </LinkScroll>
             </ListItem>
           </List>
@@ -294,18 +308,27 @@ const Header = (Props) => {
                     {home === "route" ? (
                       <LinkRouter
                         onClick={toggleOpen}
-                        className="homeLink_nav linknavNH"
+                        className={` homeLink_nav linknavNHFS ${
+                          lang
+                            ? "english-text  linknavNH"
+                            : "arabic-text linknavAR"
+                        }`}
                         to="/">
-                        Home
+                        {t("home")}
                       </LinkRouter>
                     ) : (
                       <LinkScroll
                         onClick={toggleOpen}
                         smooth={true}
                         duration={800}
-                        className="homeLink_nav linknavNH"
+                        // className="homeLink_nav linknavNH"
+                        className={` homeLink_nav linknavNHFS ${
+                          lang
+                            ? "english-text  linknavNH"
+                            : "arabic-text linknavAR"
+                        }`}
                         to="home">
-                        Home
+                        {t("home")}
                       </LinkScroll>
                     )}
                   </ListItem>
@@ -314,9 +337,13 @@ const Header = (Props) => {
                       onClick={toggleOpen}
                       smooth={true}
                       duration={800}
-                      className="servicesLink_nav linknavNH"
+                      className={` homeLink_nav linknavNHFS ${
+                        lang
+                          ? "english-text  linknavNH"
+                          : "arabic-text linknavAR"
+                      }`}
                       to="services">
-                      Services
+                      {t("landingBtnOne")}
                     </LinkScroll>
                     <div href="#" className="blusServices2" onClick={PlusOpen2}>
                       {servicesOpen2 ? "-" : "+"}
@@ -332,7 +359,10 @@ const Header = (Props) => {
                         <ListItem className="ListItemServices" key={id}>
                           <LinkRouter
                             onClick={toggleOpen}
-                            className="LInkRouterServices link__nav"
+                            // className="LInkRouterServices link__nav"
+                            className={` LInkRouterServices link__nav ${
+                              lang ? "english-text  " : "arabic-text "
+                            }`}
                             to={route}>
                             {t(title)}
                           </LinkRouter>
@@ -345,9 +375,13 @@ const Header = (Props) => {
                       onClick={toggleOpen}
                       smooth={true}
                       duration={800}
-                      className="contactusLink_nav linknavNH"
+                      className={` homeLink_nav linknavNHFS ${
+                        lang
+                          ? "english-text  linknavNH"
+                          : "arabic-text linknavAR"
+                      }`}
                       to="contactus">
-                      ContactUS
+                      {t("ContactUS")}
                     </LinkScroll>
                   </ListItem>
                 </List>

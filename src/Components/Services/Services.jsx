@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Logolanding } from "../../utils/motion";
 
 function Services(Props) {
-  const { t } = Props;
+  const { t, lang } = Props;
   return (
     <Box
       name="services"
@@ -15,7 +15,9 @@ function Services(Props) {
       py={"var(--primary-padding)"}>
       <Container>
         <Typography
-          className="head-title"
+          className={` head-title ${
+            lang ? "english-heading" : " arabic-heading"
+          }`}
           component={motion.p}
           initial={Logolanding().hidden}
           animate={Logolanding().show}>
@@ -25,7 +27,8 @@ function Services(Props) {
           textAlign="center"
           color="rgb(250,250,250,.6)"
           fontSize="24"
-          mb="20px">
+          mb="20px"
+          className={` ${lang ? "english-text" : " arabic-text"}`}>
           {t("servicesPlaces")}
           <span style={{ color: "white", fontWeight: "bold" }}>
             {t("placeOne")}
@@ -49,7 +52,7 @@ function Services(Props) {
                 flexDirection: "column",
                 textAlign: "center",
               }}>
-              <ServiceCard info={info} t={t} />
+              <ServiceCard info={info} t={t} lang={lang} />
             </Grid>
           ))}
         </Grid>

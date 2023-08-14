@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Ruwudu:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Readex+Pro:wght@200;300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&family=Ruwudu:wght@400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -78,6 +80,9 @@ a {
   --textShdowLanding: 2px 2px hsl(0, 0%, 0%), -2px 2px hsl(0, 0%, 100%),
     2px -2px hsl(0, 0%, 0%), -2px -2px hsl(0, 0%, 100%),
     4px 4px var(--secondary-color);
+    --rtl-body-font-f:  'Noto Kufi Arabic', sans-serif;
+    --rtl-heading-font-f: 'Reem Kufi', sans-serif;
+    --rtl-second-font-f:  'Ruwudu', serif;
 }
 
 .light-theme {
@@ -96,8 +101,25 @@ a {
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 10%);
   --bg-color-alt: rgb(219, 222, 180);
-}
 
+}
+/* -------------- Start Lang------------------------------------------------- */
+/* ------------------- Arabic ----------------------- */
+.arabic-text{
+  font-family: var(--rtl-body-font-f) !important;
+  /* font-size: 24px !important;   */
+}
+.arabic-heading{
+  font-family: var(--rtl-heading-font-f) !important;
+}
+/* ------------------- English -----------------------*/
+.english-text{
+font-family: var(--body-font) !important;
+}
+.english-heading{
+  font-family: var(--second-font) !important;
+}
+/* --------------End Lang----------------------------------------------------- */
 .flex {
   display: flex !important;
 }
@@ -111,7 +133,6 @@ a {
   color: white;
   font-weight: bold;
   padding: 30px 0;
-  font-family: var(--second-font) !important;
   font-size: 65px !important;
   text-align: center;
 }

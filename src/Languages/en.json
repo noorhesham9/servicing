@@ -1,4 +1,6 @@
 {
+    "home":"Home",
+    "ContactUS":"ContactUS",
     "title":"Maintenance",
     "landingBtnOne":"Services",
     "landingBtnTwo":"Contact US",
@@ -22,11 +24,18 @@
     "homeRepairstitle":"Home Repairs",
     "cardServiceBtnOne":"More",
     "cardServiceBtnTwo":"Contact",
+    "onHome":"On Home",
+    "onSite":"On Site",
+    "featuresTitle":"Features",
+    "subFeaturesTitleHome":"The specialist will come to you to fix your problem at home",
+    "subFeaturesTitleSite":"Repair will be the place of repair",
+    "featuresBtn":"Get start",
     "featureOne":"3 months warranty",
-    "featureTwo":" lowest prices in the market.",
-    "featureThree":"A fast delivery of 1 to 3 days .",
-    "featureFour":"A receipt contract.",
-    "featureFive":"free devilary.",
-    "featureSix":"free devilary"
+    "featureTwo":"lowest prices in the market",
+    "featureThree":"A fast delivery of 1 to 3 days",
+    "featureFour":"A receipt contract",
+    "featureFive":"free devilary",
+    "featureSix":"free devilary",
+    "footerRights ":"© 2023 All Right Reserved | Created by: Q-Blink Company"
 
 }

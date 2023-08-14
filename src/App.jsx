@@ -23,11 +23,12 @@ import {
 import { useTranslation } from "react-i18next";
 
 function App() {
+  const [lang, setlang] = React.useState("en");
   const { t, i18n } = useTranslation();
   const element = useRoutes([
     {
       path: "/",
-      element: <Home t={t} i18n={i18n} />,
+      element: <Home t={t} i18n={i18n} lang={lang} setlang={setlang} />,
     },
     {
       path: "/Laptop",
@@ -38,6 +39,8 @@ function App() {
           services="Laptop"
           t={t}
           i18n={i18n}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -50,6 +53,8 @@ function App() {
           services="Computer"
           t={t}
           i18n={i18n}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -62,6 +67,8 @@ function App() {
           services="Mobile Phones"
           i18n={i18n}
           t={t}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -74,6 +81,8 @@ function App() {
           services="Screens"
           t={t}
           i18n={i18n}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -86,6 +95,8 @@ function App() {
           services="Home Repairs"
           t={t}
           i18n={i18n}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -98,6 +109,8 @@ function App() {
           services="Electric Devices"
           t={t}
           i18n={i18n}
+          lang={lang}
+          setlang={setlang}
         />
       ),
     },
@@ -122,7 +135,7 @@ function App() {
         {React.cloneElement(element, { key: location.pathname })}
         <ScrollToTop />
       </AnimatePresence>
-      <Footer t={t} />
+      <Footer t={t} lang={lang} />
     </motion.div>
   );
 }

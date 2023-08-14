@@ -97,7 +97,7 @@ import "swiper/css/effect-fade";
 // ];
 
 const Landing2 = (Props) => {
-  const { t } = Props;
+  const { t, lang } = Props;
   return (
     <Box
       name="home"
@@ -145,14 +145,18 @@ const Landing2 = (Props) => {
               component={motion.p}
               initial={ButtonLAnding(0.25).hidden}
               animate={ButtonLAnding(0.25).show}
-              className="title">
+              // className="title"
+              className={` title ${
+                lang ? "english-text  " : "arabic-heading "
+              }`}>
               {t("title")}
             </Typography>
             <Typography
               component={motion.p}
               initial={ButtonLAnding(0.5).hidden}
               animate={ButtonLAnding(0.5).show}
-              className="brief">
+              fontSize={lang ? "18px" : "24px"}
+              className={` brief ${lang ? "english-text" : " arabic-text"}`}>
               {t("WebsiteDescriptionLanding")}
             </Typography>
             <Box
@@ -169,7 +173,10 @@ const Landing2 = (Props) => {
                 component={motion.div}
                 initial={ButtonLAnding(0.75).hidden}
                 animate={ButtonLAnding(0.75).show}
-                className="servicesButtonLanding">
+                // className="servicesButtonLanding"
+                className={` servicesButtonLanding ${
+                  lang ? "english-heading  " : "arabic-text "
+                }`}>
                 <Link smooth={true} duration={800} to="services">
                   {t("landingBtnOne")}
                 </Link>
@@ -178,7 +185,10 @@ const Landing2 = (Props) => {
                 component={motion.div}
                 initial={ButtonLAnding(0.75).hidden}
                 animate={ButtonLAnding(0.75).show}
-                className="contactButtonLanding">
+                // className="contactButtonLanding"
+                className={` contactButtonLanding ${
+                  lang ? "english-heading  " : "arabic-text "
+                }`}>
                 <Link smooth={true} duration={800} to="contactus">
                   {t("landingBtnTwo")}
                 </Link>
@@ -192,6 +202,9 @@ const Landing2 = (Props) => {
 };
 
 export default Landing2;
+// className={` ListItemServices desktopnavservice  ${
+//   lang ? "english-text  " : "arabic-text "
+// }`}
 
 // <Swiper
 // className="flex contianerLanding"

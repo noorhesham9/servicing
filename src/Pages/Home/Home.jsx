@@ -6,14 +6,14 @@ import Plan from "../../Components/Plan/Plan";
 import { useState } from "react";
 function Home(Props) {
   const [plan, setPlan] = useState("");
-  const { t, i18n } = Props;
+  const { t, i18n, lang, setlang } = Props;
   return (
     <>
-      <Header home="scroll" i18n={i18n} t={t} />
-      <Landing2 t={t} />
-      <Services t={t} />
-      <Plan setPlan={setPlan} t={t} />
-      <HomeContact name="contactus" plan={plan} setPlan={setPlan} />
+      <Header home="scroll" i18n={i18n} t={t} lang={lang} setlang={setlang} />
+      <Landing2 t={t} lang={lang} setlang={setlang} />
+      <Services t={t} lang={lang} />
+      <Plan setPlan={setPlan} t={t} lang={lang} />
+      <HomeContact name="contactus" plan={plan} />
     </>
   );
 }

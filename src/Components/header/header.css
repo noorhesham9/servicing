@@ -70,24 +70,30 @@
   padding-left: 8px;
   opacity: 0.8;
 }
-
+.linknavAR,
+.linknavNH,
 .linknav {
   opacity: 0.5;
   transition: var(--transition);
-  font-weight: 400;
+  font-weight: 500;
   position: relative;
   cursor: pointer;
   color: var(--text-color);
 }
+.linknavNH:hover,
+.linknavAR:hover,
 .linknav:hover {
   opacity: 1;
-  font-weight: 500;
   color: var(--title-color);
 }
+.linknavNH:hover::before,
+.linknavAR:hover::before,
 .linknav:hover::before {
   width: 70%;
 }
-.linknav::before {
+.linknavNH::before,
+.linknavAR::before,
+.linknav::before{
   transition: var(--transition);
   content: "";
   position: absolute;
@@ -95,35 +101,18 @@
   height: 2px;
   background-color: var(--primary-color);
   bottom: -2px;
+}
+.linknavNH::before,
+.linknav::before{
   left: 0;
 }
-
-.linknavNH {
-  transition: var(--transition);
-  font-weight: 400;
-  position: relative;
-  cursor: pointer;
-  color: var(--text-color);
+.linknavAR::before{
+  right: 0;
+}
+.linknavNHFS {
   font-size: 22px;
 }
-.linknavNH:hover {
-  opacity: 1;
-  font-weight: 500;
-  color: var(--title-color);
-}
-.linknavNH:hover::before {
-  width: 70%;
-}
-.linknavNH::before {
-  transition: var(--transition);
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  bottom: -2px;
-  left: 0;
-}
+
 
 .header {
   z-index: 1000;
