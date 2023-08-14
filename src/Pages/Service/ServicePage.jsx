@@ -11,11 +11,17 @@ function ServicePage(Props) {
   return (
     <>
       <Header home="route" i18n={i18n} t={t} />
-      <SubLanding title={title} img={img} />
+      <SubLanding title={title} img={img} t={t} />
       <Plan t={t} setPlan={setPlan} />
       {/* <About /> */}
       {/* <Contact /> */}
-      <HomeContact name="contactus" services={services} plan={plan} />
+      <HomeContact
+        name="contactus"
+        services={services}
+        plan={plan}
+        t={t}
+        setPlan={setPlan}
+      />
     </>
   );
 }

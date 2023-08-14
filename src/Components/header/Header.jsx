@@ -334,7 +334,7 @@ const Header = (Props) => {
                             onClick={toggleOpen}
                             className="LInkRouterServices link__nav"
                             to={route}>
-                            {title}
+                            {t(title)}
                           </LinkRouter>
                         </ListItem>
                       );

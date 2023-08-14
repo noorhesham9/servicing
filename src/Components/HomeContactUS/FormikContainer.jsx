@@ -28,38 +28,36 @@ const validationSchema = Yup.object({
   plan: Yup.string().required("Required !"),
 });
 
-function FormikContainer({ services, Plan }) {
+function FormikContainer({ services, Plan, setPlan }) {
+  {
+    services === undefined
+      ? (initialValues.subject = "")
+      : (initialValues.subject = services);
+  }
+
   const [open, setOpen] = useState(false);
   const [openerror, setOpenerror] = useState(false);
-
   const handleClose = () => {
     setOpen(false);
     setOpenerror(false);
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    // axios
-    //   .post(
-    //     "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
-    //     values
-    //   )
-    //   .then(() => {
-    //     setOpen(true);
-    //     resetForm({
-    //       Fname: "",
-    //       Lname: "",
-    //       email: "",
-    //       phone: "",
-    //       location: "",
-    //       mainSubject: "maintainence",
-    //       subject: "",
-    //       message: "",
-    //       plan: "",
-    //     });
-    //   })
-    //   .catch(() => {
-    //     setOpenerror(true);
-    //   });
+    console.log("start");
+
+    axios
+      .post(
+        "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
+        values
+      )
+      .then(() => {
+        setOpen(true);
+        resetForm({ values: initialValues });
+        setPlan("");
+      })
+      .catch(() => {
+        setOpenerror(true);
+      });
   };
 
   return (
@@ -135,9 +133,6 @@ function FormikContainer({ services, Plan }) {
                 title="message"
               />
               <Button
-                // onClick={()=>{
-
-                // }}
                 type="submit"
                 variant="contained"
                 sx={{
