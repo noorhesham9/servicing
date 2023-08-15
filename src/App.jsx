@@ -136,7 +136,7 @@ function App() {
           contactButton={contactButton}
           title="Gaming-Console"
           img={console}
-          services="Gaming-Console"
+          services="Gaming Console"
           t={t}
           i18n={i18n}
           lang={lang}
