@@ -22,6 +22,8 @@ import {
 import console from "./assets/console.jpg";
 import { useTranslation } from "react-i18next";
 
+// trying to bush from laptop
+
 function App() {
   const [contactButton, setConatctButton] = useState(false);
   const [lang, setlang] = useCycle("en", "ar");
@@ -153,7 +155,8 @@ function App() {
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
-      variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
+      variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
+    >
       <ScrollUp />
       <AnimatePresence mode="wait">
         {React.cloneElement(element, { key: location.pathname })}
