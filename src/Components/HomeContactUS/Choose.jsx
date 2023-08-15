@@ -20,7 +20,7 @@ const Choose = (Props) => {
       setVAlue(services);
     }
   }, []);
-  console.log(services);
+
   return (
     <Box>
       <FormControl
