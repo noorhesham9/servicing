@@ -13,7 +13,7 @@ import { createRef, useEffect, useRef, useState } from "react";
 const HomeContact = (Props) => {
   const conatctRef = useRef(null);
 
-  const { name, services, plan, setPlan, contactButton } = Props;
+  const { name, services, plan, setPlan, contactButton, lang, t } = Props;
 
   useEffect(() => {
     if (contactButton === undefined || contactButton === false) {

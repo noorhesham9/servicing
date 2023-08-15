@@ -43,8 +43,7 @@ function App() {
       path: "/Laptop",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Laptop"
+          title="laptoptitle"
           img={laptop02}
           services="Laptop"
           t={t}
@@ -58,8 +57,7 @@ function App() {
       path: "/Computer",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Computer"
+          title="computertitle"
           img={computer}
           services="Computer"
           t={t}
@@ -73,8 +71,7 @@ function App() {
       path: "/mobile-phones",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Mobile Phones"
+          title="mobilephonetitle"
           img={mobile}
           services="Mobile Phones"
           i18n={i18n}
@@ -88,8 +85,7 @@ function App() {
       path: "/screens",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Screens"
+          title="screentitle"
           img={screen}
           services="Screens"
           t={t}
@@ -103,8 +99,7 @@ function App() {
       path: "/home-repairs",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Home Repairs"
+          title="homeRepairstitle"
           img={homeRepair}
           services="Home Repairs"
           t={t}
@@ -118,8 +113,7 @@ function App() {
       path: "/electric-devices",
       element: (
         <ServicePage
-          contactButton={contactButton}
-          title="Electric Devices"
+          title="electricDevicetitle"
           img={electricDevices}
           services="Electric Devices"
           t={t}
@@ -134,7 +128,7 @@ function App() {
       element: (
         <ServicePage
           contactButton={contactButton}
-          title="Gaming-Console"
+          title="gamingConsoleTitle"
           img={console}
           services="Gaming-Console"
           t={t}

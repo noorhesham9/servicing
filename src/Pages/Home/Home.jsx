@@ -7,6 +7,7 @@ import { useState } from "react";
 function Home(Props) {
   const [plan, setPlan] = useState("");
   const { t, i18n, lang, setlang, setConatctButton } = Props;
+
   return (
     <>
       <Header

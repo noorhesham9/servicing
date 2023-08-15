@@ -8,7 +8,7 @@ import { Field } from "formik";
 import { infoCard } from "../../Constants";
 import { Subject } from "@mui/icons-material";
 const Choose = (Props) => {
-  const { className, title, name, services, t, ...rest } = Props;
+  const { className, title, name, services, t, lang, ...rest } = Props;
   const [value, setVAlue] = useState("");
   const handleChange = (event) => {
     setVAlue(event.target.value);
@@ -34,6 +34,9 @@ const Choose = (Props) => {
 
         {services === undefined ? (
           <Field
+            // className={`  ${
+            //   lang ? "english-text" : " arabic-text"
+            // }`}
             sx={{
               "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
                 borderColor: "var(--primary-color)",
@@ -48,6 +51,9 @@ const Choose = (Props) => {
                 fontWeight: "700",
                 color: "var(--third-color)",
               },
+              // "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
+              //   fontFamily: lang === "en" ? "var(--)" : "arabic-text",
+              // },
 
               "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
                 {
@@ -61,7 +67,7 @@ const Choose = (Props) => {
             id={name}
             {...rest}
             className={className}
-            label={`Choose your ${title}*`}>
+            label={`${title}*`}>
             {infoCard.map(({ id, useTitle }) => {
               return (
                 <MenuItem key={id} value={useTitle}>
@@ -100,7 +106,7 @@ const Choose = (Props) => {
             id={name}
             {...rest}
             className={className}
-            label={`Choose your ${title}*`}>
+            label={`${title}*`}>
             {infoCard.map(({ id, useTitle }) => {
               return (
                 <MenuItem key={id} value={useTitle}>

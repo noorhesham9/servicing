@@ -6,7 +6,6 @@ import { ButtonLAnding, Logolanding } from "../../utils/motion";
 function SubLanding(Props) {
   const { title, img, lang, t } = Props;
   const isPresent = useIsPresent();
-
   return (
     <Box
       sx={{
@@ -27,7 +26,9 @@ function SubLanding(Props) {
           component={motion.p}
           initial={Logolanding().hidden}
           animate={Logolanding().show}
-          className={` head-title ${lang ? "english-text" : " arabic-text"}`}>
+          className={` head-title ${
+            lang ? "english-heading" : " arabic-heading"
+          }`}>
           {t(title)}
         </Typography>
         <Stack
