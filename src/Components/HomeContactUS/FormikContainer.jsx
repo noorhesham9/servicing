@@ -55,7 +55,7 @@ function FormikContainer(Props) {
       .then(() => {
         setOpen(true);
         resetForm({ values: initialValues });
-        setPlan("");
+        // setPlan("");
       })
       .catch(() => {
         setOpenerror(true);
