@@ -46,7 +46,7 @@ function FormikContainer(Props) {
 
   const handleSubmit = (values, { resetForm }) => {
     console.log("start");
-
+    // console.log(values);
     axios
       .post(
         "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
@@ -68,6 +68,7 @@ function FormikContainer(Props) {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}>
       {(formik) => {
+        // console.log(formik.values);
         return (
           <Form
             className="form"

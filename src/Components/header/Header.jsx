@@ -116,7 +116,6 @@ const Header = (Props) => {
   //   setLangEnglish(!langEnglish);
   // };
   const isPresent = useIsPresent();
-  console.log(langEnglish);
   return (
     <Box
       width={"100%"}
