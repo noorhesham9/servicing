@@ -54,12 +54,12 @@ const HomeContact = (Props) => {
         color="var(--title-color)"
         fontSize={{ sm: "50px", xs: "30px" }}
         fontWeight="bold"
-        className={` ${lang ? "english-heading" : " arabic-heading"}`}>
+        className={` ${lang === "en" ? "english-heading" : " arabic-heading"}`}>
         {t("landingBtnTwo")}
       </Typography>
       <Typography
         sx={{ textAlign: "center" }}
-        className={` ${lang ? "english-text" : " arabic-text"}`}>
+        className={` ${lang === "en" ? "english-text" : " arabic-text"}`}>
         {t("contactSubTitle")}
       </Typography>
       <Container sx={{ padding: "15px !important" }}>
@@ -100,13 +100,13 @@ const HomeContact = (Props) => {
               <Box>
                 <Typography
                   className={` headtitle ${
-                    lang ? "english-heading" : " arabic-text"
+                    lang === "en" ? "english-heading" : " arabic-text"
                   }`}>
                   {t("contactInformation")}
                 </Typography>
                 <Typography
                   className={` adviceContact ${
-                    lang ? "english-text" : " arabic-text"
+                    lang === "en" ? "english-text" : " arabic-text"
                   }`}>
                   {t("contactSubInformation")}
                 </Typography>

@@ -9,7 +9,7 @@ function Plan(Props) {
   return (
     <Box
       id="plan"
-      sx={{ direction: lang ? "ltr" : " rtl" }}
+      sx={{ direction: lang === "en" ? "ltr" : " rtl" }}
       className="section__gradient-2"
       py="var(--primary-padding)"
       bgcolor="var(--bg-color)">

@@ -147,7 +147,7 @@ const Landing2 = (Props) => {
               animate={ButtonLAnding(0.25).show}
               // className="title"
               className={` title ${
-                lang ? "english-text  " : "arabic-heading "
+                lang === "en" ? "english-text  " : "arabic-heading "
               }`}>
               {t("title")}
             </Typography>
@@ -155,8 +155,10 @@ const Landing2 = (Props) => {
               component={motion.p}
               initial={ButtonLAnding(0.5).hidden}
               animate={ButtonLAnding(0.5).show}
-              fontSize={lang ? "18px" : "24px"}
-              className={` brief ${lang ? "english-text" : " arabic-text"}`}>
+              fontSize={lang === "en" ? "18px" : "24px"}
+              className={` brief ${
+                lang === "en" ? "english-text" : " arabic-text"
+              }`}>
               {t("WebsiteDescriptionLanding")}
             </Typography>
             <Box
@@ -175,7 +177,7 @@ const Landing2 = (Props) => {
                 animate={ButtonLAnding(0.75).show}
                 // className="servicesButtonLanding"
                 className={` servicesButtonLanding ${
-                  lang ? "english-heading  " : "arabic-text "
+                  lang === "en" ? "english-heading  " : "arabic-text "
                 }`}>
                 <Link smooth={true} duration={800} to="services">
                   {t("landingBtnOne")}
@@ -187,7 +189,7 @@ const Landing2 = (Props) => {
                 animate={ButtonLAnding(0.75).show}
                 // className="contactButtonLanding"
                 className={` contactButtonLanding ${
-                  lang ? "english-heading  " : "arabic-text "
+                  lang === "en" ? "english-heading  " : "arabic-text "
                 }`}>
                 <Link smooth={true} duration={800} to="contactus">
                   {t("landingBtnTwo")}

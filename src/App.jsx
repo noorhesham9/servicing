@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 import { useLocation, useRoutes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import ServicePage from "./Pages/Service/ServicePage";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, useCycle } from "framer-motion";
 import * as React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -24,7 +24,7 @@ import { useTranslation } from "react-i18next";
 
 function App() {
   const [contactButton, setConatctButton] = useState(false);
-  const [lang, setlang] = useState("en");
+  const [lang, setlang] = useCycle("en", "ar");
   const { t, i18n } = useTranslation();
   const element = useRoutes([
     {
@@ -130,7 +130,7 @@ function App() {
           contactButton={contactButton}
           title="gamingConsoleTitle"
           img={console}
-          services="Gaming-Console"
+          services="Gaming Console"
           t={t}
           i18n={i18n}
           lang={lang}
