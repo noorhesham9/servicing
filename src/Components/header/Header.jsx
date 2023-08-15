@@ -77,11 +77,6 @@ const services2 = {
 
 const Header = (Props) => {
   const { home, i18n, t, lang, setlang, setConatctButton } = Props;
-  const changeLang = () => {
-    i18n.changeLanguage(langEnglish ? "ar" : "en");
-    setlang(!lang);
-    setLangEnglish(!langEnglish);
-  };
 
   const [top, settop] = useState(true);
   useEffect(() => {
@@ -95,12 +90,24 @@ const Header = (Props) => {
   }, []);
 
   const [themeWhite, setThemeWhite] = useState(true);
-  const [langEnglish, setLangEnglish] = useState(true);
+  const [langEnglish, setLangEnglish] = useState(lang === "en");
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [servicesOpen, PlusOpen] = useCycle(false, true);
   const [servicesOpen2, PlusOpen2] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
+
+  // if(lang === 'en'){
+  //   setLangEnglish(true)
+  // }else{
+  //   setLangEnglish(false)
+  // }
+
+  const changeLang = () => {
+    i18n.changeLanguage(langEnglish ? "ar" : "en");
+    setlang();
+    setLangEnglish(!langEnglish);
+  };
 
   const ThemeHandler = () => {
     setThemeWhite(!themeWhite);
@@ -109,7 +116,7 @@ const Header = (Props) => {
   //   setLangEnglish(!langEnglish);
   // };
   const isPresent = useIsPresent();
-
+  console.log(langEnglish);
   return (
     <Box
       width={"100%"}
@@ -170,7 +177,9 @@ const Header = (Props) => {
                     setConatctButton(false);
                   }}
                   className={` servicesLink_nav  ${
-                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                    lang === "en"
+                      ? "english-text  linknav"
+                      : "arabic-text linknavAR"
                   }`}
                   to="/">
                   {t("home")}
@@ -183,7 +192,9 @@ const Header = (Props) => {
                   smooth={true}
                   duration={800}
                   className={` servicesLink_nav  ${
-                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                    lang === "en"
+                      ? "english-text  linknav"
+                      : "arabic-text linknavAR"
                   }`}
                   to="home">
                   {t("home")}
@@ -196,7 +207,9 @@ const Header = (Props) => {
                 <a
                   onClick={PlusOpen}
                   className={` servicesLink_nav  ${
-                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                    lang === "en"
+                      ? "english-text  linknav"
+                      : "arabic-text linknavAR"
                   }`}>
                   {t("landingBtnOne")}
                 </a>
@@ -223,7 +236,7 @@ const Header = (Props) => {
                             setConatctButton(false);
                           }}
                           className={` ListItemServices desktopnavservice  ${
-                            lang ? "english-text  " : "arabic-text "
+                            lang === "en" ? "english-text  " : "arabic-text "
                           }`}
                           key={id}>
                           <LinkRouter
@@ -247,7 +260,9 @@ const Header = (Props) => {
                   smooth={true}
                   duration={800}
                   className={` servicesLink_nav  ${
-                    lang ? "english-text  linknav" : "arabic-text linknavAR"
+                    lang === "en"
+                      ? "english-text  linknav"
+                      : "arabic-text linknavAR"
                   }`}
                   to="services">
                   {t("landingBtnOne")}
@@ -271,7 +286,7 @@ const Header = (Props) => {
                       return (
                         <ListItem
                           className={` ListItemServices desktopnavservice  ${
-                            lang ? "english-text  " : "arabic-text "
+                            lang === "en" ? "english-text  " : "arabic-text "
                           }`}
                           key={id}>
                           <LinkRouter
@@ -337,7 +352,9 @@ const Header = (Props) => {
                 smooth={true}
                 duration={800}
                 className={` servicesLink_nav  ${
-                  lang ? "english-text  linknav" : "arabic-text linknavAR"
+                  lang === "en"
+                    ? "english-text  linknav"
+                    : "arabic-text linknavAR"
                 }`}
                 to="contactus">
                 {t("ContactUS")}
@@ -425,7 +442,7 @@ const Header = (Props) => {
                       <LinkRouter
                         onClick={toggleOpen}
                         className={` homeLink_nav linknavNHFS ${
-                          lang
+                          lang === "en"
                             ? "english-text  linknavNH"
                             : "arabic-text linknavAR"
                         }`}
@@ -439,7 +456,7 @@ const Header = (Props) => {
                         duration={800}
                         // className="homeLink_nav linknavNH"
                         className={` homeLink_nav linknavNHFS ${
-                          lang
+                          lang === "en"
                             ? "english-text  linknavNH"
                             : "arabic-text linknavAR"
                         }`}
@@ -454,7 +471,7 @@ const Header = (Props) => {
                       smooth={true}
                       duration={800}
                       className={` homeLink_nav linknavNHFS ${
-                        lang
+                        lang === "en"
                           ? "english-text  linknavNH"
                           : "arabic-text linknavAR"
                       }`}
@@ -477,7 +494,7 @@ const Header = (Props) => {
                             onClick={toggleOpen}
                             // className="LInkRouterServices link__nav"
                             className={` LInkRouterServices link__nav ${
-                              lang ? "english-text  " : "arabic-text "
+                              lang === "en" ? "english-text  " : "arabic-text "
                             }`}
                             to={route}>
                             {t(title)}
@@ -492,7 +509,7 @@ const Header = (Props) => {
                       smooth={true}
                       duration={800}
                       className={` homeLink_nav linknavNHFS ${
-                        lang
+                        lang === "en"
                           ? "english-text  linknavNH"
                           : "arabic-text linknavAR"
                       }`}

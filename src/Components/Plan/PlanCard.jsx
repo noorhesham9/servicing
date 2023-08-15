@@ -30,7 +30,7 @@ function PlanCard(Props) {
               fontWeight="bold"
               textAlign={{ xs: "center", md: "start" }}
               className={` text ${
-                lang ? "english-heading" : " arabic-heading"
+                lang === "en" ? "english-heading" : " arabic-heading"
               }`}
               fontSize={{
                 xs: "var(--xs-title-second-font-fontSize)",
@@ -43,7 +43,9 @@ function PlanCard(Props) {
               color="rgb(250,250,250,.6)"
               fontSize="14px"
               pt="7px"
-              className={` ${lang ? " english-text " : " arabic-text "}`}>
+              className={` ${
+                lang === "en" ? " english-text " : " arabic-text "
+              }`}>
               {t(subtitle)}
             </Typography>
           </Stack>
@@ -51,7 +53,9 @@ function PlanCard(Props) {
             textAlign={{ xs: "center", md: "start" }}
             fontSize="var( --xs-title-fontSize)"
             p="50px 0 10px"
-            className={` text ${lang ? " english-text " : " arabic-text "}`}>
+            className={` text ${
+              lang === "en" ? " english-text " : " arabic-text "
+            }`}>
             {t("featuresTitle")}
           </Typography>
           <Grid container spacing={1}>
@@ -65,7 +69,9 @@ function PlanCard(Props) {
                     <CheckCircleIcon sx={{ color: "white" }} />
                   </IconButton>
                   <Typography
-                    className={`  ${lang ? "english-text" : " arabic-text"}`}>
+                    className={`  ${
+                      lang === "en" ? "english-text" : " arabic-text"
+                    }`}>
                     {t(info)}
                   </Typography>
                 </Stack>
@@ -89,7 +95,9 @@ function PlanCard(Props) {
                 width: "100%",
                 textTransform: "capitalize",
               }}
-              className={` btn ${lang ? "english-text" : " arabic-text"}`}
+              className={` btn ${
+                lang === "en" ? "english-text" : " arabic-text"
+              }`}
               variant="outlined">
               {t("featuresBtn")}
             </Button>

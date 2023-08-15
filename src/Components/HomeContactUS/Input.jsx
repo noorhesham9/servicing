@@ -6,7 +6,9 @@ function Input(Props) {
   return (
     <Stack className="form-control">
       <Field
-        className={` inpuuuutField ${lang ? "english-text" : " arabic-text"}`}
+        className={` inpuuuutField ${
+          lang === "en" ? "english-text" : " arabic-text"
+        }`}
         name={name}
         id={name}
         {...rest}

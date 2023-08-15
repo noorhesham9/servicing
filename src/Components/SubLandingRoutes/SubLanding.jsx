@@ -27,7 +27,9 @@ function SubLanding(Props) {
           component={motion.p}
           initial={Logolanding().hidden}
           animate={Logolanding().show}
-          className={` head-title ${lang ? "english-text" : " arabic-text"}`}>
+          className={` head-title ${
+            lang === "en" ? "english-text" : " arabic-text"
+          }`}>
           {t(title)}
         </Typography>
         <Stack
@@ -36,7 +38,7 @@ function SubLanding(Props) {
           component={motion.div}
           initial={ButtonLAnding(0.25).hidden}
           animate={ButtonLAnding(0.25).show}
-          className={`${lang ? "english-text" : " arabic-text"}`}>
+          className={`${lang === "en" ? "english-text" : " arabic-text"}`}>
           <Typography className="link" color="rgb(250,250,250,.6)">
             <Link to="/" className="link">
               {t("home")}
@@ -46,7 +48,9 @@ function SubLanding(Props) {
           {" | "}
           <Typography
             color="rgb(250,250,250,.6)"
-            className={` link ${lang ? "english-text" : " arabic-text"}`}>
+            className={` link ${
+              lang === "en" ? "english-text" : " arabic-text"
+            }`}>
             {t(title)}
           </Typography>
         </Stack>

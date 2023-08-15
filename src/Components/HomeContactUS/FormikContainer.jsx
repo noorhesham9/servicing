@@ -147,7 +147,9 @@ function FormikContainer(Props) {
               <Button
                 type="submit"
                 variant="contained"
-                className={` ${lang ? "english-text" : " arabic-text"}`}
+                className={` ${
+                  lang === "en" ? "english-text" : " arabic-text"
+                }`}
                 sx={{
                   fontSize: "18px",
                   fontWeight: "bold",

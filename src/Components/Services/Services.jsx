@@ -16,7 +16,7 @@ function Services(Props) {
       <Container>
         <Typography
           className={` head-title ${
-            lang ? "english-heading" : " arabic-heading"
+            lang === "en" ? "english-heading" : " arabic-heading"
           }`}
           component={motion.p}
           initial={Logolanding().hidden}
@@ -28,7 +28,7 @@ function Services(Props) {
           color="rgb(250,250,250,.6)"
           fontSize="24"
           mb="20px"
-          className={` ${lang ? "english-text" : " arabic-text"}`}>
+          className={` ${lang === "en" ? "english-text" : " arabic-text"}`}>
           {t("servicesPlaces")}
           <span style={{ color: "white", fontWeight: "bold" }}>
             {t("placeOne")}

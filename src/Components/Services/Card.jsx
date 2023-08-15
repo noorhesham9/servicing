@@ -53,13 +53,17 @@ function ServiceCard(Props) {
               md: "var(--lg-title-second-font-fontSize)",
             }}
             fontFamily="var(--second-font)"
-            className={` text ${lang ? "english-heading" : " arabic-heading"}`}>
+            className={` text ${
+              lang === "en" ? "english-heading" : " arabic-heading"
+            }`}>
             {t(title)}
           </Typography>
           <Typography
             textAlign="center"
             fontSize="var( --text-fontSize)"
-            className={` text ${lang ? "english-text" : " arabic-text"}`}
+            className={` text ${
+              lang === "en" ? "english-text" : " arabic-text"
+            }`}
             py="5px">
             {t(desc)}
           </Typography>
@@ -72,7 +76,9 @@ function ServiceCard(Props) {
           }}>
           <LinkRouter to={route}>
             <Button
-              className={` btn ${lang ? "english-text" : " arabic-text"}`}
+              className={` btn ${
+                lang === "en" ? "english-text" : " arabic-text"
+              }`}
               variant="outlined"
               sx={{
                 borderColor: "var(--primary-color)",
@@ -90,7 +96,9 @@ function ServiceCard(Props) {
 
           <LinkRouter to={route} onClick={() => setConatctButton(true)}>
             <Button
-              className={` btn ${lang ? "english-text" : " arabic-text"}`}
+              className={` btn ${
+                lang === "en" ? "english-text" : " arabic-text"
+              }`}
               variant="outlined"
               sx={{
                 textTransform: "capitalize",
