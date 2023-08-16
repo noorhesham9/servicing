@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 function ServicePage(Props) {
   const [plan, setPlan] = useState("");
   const { title, img, services, t, i18n, lang, setlang, contactButton } = Props;
-  console.log(contactButton);
   return (
     <>
       <Header home="route" i18n={i18n} t={t} lang={lang} setlang={setlang} />

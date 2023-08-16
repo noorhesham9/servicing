@@ -27,7 +27,7 @@ function Input(Props) {
               borderColor: "var(--third-color)",
             },
           "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
-            fontFamily: "inherit",
+            fontFamily: "inherit !important",
           },
 
           m: "10px 0",

@@ -23,7 +23,7 @@
     "screentitle":"Screens",
     "electricDevicetitle":"Electric Devices",
     "homeRepairstitle":"Home Repairs",
-    "gamingConsoleTitle":"Gaming Console ",
+    "gamingConsoleTitle":"Gaming Console",
     "cardServiceBtnOne":"More",
     "cardServiceBtnTwo":"Contact",
     "onHome":"On Home",
@@ -36,8 +36,9 @@
     "featureTwo":"lowest prices in the market",
     "featureThree":"A fast delivery of 1 to 3 days",
     "featureFour":"A receipt contract",
-    "featureFive":"free devilary",
+    "featureFive":"there is no tip for anyone",
     "featureSix":"free devilary",
+    "featureSiven":"The best specialists",
     "contactSubTitle":"Any question or remarks? Just Write us a message",
     "contactFirstName":"Enter Your First Name",
     "contactLastName":"Enter Your Last Name",
@@ -53,6 +54,7 @@
     "contactmessageReceived":"The message was received successfully",
     "contactmessageError":" There is an error, please send an e-mail",
     "footerRights ":"© 2023 All Right Reserved | Created by: Q-Blink Company"
+    
     
 
 }

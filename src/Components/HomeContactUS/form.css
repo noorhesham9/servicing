@@ -104,18 +104,21 @@
   -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
 }
 
-.radioControl {
+ .radioControl {
   border: 1px solid var(--primary-color) !important;
   border-radius: 10px;
 }
+
 .radioControl .GroubLabel {
   padding: 10px;
   color: white;
   transition: var(--transition);
 }
-.radioControl .GroubLabel.Mui-focused {
+/* .radioControl .GroubLabel.Mui-focused {
   color: var(--third-color) !important;
-}
+} */
+
+
 .radioControl .RadioGroub {
   display: flex;
   padding: 10px;
@@ -135,7 +138,16 @@
 }
 .radioControl .RadioGroub .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked ~ .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
   color: var(--primary-color) !important;
+  font-family: inherit !important;
+  font-size: 22px;
 }
-.radioControl:hover .GroubLabel {
-  color: var(--third-color) !important;
-}/*# sourceMappingURL=form.css.map */
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  font-family: inherit !important;
+  font-size: 18px;
+}
+
+
+/*# sourceMappingURL=form.css.map */
+/* .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: var(--body-font) !important;
+} */

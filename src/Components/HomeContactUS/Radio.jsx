@@ -18,7 +18,7 @@ import { infoPlanCard } from "../../Constants";
 // ];
 
 const Radiooo = (Props) => {
-  const { name, plan, t, title, ...rest } = Props;
+  const { name, plan, t, title, lang, ...rest } = Props;
   const [checked, setChecked] = useState("");
   useEffect(() => {
     setChecked(plan);
@@ -29,7 +29,9 @@ const Radiooo = (Props) => {
         style={{
           color: "white",
         }}
-        className="GroubLabel"
+        className={` GroubLabel  ${
+          lang === "en" ? "english-text" : " arabic-text"
+        }`}
         id="demo-radio-buttons-group-label">
         {t(title)}
       </FormLabel>
@@ -52,7 +54,16 @@ const Radiooo = (Props) => {
               value={title}
               key={inedx}
               control={<Radio />}
-              label={title}
+              label={t(title)}
+              // sx={{
+              //   "& .css-1lxp84z-MuiFormControlLabel-root .MuiFormControlLabel-label":
+              //     {
+              //       fontSize: "25px !important",
+              //     },
+              // }}
+              className={`  ${
+                lang === "en" ? "english-heading" : " arabic-text"
+              }`}
             />
           );
         })}

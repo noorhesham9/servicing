@@ -68,7 +68,6 @@ function FormikContainer(Props) {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}>
       {(formik) => {
-        // console.log(formik.values);
         return (
           <Form
             className="form"

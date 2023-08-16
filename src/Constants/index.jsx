@@ -59,7 +59,7 @@ export const infoCard = [
     id: 1,
     icon: faLaptop,
     title: "laptoptitle",
-    useTitle: "Laptop",
+    useTitle: "laptoptitle",
     desc: "laptopDescription",
     bOne: "cardServiceBtnOne",
     bTwo: "cardServiceBtnTwo",
@@ -67,7 +67,7 @@ export const infoCard = [
   },
   {
     id: 2,
-    useTitle: "Mobile Phones",
+    useTitle: "mobilephonetitle",
     icon: faMobileScreenButton,
     title: "mobilephonetitle",
     desc: "mobilephoneDescription",
@@ -79,7 +79,7 @@ export const infoCard = [
   {
     id: 3,
     icon: faComputer,
-    useTitle: "Computer",
+    useTitle: "computertitle",
     title: "computertitle",
     desc: "computerDescription",
     bOne: "cardServiceBtnOne",
@@ -89,7 +89,7 @@ export const infoCard = [
   {
     id: 4,
     icon: faDisplay,
-    useTitle: "Screens",
+    useTitle: "screentitle",
     title: "screentitle",
     desc: "laptopDescription",
     bOne: "cardServiceBtnOne",
@@ -99,7 +99,7 @@ export const infoCard = [
   {
     id: 5,
     icon: faFan,
-    useTitle: "Electric Devices",
+    useTitle: "electricDevicetitle",
     title: "electricDevicetitle",
     desc: "electricDeviceDescription",
     bOne: "cardServiceBtnOne",
@@ -108,7 +108,7 @@ export const infoCard = [
   },
   {
     id: 6,
-    useTitle: "Home Repairs",
+    useTitle: "homeRepairstitle",
     icon: faScrewdriverWrench,
     title: "homeRepairstitle",
     desc: "homeRepairsDescription",
@@ -118,7 +118,7 @@ export const infoCard = [
   },
   {
     id: 7,
-    useTitle: "Gaming Console",
+    useTitle: "gamingConsoleTitle",
     icon: faPlay,
     title: "gamingConsoleTitle",
     desc: "gamingConsoleDescription",
@@ -191,10 +191,11 @@ export const infoPlanCard = [
     features: [
       "featureOne",
       "featureTwo",
-      "featureThree",
-      "featureFour",
+      // "featureThree",
+      // "featureFour",
       "featureFive",
       "featureSix",
+      "featureSiven",
     ],
   },
   {

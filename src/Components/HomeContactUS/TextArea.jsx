@@ -1,7 +1,7 @@
 import { Field } from "formik";
 import { Box, TextField } from "@mui/material";
 function TextArea(Props) {
-  const { title, name, ...rest } = Props;
+  const { title, name, lang, ...rest } = Props;
   return (
     <Box className="form-control ">
       <Field
@@ -38,8 +38,12 @@ function TextArea(Props) {
             {
               borderColor: "var(--third-color) !important",
             },
+          "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
+            fontFamily: "inherit !important",
+          },
         }}
         label={`${title}`}
+        className={`  ${lang === "en" ? "english-text" : " arabic-text"}`}
         multiline
         rows={5}
       />

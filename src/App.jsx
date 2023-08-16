@@ -24,7 +24,7 @@ import { useTranslation } from "react-i18next";
 
 function App() {
   const [contactButton, setConatctButton] = useState(false);
-  const [lang, setlang] = useCycle("en", "ar");
+  const [lang, setlang] = useCycle("ar", "en");
   const { t, i18n } = useTranslation();
   const element = useRoutes([
     {

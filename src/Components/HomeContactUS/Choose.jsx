@@ -10,6 +10,8 @@ import { Subject } from "@mui/icons-material";
 const Choose = (Props) => {
   const { className, title, name, services, t, lang, ...rest } = Props;
   const [value, setVAlue] = useState("");
+  // console.log({ value });
+
   const handleChange = (event) => {
     setVAlue(event.target.value);
   };
@@ -31,13 +33,14 @@ const Choose = (Props) => {
         }}
         required
         fullWidth>
-        <InputLabel id="demo-simple-select-label">{t(title)}</InputLabel>
+        <InputLabel
+          id="demo-simple-select-label"
+          className={`  ${lang === "en" ? "english-text" : " arabic-text"}`}>
+          {t(title)}
+        </InputLabel>
 
         {services === undefined ? (
           <Field
-            // className={`  ${
-            //   lang ? "english-text" : " arabic-text"
-            // }`}
             sx={{
               "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
                 borderColor: "var(--primary-color)",
@@ -52,9 +55,6 @@ const Choose = (Props) => {
                 fontWeight: "700",
                 color: "var(--third-color)",
               },
-              // "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
-              //   fontFamily: lang === "en" ? "var(--)" : "arabic-text",
-              // },
 
               "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
                 {
@@ -69,10 +69,16 @@ const Choose = (Props) => {
             {...rest}
             className={className}
             label={`${title}*`}>
-            {infoCard.map(({ id, useTitle }) => {
+            {infoCard.map((info) => {
+              const { id, useTitle } = info;
               return (
-                <MenuItem key={id} value={useTitle}>
-                  {useTitle}
+                <MenuItem
+                  key={id}
+                  value={t(useTitle)}
+                  className={`  ${
+                    lang === "en" ? "english-text" : " arabic-text"
+                  }`}>
+                  {t(useTitle)}
                 </MenuItem>
               );
             })}
@@ -102,7 +108,7 @@ const Choose = (Props) => {
             labelId="demo-simple-select-label"
             as={Select}
             name="subject"
-            value={value}
+            value={t(value)}
             required
             id={name}
             {...rest}
@@ -110,8 +116,8 @@ const Choose = (Props) => {
             label={`${title}*`}>
             {infoCard.map(({ id, useTitle }) => {
               return (
-                <MenuItem key={id} value={useTitle}>
-                  {useTitle}
+                <MenuItem key={id} value={t(useTitle)}>
+                  {t(useTitle)}
                 </MenuItem>
               );
             })}
