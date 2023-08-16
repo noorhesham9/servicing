@@ -77,7 +77,7 @@ const services2 = {
 
 const Header = (Props) => {
   const { home, i18n, t, lang, setlang, setConatctButton } = Props;
-
+  console.log(setConatctButton);
   const [top, settop] = useState(true);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -125,20 +125,23 @@ const Header = (Props) => {
         transition: "var(--transition)",
         height: "75px",
         // direction: lang ? "ltr" : "rtl",
-      }}>
+      }}
+    >
       <Container
         className="flex spaceBetween containHeader "
         sx={{
           height: "100%",
           alignItems: "center",
-        }}>
+        }}
+      >
         {home === "route" ? (
           <LinkRouter
             onClick={() => {
               setConatctButton(false);
             }}
             to="/"
-            className="logo">
+            className="logo"
+          >
             Logo
           </LinkRouter>
         ) : (
@@ -149,7 +152,8 @@ const Header = (Props) => {
             smooth={true}
             duration={800}
             to="home"
-            className="logo">
+            className="logo"
+          >
             Logo
           </LinkScroll>
         )}
@@ -161,14 +165,16 @@ const Header = (Props) => {
             justifyContent: "center",
             alignItems: "center",
             color: "--title-color",
-          }}>
+          }}
+        >
           <List
             className="listLInks_Header"
             sx={{
               justifyContent: "center",
               alignItems: "center",
               letterSpacing: "0.6px",
-            }}>
+            }}
+          >
             <ListItem>
               {home === "route" ? (
                 <LinkRouter
@@ -180,7 +186,8 @@ const Header = (Props) => {
                       ? "english-text  linknav"
                       : "arabic-text linknavAR"
                   }`}
-                  to="/">
+                  to="/"
+                >
                   {t("home")}
                 </LinkRouter>
               ) : (
@@ -195,7 +202,8 @@ const Header = (Props) => {
                       ? "english-text  linknav"
                       : "arabic-text linknavAR"
                   }`}
-                  to="home">
+                  to="home"
+                >
                   {t("home")}
                 </LinkScroll>
               )}
@@ -209,7 +217,8 @@ const Header = (Props) => {
                     lang === "en"
                       ? "english-text  linknav"
                       : "arabic-text linknavAR"
-                  }`}>
+                  }`}
+                >
                   {t("landingBtnOne")}
                 </a>
 
@@ -226,7 +235,8 @@ const Header = (Props) => {
                   className={
                     servicesOpen ? "open sevicesBox" : "closed sevicesBox"
                   }
-                  animate={servicesOpen ? "open" : "closed"}>
+                  animate={servicesOpen ? "open" : "closed"}
+                >
                   <List className="sevicesListBox">
                     {infoCard.map(({ id, route, title }) => {
                       return (
@@ -237,11 +247,13 @@ const Header = (Props) => {
                           className={` ListItemServices desktopnavservice  ${
                             lang === "en" ? "english-text  " : "arabic-text "
                           }`}
-                          key={id}>
+                          key={id}
+                        >
                           <LinkRouter
                             onClick={PlusOpen}
                             className="LInkRouterServices desktopnavserviceLInk"
-                            to={route}>
+                            to={route}
+                          >
                             {t(title)}
                           </LinkRouter>
                         </ListItem>
@@ -263,7 +275,8 @@ const Header = (Props) => {
                       ? "english-text  linknav"
                       : "arabic-text linknavAR"
                   }`}
-                  to="services">
+                  to="services"
+                >
                   {t("landingBtnOne")}
                 </LinkScroll>
                 <div href="#" className="blusServices" onClick={PlusOpen}>
@@ -279,7 +292,8 @@ const Header = (Props) => {
                   className={
                     servicesOpen ? "open sevicesBox" : "closed sevicesBox"
                   }
-                  animate={servicesOpen ? "open" : "closed"}>
+                  animate={servicesOpen ? "open" : "closed"}
+                >
                   <List className="sevicesListBox">
                     {infoCard.map(({ id, route, title }) => {
                       return (
@@ -287,11 +301,13 @@ const Header = (Props) => {
                           className={` ListItemServices desktopnavservice  ${
                             lang === "en" ? "english-text  " : "arabic-text "
                           }`}
-                          key={id}>
+                          key={id}
+                        >
                           <LinkRouter
                             onClick={PlusOpen}
                             className="LInkRouterServices desktopnavserviceLInk"
-                            to={route}>
+                            to={route}
+                          >
                             {t(title)}
                           </LinkRouter>
                         </ListItem>
@@ -355,7 +371,8 @@ const Header = (Props) => {
                     ? "english-text  linknav"
                     : "arabic-text linknavAR"
                 }`}
-                to="contactus">
+                to="contactus"
+              >
                 {t("ContactUS")}
               </LinkScroll>
             </ListItem>
@@ -373,7 +390,8 @@ const Header = (Props) => {
               justifyContent: "center",
               alignItems: "center",
               transition: "var(--transition)",
-            }}>
+            }}
+          >
             {langEnglish ? "AR" : "EN"}
           </IconButton>
           {/* <IconButton
@@ -401,7 +419,8 @@ const Header = (Props) => {
             className={isOpen ? "open" : "closed"}
             animate={isOpen ? "open" : "closed"}
             custom={height}
-            ref={containerRef}>
+            ref={containerRef}
+          >
             <MenuToggle
               toggle={() => toggleOpen()}
               className={
@@ -419,7 +438,8 @@ const Header = (Props) => {
                 top: "0",
               }}
               className="background"
-              variants={sidebar}>
+              variants={sidebar}
+            >
               <Box
                 style={{
                   fontSize: "50px",
@@ -430,12 +450,14 @@ const Header = (Props) => {
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 <List
                   sx={{
                     padding: "20px",
                     letterSpacing: "0.6px",
-                  }}>
+                  }}
+                >
                   <ListItem>
                     {home === "route" ? (
                       <LinkRouter
@@ -445,7 +467,8 @@ const Header = (Props) => {
                             ? "english-text  linknavNH"
                             : "arabic-text linknavAR"
                         }`}
-                        to="/">
+                        to="/"
+                      >
                         {t("home")}
                       </LinkRouter>
                     ) : (
@@ -459,7 +482,8 @@ const Header = (Props) => {
                             ? "english-text  linknavNH"
                             : "arabic-text linknavAR"
                         }`}
-                        to="home">
+                        to="home"
+                      >
                         {t("home")}
                       </LinkScroll>
                     )}
@@ -474,7 +498,8 @@ const Header = (Props) => {
                           ? "english-text  linknavNH"
                           : "arabic-text linknavAR"
                       }`}
-                      to="services">
+                      to="services"
+                    >
                       {t("landingBtnOne")}
                     </LinkScroll>
                     <div href="#" className="blusServices2" onClick={PlusOpen2}>
@@ -485,7 +510,8 @@ const Header = (Props) => {
                   <motion.div
                     variants={services2}
                     animate={servicesOpen2 ? "open" : "closed"}
-                    className={"containsevrviceLinks"}>
+                    className={"containsevrviceLinks"}
+                  >
                     {infoCard.map(({ id, route, title }) => {
                       return (
                         <ListItem className="ListItemServices" key={id}>
@@ -495,7 +521,8 @@ const Header = (Props) => {
                             className={` LInkRouterServices link__nav ${
                               lang === "en" ? "english-text  " : "arabic-text "
                             }`}
-                            to={route}>
+                            to={route}
+                          >
                             {t(title)}
                           </LinkRouter>
                         </ListItem>
@@ -512,7 +539,8 @@ const Header = (Props) => {
                           ? "english-text  linknavNH"
                           : "arabic-text linknavAR"
                       }`}
-                      to="contactus">
+                      to="contactus"
+                    >
                       {t("ContactUS")}
                     </LinkScroll>
                   </ListItem>

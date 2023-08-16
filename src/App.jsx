@@ -21,7 +21,7 @@ import {
 } from "./assets";
 import console from "./assets/console.jpg";
 import { useTranslation } from "react-i18next";
-
+import { infoCard } from "./Constants";
 // trying to bush from laptop
 
 function App() {
@@ -45,9 +45,11 @@ function App() {
       path: "/Laptop",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="laptoptitle"
           img={laptop02}
-          services="Laptop"
+          services={`${infoCard[0].services}`}
           t={t}
           i18n={i18n}
           lang={lang}
@@ -59,9 +61,11 @@ function App() {
       path: "/Computer",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="computertitle"
           img={computer}
-          services="Computer"
+          services={`${infoCard[2].services}`}
           t={t}
           i18n={i18n}
           lang={lang}
@@ -73,9 +77,11 @@ function App() {
       path: "/mobile-phones",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="mobilephonetitle"
           img={mobile}
-          services="Mobile Phones"
+          services={`${infoCard[1].services}`}
           i18n={i18n}
           t={t}
           lang={lang}
@@ -87,9 +93,11 @@ function App() {
       path: "/screens",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="screentitle"
           img={screen}
-          services="Screens"
+          services={`${infoCard[3].services}`}
           t={t}
           i18n={i18n}
           lang={lang}
@@ -101,9 +109,11 @@ function App() {
       path: "/home-repairs",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="homeRepairstitle"
           img={homeRepair}
-          services="Home Repairs"
+          services={`${infoCard[5].services}`}
           t={t}
           i18n={i18n}
           lang={lang}
@@ -115,9 +125,11 @@ function App() {
       path: "/electric-devices",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
+          contactButton={contactButton}
           title="electricDevicetitle"
           img={electricDevices}
-          services="Electric Devices"
+          services={`${infoCard[4].services}`}
           t={t}
           i18n={i18n}
           lang={lang}
@@ -129,10 +141,11 @@ function App() {
       path: "/gaming-console",
       element: (
         <ServicePage
+          setConatctButton={setConatctButton}
           contactButton={contactButton}
           title="gamingConsoleTitle"
           img={console}
-          services="Gaming Console"
+          services={`${infoCard[6].services}`}
           t={t}
           i18n={i18n}
           lang={lang}

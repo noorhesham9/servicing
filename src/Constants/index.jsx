@@ -4,7 +4,8 @@ export const LandingImage = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="251"
       height="251"
-      viewBox="0 0 800 800">
+      viewBox="0 0 800 800"
+    >
       <g fill="none" stroke="#16A100" strokeWidth="1">
         <path d="M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63" />
         <path d="M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764" />
@@ -57,6 +58,7 @@ import { homeRepair } from "../assets";
 export const infoCard = [
   {
     id: 1,
+    services: "laptopservices",
     icon: faLaptop,
     title: "laptoptitle",
     useTitle: "laptoptitle",
@@ -67,6 +69,7 @@ export const infoCard = [
   },
   {
     id: 2,
+    services: "mobilephoneservices",
     useTitle: "mobilephonetitle",
     icon: faMobileScreenButton,
     title: "mobilephonetitle",
@@ -78,6 +81,7 @@ export const infoCard = [
 
   {
     id: 3,
+    services: "computerservices",
     icon: faComputer,
     useTitle: "computertitle",
     title: "computertitle",
@@ -89,6 +93,7 @@ export const infoCard = [
   {
     id: 4,
     icon: faDisplay,
+    services: "screenservices",
     useTitle: "screentitle",
     title: "screentitle",
     desc: "laptopDescription",
@@ -99,6 +104,7 @@ export const infoCard = [
   {
     id: 5,
     icon: faFan,
+    services: "electricdeviceservices",
     useTitle: "electricDevicetitle",
     title: "electricDevicetitle",
     desc: "electricDeviceDescription",
@@ -108,6 +114,7 @@ export const infoCard = [
   },
   {
     id: 6,
+    services: "homeRepairsservices",
     useTitle: "homeRepairstitle",
     icon: faScrewdriverWrench,
     title: "homeRepairstitle",
@@ -119,6 +126,7 @@ export const infoCard = [
   {
     id: 7,
     useTitle: "gamingConsoleTitle",
+    services: "gamingconsoleservices",
     icon: faPlay,
     title: "gamingConsoleTitle",
     desc: "gamingConsoleDescription",
