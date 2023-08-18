@@ -24,6 +24,9 @@ function Services(Props) {
           {t("landingBtnOne")}
         </Typography>
         <Typography
+          component={motion.p}
+          initial={Logolanding().hidden}
+          animate={Logolanding().show}
           textAlign="center"
           color="rgb(250,250,250,.6)"
           fontSize="24"

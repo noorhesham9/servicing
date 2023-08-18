@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // import { Link } from "react-scroll";
 import { infoPlanCard } from "../../Constants";
 import PlanCard from "./PlanCard";
-import { textVariant } from "../../utils/motion";
+import { Logolanding, textVariant } from "../../utils/motion";
 function Plan(Props) {
   const { t, setPlan, lang } = Props;
   return (
@@ -14,20 +14,24 @@ function Plan(Props) {
       py="var(--primary-padding)"
       bgcolor="var(--bg-color)">
       <Container className="containerforAbout">
-        <motion.div variants={textVariant()}>
-          <Typography
-            className="AboutUS"
-            sx={{
-              textAlign: "center",
-              marginBottom: "20px",
-              fontSize: { sm: "50px", xs: "30px" },
-              fontWeight: "bold",
-              fontFamily: "var(--second-font)",
-              color: "var(--text-color)",
-            }}>
-            Choose your Plan
-          </Typography>
-        </motion.div>
+        <Typography
+          // className="AboutUS"
+          className={` text ${
+            lang === "en" ? "english-heading" : " arabic-heading"
+          }`}
+          component={motion.p}
+          initial={Logolanding().hidden}
+          animate={Logolanding().show}
+          sx={{
+            textAlign: "center",
+            marginBottom: "20px",
+            fontSize: { sm: "50px", xs: "30px" },
+            fontWeight: "bold",
+            fontFamily: "var(--second-font)",
+            color: "var(--text-color)",
+          }}>
+          {t("planTitle")}
+        </Typography>
         <Grid container spacing={2}>
           {infoPlanCard.map((info) => (
             <Grid

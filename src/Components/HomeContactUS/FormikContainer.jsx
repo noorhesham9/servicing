@@ -66,17 +66,14 @@ function FormikContainer(Props) {
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
+      onSubmit={handleSubmit}>
       {(formik) => {
-        console.log(formik.values);
         return (
           <Form
             className="form"
             style={{
               width: "100%",
-            }}
-          >
+            }}>
             <Stack justifyContent="space-between">
               <Stack className="FnameAndLname">
                 <FormikControl
@@ -163,20 +160,17 @@ function FormikContainer(Props) {
                   m: "15px 0",
                   p: "10px",
                   borderRadius: "10px",
-                }}
-              >
+                }}>
                 {t("contactSubmit")}
               </Button>
               <Snackbar
                 open={open}
                 autoHideDuration={6000}
-                onClose={handleClose}
-              >
+                onClose={handleClose}>
                 <Alert
                   onClose={handleClose}
                   severity="success"
-                  sx={{ width: "100%" }}
-                >
+                  sx={{ width: "100%" }}>
                   {t("contactmessageReceived")}
                 </Alert>
               </Snackbar>
@@ -184,13 +178,11 @@ function FormikContainer(Props) {
               <Snackbar
                 open={openerror}
                 autoHideDuration={6000}
-                onClose={handleClose}
-              >
+                onClose={handleClose}>
                 <Alert
                   onClose={handleClose}
                   severity="error"
-                  sx={{ width: "100%" }}
-                >
+                  sx={{ width: "100%" }}>
                   {t("contactmessageError")}
                 </Alert>
               </Snackbar>

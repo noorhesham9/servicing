@@ -10,7 +10,6 @@ import { Subject } from "@mui/icons-material";
 const Choose = (Props) => {
   const { className, title, name, services, t, lang, ...rest } = Props;
   const [value, setVAlue] = useState("");
-  console.log({ value });
 
   useEffect(() => {
     if (services === undefined) {
@@ -28,12 +27,10 @@ const Choose = (Props) => {
           color: "var(--text-color) !important",
         }}
         required
-        fullWidth
-      >
+        fullWidth>
         <InputLabel
           id="demo-simple-select-label"
-          className={`  ${lang === "en" ? "english-text" : " arabic-text"}`}
-        >
+          className={`  ${lang === "en" ? "english-text" : " arabic-text"}`}>
           {t(title)}
         </InputLabel>
 
@@ -66,8 +63,7 @@ const Choose = (Props) => {
             id={name}
             {...rest}
             className={className}
-            label={`${title}*`}
-          >
+            label={`${title}*`}>
             {infoCard.map((info) => {
               const { id, useTitle } = info;
               return (
@@ -76,8 +72,7 @@ const Choose = (Props) => {
                   value={t(useTitle)}
                   className={`  ${
                     lang === "en" ? "english-text" : " arabic-text"
-                  }`}
-                >
+                  }`}>
                   {t(useTitle)}
                 </MenuItem>
               );
@@ -113,8 +108,7 @@ const Choose = (Props) => {
             id={name}
             {...rest}
             className={className}
-            label={`${title}*`}
-          >
+            label={`${title}*`}>
             {infoCard.map(({ id, useTitle }) => {
               return (
                 <MenuItem key={id} value={t(useTitle)}>

@@ -46,7 +46,7 @@ function Footer(Props) {
           <Stack className="box">
             <Typography
               className={` title ${
-                lang === "en" ? "english-text" : " arabic-text"
+                lang === "en" ? "english-heading" : " arabic-heading"
               }`}
               fontSize={{
                 xs: "var(--xs-title-second-font-fontSize)",
