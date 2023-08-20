@@ -34,6 +34,10 @@ function Input(Props) {
           "& .css-1v4ccyo:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "var(--third-color)",
           },
+          "& .css-1v4ccyo.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "var(--third-color) !important",
+          },
+
           m: "10px 0",
           "& label": { color: "var(--text-color)" },
           "& input": {
