@@ -110,11 +110,20 @@
 .radioControl {
   border: 1px solid var(--primary-color) !important;
   border-radius: 10px;
+  label {
+    .Mui-checked {
+      color: var(--third-color) !important;
+    }
+  }
+  .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
+    font-family: inherit;
+  }
+
   .GroubLabel {
     padding: 10px;
     color: white;
     transition: var(--transition);
-    &.Mui-focused {
+    &.Mui-checked {
       color: var(--third-color) !important;
     }
   }

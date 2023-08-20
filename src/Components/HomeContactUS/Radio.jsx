@@ -8,14 +8,6 @@ import InputLabel from "@mui/material/InputLabel";
 import FormLabel from "@mui/material/FormLabel";
 import { Field } from "formik";
 import { infoPlanCard } from "../../Constants";
-// const Maintitle = [
-//   {
-//     title: "On Home",
-//   },
-//   {
-//     title: "On Site",
-//   },
-// ];
 
 const Radiooo = (Props) => {
   const { name, plan, t, title, lang, ...rest } = Props;
@@ -62,7 +54,7 @@ const Radiooo = (Props) => {
               //     },
               // }}
               className={`  ${
-                lang === "en" ? "english-heading" : " arabic-text"
+                lang === "en" ? "english-heading" : "arabic-text"
               }`}
             />
           );

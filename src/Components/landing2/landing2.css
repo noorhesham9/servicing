@@ -32,8 +32,10 @@
   padding-bottom: 10px;
 }
 .contianerLanding .brief {
+  font-family: var(--body-font);
   color: var(--title-color);
   padding-bottom: 20px;
+  font-size: 17px;
 }
 .contianerLanding .servicesButtonLanding {
   background: #131f1c;
