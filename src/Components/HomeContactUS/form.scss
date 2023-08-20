@@ -46,39 +46,39 @@
   }
 }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+.MuiInputLabel-root {
   color: var(--text-color) !important;
 }
-.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+.MuiInputLabel-root.Mui-focused {
   color: var(--third-color) !important;
 }
 
 .inpuuuutField {
-  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  .MuiOutlinedInput-notchedOutline {
     transition: var(--transition);
     border-color: var(--primary-color);
   }
 
-  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover
+  .MuiInputBase-root.MuiOutlinedInput-root:hover
     .MuiOutlinedInput-notchedOutline {
     border-color: var(--third-color);
   }
-  .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+  .MuiInputBase-root.MuiOutlinedInput-root.Mui-focused
     .MuiOutlinedInput-notchedOutline {
     border-color: var(--third-color);
   }
 }
+
 .optionServices {
-  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  .MuiOutlinedInput-notchedOutline {
     transition: var(--transition);
-    border-color: var(--primary-color);
+    border-color: var(--primary-color) !important;
   }
   &:hover .MuiOutlinedInput-notchedOutline {
     border-color: var(--third-color) !important;
   }
-  &.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
-    .MuiOutlinedInput-notchedOutline {
-    border-color: var(--third-color);
+  &.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: var(--third-color) !important;
   }
 }
 

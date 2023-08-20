@@ -45,34 +45,34 @@
   flex: 0 0 48.5%;
 }
 
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+.MuiInputLabel-root {
   color: var(--text-color) !important;
 }
 
-.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+.MuiInputLabel-root.Mui-focused {
   color: var(--third-color) !important;
 }
 
-.inpuuuutField .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+.inpuuuutField .MuiOutlinedInput-notchedOutline {
   transition: var(--transition);
   border-color: var(--primary-color);
 }
-.inpuuuutField .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+.inpuuuutField .MuiInputBase-root.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
   border-color: var(--third-color);
 }
-.inpuuuutField .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+.inpuuuutField .MuiInputBase-root.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: var(--third-color);
 }
 
-.optionServices .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+.optionServices .MuiOutlinedInput-notchedOutline {
   transition: var(--transition);
-  border-color: var(--primary-color);
+  border-color: var(--primary-color) !important;
 }
 .optionServices:hover .MuiOutlinedInput-notchedOutline {
   border-color: var(--third-color) !important;
 }
-.optionServices.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-  border-color: var(--third-color);
+.optionServices.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--third-color) !important;
 }
 
 .radioControl {
