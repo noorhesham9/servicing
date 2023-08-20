@@ -31,7 +31,7 @@ function Input(Props) {
             {
               borderColor: "var(--third-color)",
             },
-          "&.css-1v4ccyo:hover .MuiOutlinedInput-notchedOutline": {
+          "& .css-1v4ccyo:hover .MuiOutlinedInput-notchedOutline": {
             borderColor: "var(--third-color)",
           },
           m: "10px 0",
