@@ -87,7 +87,6 @@ const Header = (Props) => {
       }
     });
   }, []);
-
   const [themeWhite, setThemeWhite] = useState(true);
   const [langEnglish, setLangEnglish] = useState(lang === "en");
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -108,12 +107,6 @@ const Header = (Props) => {
     setLangEnglish(!langEnglish);
   };
 
-  const ThemeHandler = () => {
-    setThemeWhite(!themeWhite);
-  };
-  // const langHandler = () => {
-  //   setLangEnglish(!langEnglish);
-  // };
   const isPresent = useIsPresent();
   return (
     <Box
