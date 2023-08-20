@@ -16,19 +16,21 @@ function Input(Props) {
         required={required}
         label={`${title}`}
         sx={{
-          "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
+          "& .MuiOutlinedInput-notchedOutline.css-igs3ac": {
             borderColor: "var(--primary-color)",
             "&:hover": {
               borderColor: "var(--primary-color)",
             },
           },
+
+          "& .MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline":
+            {
+              borderColor: "var(--primary-color)",
+            },
           "& .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
             {
               borderColor: "var(--third-color)",
             },
-          "& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root": {
-            fontFamily: "inherit !important",
-          },
 
           m: "10px 0",
           "& label": { color: "var(--text-color)" },
@@ -41,10 +43,6 @@ function Input(Props) {
             fontWeight: "700",
             color: "var(--third-color)",
           },
-          "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
-            {
-              borderColor: "var(--third-color)",
-            },
         }}
       />
     </Stack>
