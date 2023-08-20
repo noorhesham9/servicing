@@ -42,7 +42,7 @@
 }
 .FnameAndLname .form-control,
 .emailandphone .form-control {
-  flex: 0 0 48.5%;
+  flex: 0 0 48%;
 }
 
 .MuiInputLabel-root {
@@ -51,8 +51,12 @@
 
 .MuiInputLabel-root.Mui-focused {
   color: var(--third-color) !important;
+  font-family: "Roboto, Helvetica, Arial, sans-serif" !important;
 }
 
+.inpuuuutField {
+  margin-bottom: 10px;
+}
 .inpuuuutField .MuiOutlinedInput-notchedOutline {
   transition: var(--transition);
   border-color: var(--primary-color);
@@ -106,10 +110,6 @@
 }
 
 @media (max-width: 600px) {
-  .FnameAndLname,
-  .emailandphone {
-    gap: 0px;
-  }
   .FnameAndLname .form-control,
   .emailandphone .form-control {
     flex: 0 0 100%;
