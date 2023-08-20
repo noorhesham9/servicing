@@ -17,7 +17,6 @@ function ServicePage(Props) {
     contactButton,
     setConatctButton,
   } = Props;
-  console.log(contactButton);
   return (
     <>
       <Header
