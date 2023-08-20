@@ -36,26 +36,6 @@ const Choose = (Props) => {
 
         {services === undefined ? (
           <Field
-            sx={{
-              "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                borderColor: "var(--primary-color)",
-              },
-              "& label": { color: "var(--text-color)" },
-              "& input": {
-                borderColor: "var(--third-color)",
-                color: "var(--text-color)",
-                borderRadius: "10px",
-              },
-              "& .MuiInputLabel-root.Mui-focused": {
-                fontWeight: "700",
-                color: "var(--third-color)",
-              },
-
-              "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: "var(--third-color)",
-                },
-            }}
             labelId="demo-simple-select-label"
             as={Select}
             name="subject"
@@ -80,26 +60,6 @@ const Choose = (Props) => {
           </Field>
         ) : (
           <Field
-            sx={{
-              "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-                borderColor: "var(--primary-color)",
-              },
-              "& label": { color: "var(--text-color)" },
-              "& input": {
-                borderColor: "var(--third-color)",
-                color: "var(--text-color)",
-                borderRadius: "10px",
-              },
-              "& .MuiInputLabel-root.Mui-focused": {
-                fontWeight: "700",
-                color: "var(--third-color)",
-              },
-
-              "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: "var(--third-color)",
-                },
-            }}
             labelId="demo-simple-select-label"
             as={Select}
             name="subject"
@@ -118,43 +78,6 @@ const Choose = (Props) => {
             })}
           </Field>
         )}
-        {/* <Field
-          sx={{
-            "& .css-1d3z3hw-MuiOutlinedInput-notchedOutline": {
-              borderColor: "var(--primary-color)",
-            },
-            "& label": { color: "var(--text-color)" },
-            "& input": {
-              borderColor: "var(--third-color)",
-              color: "var(--text-color)",
-              borderRadius: "10px",
-            },
-            "& .MuiInputLabel-root.Mui-focused": {
-              fontWeight: "700",
-              color: "var(--third-color)",
-            },
-
-            "& .MuiOutlinedInput-root:focus-within .MuiOutlinedInput-notchedOutline":
-              {
-                borderColor: "var(--third-color)",
-              },
-          }}
-          labelId="demo-simple-select-label"
-          as={Select}
-          name="subject"
-          required
-          id={name}
-          {...rest}
-          className={className}
-          label={`Choose your ${title}*`}>
-          {infoCard.map(({ id, useTitle }) => {
-            return (
-              <MenuItem key={id} value={useTitle}>
-                {useTitle}
-              </MenuItem>
-            );
-          })}
-        </Field> */}
       </FormControl>
     </Box>
   );
