@@ -125,17 +125,18 @@
   }
 }
 
+.registerbutton {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: var(--primary-color);
+  }
+}
+
 @media (min-width: 768px) {
   .registerbutton {
     &:hover {
-      background-color: var(--primary-color);
+      background-color: var(--primary-color) !important;
       color: var(--button-color);
     }
-  }
-}
-.registerbutton {
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--primary-color);
   }
 }

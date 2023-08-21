@@ -55,7 +55,7 @@ function FormikContainer(Props) {
       .then(() => {
         setOpen(true);
         resetForm({ values: initialValues });
-        // setPlan("");
+        setPlan("");
       })
       .catch(() => {
         setOpenerror(true);
@@ -155,7 +155,6 @@ function FormikContainer(Props) {
                   fontWeight: "bold",
                   bgcolor: "rgba(0,0,0,.5)",
                   color: "var(--primary-color)",
-
                   m: "15px 0",
                   p: "10px",
                   borderRadius: "10px",
