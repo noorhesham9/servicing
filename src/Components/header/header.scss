@@ -14,8 +14,12 @@
   z-index: 2;
   position: relative;
 }
-.ListItemServices {
-  font-size: 16px;
+.ListItemServicesAR {
+  padding: 4px 16px !important;
+  font-size: 13px;
+}
+.ListItemServicesEN {
+  font-size: 17px;
 }
 .desktopnavservice {
   padding: 8px 1px !important;
@@ -57,7 +61,6 @@
 // }
 .containsevrviceLinks {
   overflow: hidden;
-  // transition: var(--transition);
 }
 .blusServices2 {
   font-size: 22px;
@@ -72,7 +75,6 @@
 .linknav {
   opacity: 0.5;
   transition: var(--transition);
-
   font-weight: 400;
   position: relative;
   cursor: pointer;
@@ -96,14 +98,21 @@
     left: 0;
   }
 }
+.listNavLinks {
+  .liEN {
+  }
+  .liAr {
+    padding: 4px 16px;
+  }
+}
 .linknavNH {
+  opacity: 0.5;
   transition: var(--transition);
   font-weight: 400;
   position: relative;
   cursor: pointer;
-  color: var(--text-color);
-
   font-size: 22px;
+  color: var(--text-color);
   &:hover {
     opacity: 1;
     font-weight: 500;

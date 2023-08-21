@@ -42,17 +42,14 @@ const Choose = (Props) => {
             required
             id={name}
             {...rest}
-            className={className}
+            className={` servhome ${className} ${
+              lang === "en" ? "english-text" : " arabic-text"
+            }`}
             label={`${title}*`}>
             {infoCard.map((info) => {
               const { id, useTitle } = info;
               return (
-                <MenuItem
-                  key={id}
-                  value={t(useTitle)}
-                  className={` servhome ${className} ${
-                    lang === "en" ? "english-text" : " arabic-text"
-                  }`}>
+                <MenuItem key={id} value={t(useTitle)}>
                   {t(useTitle)}
                 </MenuItem>
               );

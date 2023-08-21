@@ -12,10 +12,10 @@ import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
 
 const HeightAR = () => {
-  return `${infoCard.length * 47}px`;
+  return `${infoCard.length * 33}px`;
 };
 const HeightEN = () => {
-  return `${infoCard.length * 37}px`;
+  return `${infoCard.length * 36}px`;
 };
 
 const sidebar = {
@@ -428,7 +428,7 @@ const Header = (Props) => {
               variants={sidebar}>
               <Box
                 style={{
-                  fontSize: "24px",
+                  fontSize: "18px",
                   width: "100%",
                   height: "100%",
                   padding: "80px 0",
@@ -438,15 +438,17 @@ const Header = (Props) => {
                   alignItems: "center",
                 }}>
                 <List
+                  className="listNavLinks"
                   sx={{
                     padding: "20px",
+                    zIndex: "10000",
                     letterSpacing: "0.6px",
                   }}>
-                  <ListItem>
+                  <ListItem className={`${lang === "en" ? "liEN" : "liAr"}`}>
                     {home === "route" ? (
                       <LinkRouter
                         onClick={toggleOpen}
-                        className={` homeLink_nav linknavNHFS ${
+                        className={`${
                           lang === "en"
                             ? "english-text  linknavNH"
                             : "arabic-text linknav"
@@ -459,8 +461,7 @@ const Header = (Props) => {
                         onClick={toggleOpen}
                         smooth={true}
                         duration={800}
-                        // className="homeLink_nav linknavNH"
-                        className={` homeLink_nav linknavNHFS ${
+                        className={`   ${
                           lang === "en"
                             ? "english-text  linknavNH"
                             : "arabic-text linknav"
@@ -470,7 +471,7 @@ const Header = (Props) => {
                       </LinkScroll>
                     )}
                   </ListItem>
-                  <ListItem>
+                  <ListItem className={`${lang === "en" ? "liEN" : "liAr"}`}>
                     <LinkScroll
                       onClick={toggleOpen}
                       smooth={true}
@@ -494,7 +495,13 @@ const Header = (Props) => {
                     className={"containsevrviceLinks"}>
                     {infoCard.map(({ id, route, title }) => {
                       return (
-                        <ListItem className="ListItemServices" key={id}>
+                        <ListItem
+                          className={
+                            lang === "en"
+                              ? "ListItemServicesEN"
+                              : "ListItemServicesAR"
+                          }
+                          key={id}>
                           <LinkRouter
                             onClick={toggleOpen}
                             // className="LInkRouterServices link__nav"
@@ -508,7 +515,7 @@ const Header = (Props) => {
                       );
                     })}
                   </motion.div>
-                  <ListItem>
+                  <ListItem className={`${lang === "en" ? "liEN" : "liAr"}`}>
                     <LinkScroll
                       onClick={toggleOpen}
                       smooth={true}
