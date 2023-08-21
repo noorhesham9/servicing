@@ -1,7 +1,5 @@
 import "./App.css";
-import Header from "./Components/header/Header";
-import Landing from "./Components/landing/Landing";
-import Services from "./Components/Services/Services";
+
 import ScrollUp from "./Components/ScrollUP/ScrollUp";
 import Footer from "./Components/Footer/Footer";
 import { useLocation, useRoutes } from "react-router-dom";
@@ -22,7 +20,6 @@ import {
 import console from "./assets/console.jpg";
 import { useTranslation } from "react-i18next";
 import { infoCard } from "./Constants";
-// trying to bush from laptop
 
 function App() {
   const [contactButton, setConatctButton] = useState(false);
@@ -168,8 +165,7 @@ function App() {
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 1 } }}
-      variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-    >
+      variants={{ visible: { transition: { staggerChildren: 0.3 } } }}>
       <ScrollUp />
       <AnimatePresence mode="wait">
         {React.cloneElement(element, { key: location.pathname })}

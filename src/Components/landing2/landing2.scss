@@ -36,6 +36,7 @@
     font-size: 17px;
   }
   .servicesButtonLanding {
+    color: white;
     background: #131f1c;
     align-items: center;
     border: 1px solid var(--primary-color);
@@ -50,12 +51,9 @@
     font-weight: 600;
     line-height: 1.5;
     cursor: pointer;
-    &:hover {
-      background-color: transparent;
-      color: var(--primary-color);
-    }
   }
   .contactButtonLanding {
+    color: white;
     background: #131f1c;
     align-items: center;
     border: 1px solid var(--primary-color);
@@ -69,6 +67,23 @@
     font-weight: 600;
     line-height: 1.5;
     cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .contianerLanding {
+    .servicesButtonLanding {
+      &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+      }
+    }
+    .contactButtonLanding {
+      &:hover {
+        background-color: transparent;
+        color: var(--primary-color);
+      }
+    }
   }
 }
 

@@ -1,100 +1,13 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import "./landing2.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, EffectFade } from "swiper/modules";
-import nn from "../../assets/tree-736885_1280.jpg";
-import mm from "../../assets/digital_camera_photo-1080x675.jpg";
-import image1 from "../../assets/1.jpg";
-import image2 from "../../assets/2.jpg";
-import imag3 from "../../assets/3.jpg";
-import landingShabe from "../../assets/blob-scene-haikei.svg";
-import {
-  Logolanding,
-  ButtonLAnding,
-  SwiperVariant,
-  zoomInlanding1,
-  zoomInlanding2,
-  zoomInlanding3,
-} from "../../utils/motion";
-import { easeInOut, motion } from "framer-motion";
+
+import { Logolanding, ButtonLAnding } from "../../utils/motion";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import "swiper/css/effect-fade";
-
-// const data = [
-//   {
-//     id: 1,
-//     image: nn,
-//     title: "maintainence",
-//     color: "#0a1411",
-//     initial: () => {
-//       return zoomInlanding1().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding1().show;
-//     },
-//   },
-//   {
-//     id: 2,
-//     image: mm,
-//     title: "website macker",
-//     color: "#0a1411",
-//     initial: () => {
-//       return zoomInlanding2().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding2().show;
-//     },
-//   },
-//   {
-//     id: 3,
-//     image: image1,
-//     color: "#0a1411",
-//     title: "fridge",
-//     initial: () => {
-//       return zoomInlanding3().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding3().show;
-//     },
-//   },
-//   {
-//     id: 4,
-//     image: image2,
-//     title: "washing machine",
-//     color: "#0a1411",
-//     initial: () => {
-//       return zoomInlanding1().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding1().show;
-//     },
-//   },
-//   {
-//     id: 5,
-//     image: imag3,
-//     title: "screens",
-//     color: "#0a1411",
-//     initial: () => {
-//       return zoomInlanding2().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding2().show;
-//     },
-//   },
-//   {
-//     id: 6,
-//     image: imag3,
-//     title: "screens",
-//     initial: () => {
-//       return zoomInlanding3().hidden;
-//     },
-//     animate: () => {
-//       return zoomInlanding3().show;
-//     },
-//   },
-// ];
 
 const Landing2 = (Props) => {
   const { t, lang } = Props;

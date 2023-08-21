@@ -114,4 +114,14 @@
   .emailandphone .form-control {
     flex: 0 0 100%;
   }
+}
+@media (min-width: 768px) {
+  .registerbutton:hover {
+    background-color: var(--primary-color);
+    color: var(--button-color);
+  }
+}
+.registerbutton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--primary-color);
 }/*# sourceMappingURL=form.css.map */

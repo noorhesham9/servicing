@@ -38,6 +38,7 @@
   font-size: 17px;
 }
 .contianerLanding .servicesButtonLanding {
+  color: white;
   background: #131f1c;
   align-items: center;
   border: 1px solid var(--primary-color);
@@ -53,11 +54,8 @@
   line-height: 1.5;
   cursor: pointer;
 }
-.contianerLanding .servicesButtonLanding:hover {
-  background-color: transparent;
-  color: var(--primary-color);
-}
 .contianerLanding .contactButtonLanding {
+  color: white;
   background: #131f1c;
   align-items: center;
   border: 1px solid var(--primary-color);
@@ -73,6 +71,16 @@
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .contianerLanding .servicesButtonLanding:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+  .contianerLanding .contactButtonLanding:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+}
 .swiper-pagination-bullet {
   transition: var(--transition);
   width: 10px !important;

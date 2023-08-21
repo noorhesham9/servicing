@@ -147,16 +147,15 @@ function FormikContainer(Props) {
               <Button
                 type="submit"
                 variant="contained"
-                className={` ${lang ? "english-heading" : " arabic-text"}`}
+                className={` registerbutton ${
+                  lang ? "english-heading" : " arabic-text"
+                }`}
                 sx={{
                   fontSize: "18px",
                   fontWeight: "bold",
                   bgcolor: "rgba(0,0,0,.5)",
                   color: "var(--primary-color)",
-                  "&:hover": {
-                    bgcolor: "var(--primary-color)",
-                    color: "var(--button-color)",
-                  },
+
                   m: "15px 0",
                   p: "10px",
                   borderRadius: "10px",
