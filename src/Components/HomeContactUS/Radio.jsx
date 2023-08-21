@@ -47,12 +47,6 @@ const Radiooo = (Props) => {
               key={inedx}
               control={<Radio />}
               label={t(title)}
-              // sx={{
-              //   "& .css-1lxp84z-MuiFormControlLabel-root .MuiFormControlLabel-label":
-              //     {
-              //       fontSize: "25px !important",
-              //     },
-              // }}
               className={`  ${
                 lang === "en" ? "english-heading" : "arabic-text"
               }`}

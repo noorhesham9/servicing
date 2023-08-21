@@ -116,22 +116,6 @@
   }
 }
 
-// .css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root:hover
-//   .MuiOutlinedInput-notchedOutline {
-//   border-color: var(--third-color) !important;
-// }
-
-// .css-1jy569b-MuiFormLabel-root-MuiInputLabel-root {
-//   color: var(--third-color) !important;
-// }
-// .css-2jg8kz-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused
-//   .MuiOutlinedInput-notchedOutline {
-//   border-color: var(--third-color) !important;
-// }
-// .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-//   color: var(--text-color) !important;
-// }
-
 @media (max-width: 600px) {
   .FnameAndLname,
   .emailandphone {
@@ -140,72 +124,3 @@
     }
   }
 }
-
-// .optionServices {
-//   border-radius: 10px !important;
-// }
-// .MuiList-root.MuiList-padding.MuiMenu-list.css-6hp17o-MuiList-root-MuiMenu-list {
-//   color: white;
-// }
-// .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiMenu-paper.MuiPopover-paper.MuiMenu-paper.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
-//   box-shadow: 0 0px 4px rgb(255 255 255 / 10%),
-//     inset -1px 0px 2.26765px rgb(255 255 255 / 21%) !important;
-//   background-color: #0a1411;
-// }
-// .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon {
-//   color: white;
-// }
-// .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.Mui-disabled.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
-//   color: rgb(255, 255, 255, 0.4);
-// }
-// .MuiSelect-select.MuiSelect-outlined.Mui-disabled.MuiInputBase-input.MuiOutlinedInput-input.Mui-disabled.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
-//   color: white !important;
-//   -webkit-text-fill-color: rgb(255, 255, 255, 0.4);
-// }
-
-// .radioControl {
-//   border: 1px solid var(--primary-color) !important;
-//   border-radius: 10px;
-//   label {
-//     .Mui-checked {
-//       color: var(--third-color) !important;
-//     }
-//   }
-//   .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
-//     font-family: inherit;
-//   }
-
-//   .GroubLabel {
-//     padding: 10px;
-//     color: white;
-//     transition: var(--transition);
-//     &.Mui-checked {
-//       color: var(--third-color) !important;
-//     }
-//   }
-//   .RadioGroub {
-//     display: flex;
-//     padding: 10px;
-//     flex-direction: row;
-//     .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root {
-//       width: fit-content;
-//       transition: var(--transition);
-//       &:hover {
-//         color: var(--third-color) !important;
-//       }
-
-//       .css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked {
-//         transition: var(--transition);
-//         ~ .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-ahj2mt-MuiTypography-root {
-//           color: var(--primary-color) !important;
-//         }
-//         color: var(--primary-color);
-//       }
-//     }
-//   }
-//   &:hover {
-//     .GroubLabel {
-//       color: var(--third-color) !important;
-//     }
-//   }
-// }

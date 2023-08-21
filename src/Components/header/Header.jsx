@@ -17,9 +17,13 @@ import { useDimensions } from "./use-Dimensions";
 import { MenuToggle } from "./MenuToggle";
 import { infoCard } from "../../Constants";
 
-const Height = () => {
+const HeightAR = () => {
+  return `${infoCard.length * 47}px`;
+};
+const HeightEN = () => {
   return `${infoCard.length * 37}px`;
 };
+
 const sidebar = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
@@ -60,24 +64,39 @@ const services = {
   },
 };
 
-const services2 = {
-  open: {
-    height: `${Height()}`,
-    transition: {
-      duration: 0.4,
-    },
-  },
-  closed: {
-    height: "0px",
-    transition: {
-      duration: 0.6,
-    },
-  },
-};
+// const services2 = {
+//   open: {
+//     height: `${lang === "EN" ? HeightAR() : HeightEN()}`,
+//     transition: {
+//       duration: 0.4,
+//     },
+//   },
+//   closed: {
+//     height: "0px",
+//     transition: {
+//       duration: 0.6,
+//     },
+//   },
+// };
 
 const Header = (Props) => {
   const { home, i18n, t, lang, setlang, setConatctButton } = Props;
   const [top, settop] = useState(true);
+
+  const services2 = {
+    open: {
+      height: `${lang === "en" ? HeightEN() : HeightAR()}`,
+      transition: {
+        duration: 0.4,
+      },
+    },
+    closed: {
+      height: "0px",
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
@@ -170,7 +189,7 @@ const Header = (Props) => {
                   className={` servicesLink_nav  ${
                     lang === "en"
                       ? "english-text  linknav"
-                      : "arabic-text linknavAR"
+                      : "arabic-text linknav"
                   }`}
                   to="/">
                   {t("home")}
@@ -185,7 +204,7 @@ const Header = (Props) => {
                   className={` servicesLink_nav  ${
                     lang === "en"
                       ? "english-text  linknav"
-                      : "arabic-text linknavAR"
+                      : "arabic-text linknav"
                   }`}
                   to="home">
                   {t("home")}
@@ -200,7 +219,7 @@ const Header = (Props) => {
                   className={` servicesLink_nav  ${
                     lang === "en"
                       ? "english-text  linknav"
-                      : "arabic-text linknavAR"
+                      : "arabic-text linknav"
                   }`}>
                   {t("landingBtnOne")}
                 </a>
@@ -253,7 +272,7 @@ const Header = (Props) => {
                   className={` servicesLink_nav  ${
                     lang === "en"
                       ? "english-text  linknav"
-                      : "arabic-text linknavAR"
+                      : "arabic-text linknav"
                   }`}
                   to="services">
                   {t("landingBtnOne")}
@@ -293,6 +312,7 @@ const Header = (Props) => {
                 </Box>
               </ListItem>
             )}
+
             {/* <ListItem className="servicesListItem">
               <LinkScroll
                 smooth={true}
@@ -345,7 +365,7 @@ const Header = (Props) => {
                 className={` servicesLink_nav  ${
                   lang === "en"
                     ? "english-text  linknav"
-                    : "arabic-text linknavAR"
+                    : "arabic-text linknav"
                 }`}
                 to="contactus">
                 {t("ContactUS")}
@@ -414,7 +434,7 @@ const Header = (Props) => {
               variants={sidebar}>
               <Box
                 style={{
-                  fontSize: "50px",
+                  fontSize: "24px",
                   width: "100%",
                   height: "100%",
                   padding: "80px 0",
@@ -435,7 +455,7 @@ const Header = (Props) => {
                         className={` homeLink_nav linknavNHFS ${
                           lang === "en"
                             ? "english-text  linknavNH"
-                            : "arabic-text linknavAR"
+                            : "arabic-text linknav"
                         }`}
                         to="/">
                         {t("home")}
@@ -449,7 +469,7 @@ const Header = (Props) => {
                         className={` homeLink_nav linknavNHFS ${
                           lang === "en"
                             ? "english-text  linknavNH"
-                            : "arabic-text linknavAR"
+                            : "arabic-text linknav"
                         }`}
                         to="home">
                         {t("home")}
@@ -464,7 +484,7 @@ const Header = (Props) => {
                       className={` homeLink_nav linknavNHFS ${
                         lang === "en"
                           ? "english-text  linknavNH"
-                          : "arabic-text linknavAR"
+                          : "arabic-text linknav"
                       }`}
                       to="services">
                       {t("landingBtnOne")}
@@ -502,7 +522,7 @@ const Header = (Props) => {
                       className={` homeLink_nav linknavNHFS ${
                         lang === "en"
                           ? "english-text  linknavNH"
-                          : "arabic-text linknavAR"
+                          : "arabic-text linknav"
                       }`}
                       to="contactus">
                       {t("ContactUS")}
