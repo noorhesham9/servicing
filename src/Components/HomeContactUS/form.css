@@ -57,6 +57,9 @@
 .inpuuuutField {
   margin-bottom: 10px;
 }
+.inpuuuutField input {
+  color: white;
+}
 .inpuuuutField .MuiOutlinedInput-notchedOutline {
   transition: var(--transition);
   border-color: var(--primary-color);
@@ -68,6 +71,24 @@
   border-color: var(--third-color);
 }
 
+.optionServices.servhome .MuiSelect-select {
+  color: rgb(255, 255, 255) !important;
+  -webkit-text-fill-color: rgb(255, 255, 255) !important;
+}
+.optionServices.servhome svg {
+  color: white !important;
+}
+.optionServices.servroute .MuiSelect-select {
+  color: rgba(170, 170, 170, 0.6) !important;
+  -webkit-text-fill-color: rgba(170, 170, 170, 0.6) !important;
+}
+.optionServices.servroute svg {
+  color: rgba(170, 170, 170, 0.6) !important;
+}
+.optionServices svg {
+  fill: "white";
+  color: white;
+}
 .optionServices .MuiOutlinedInput-notchedOutline {
   transition: var(--transition);
   border-color: var(--primary-color) !important;

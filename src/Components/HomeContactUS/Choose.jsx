@@ -50,7 +50,7 @@ const Choose = (Props) => {
                 <MenuItem
                   key={id}
                   value={t(useTitle)}
-                  className={`  ${
+                  className={` servhome ${className} ${
                     lang === "en" ? "english-text" : " arabic-text"
                   }`}>
                   {t(useTitle)}
@@ -67,7 +67,9 @@ const Choose = (Props) => {
             required
             id={name}
             {...rest}
-            className={className}
+            className={` servroute ${className} ${
+              lang === "en" ? "english-text" : " arabic-text"
+            }`}
             label={`${title}*`}>
             {infoCard.map(({ id, useTitle }) => {
               return (

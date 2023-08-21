@@ -11,6 +11,7 @@ function TextArea(Props) {
         required
         {...rest}
         sx={{
+          color: "white",
           borderRadius: "10px",
           width: "100%",
           "& label": { color: "var(--text-color)" },

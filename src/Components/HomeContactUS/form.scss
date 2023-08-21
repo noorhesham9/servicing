@@ -55,6 +55,10 @@
 }
 
 .inpuuuutField {
+  input {
+    color: white;
+  }
+
   margin-bottom: 10px;
   .MuiOutlinedInput-notchedOutline {
     transition: var(--transition);
@@ -70,8 +74,41 @@
     border-color: var(--third-color);
   }
 }
+// .MuiSelect-select {
+//   color: rgb(163, 163, 163) !important;
+//   -webkit-text-fill-color: rgba(177, 177, 177, 0.676) !important;'
+// }
+
+// svg {
+//   fill: "white";
+//   color: white;
+// }
 
 .optionServices {
+  &.servhome {
+    .MuiSelect-select {
+      color: rgb(255, 255, 255) !important;
+      -webkit-text-fill-color: rgba(255, 255, 255) !important;
+    }
+    svg {
+      color: white !important;
+    }
+  }
+
+  &.servroute {
+    .MuiSelect-select {
+      color: rgba(170, 170, 170, 0.6) !important;
+      -webkit-text-fill-color: rgba(170, 170, 170, 0.6) !important;
+    }
+    svg {
+      color: rgba(170, 170, 170, 0.6) !important;
+    }
+  }
+  svg {
+    fill: "white";
+    color: white;
+  }
+
   .MuiOutlinedInput-notchedOutline {
     transition: var(--transition);
     border-color: var(--primary-color) !important;
