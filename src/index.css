@@ -248,13 +248,32 @@ a {
   right: 20px;
   bottom: 30px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 10000;
-  background-color: var(--secondary-color);
+  background: rgb(0, 0, 0, 0.6) !important;
+  box-shadow: 0 0px 8px 3px rgba(255, 255, 255, 0.1),
+    -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
   transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 550px) {
+  .scroll-up {
+    right: 10px;
+    bottom: 15px;
+  }
+}
+.scroll-up svg {
+  color: white;
 }
 .scroll-up:hover {
   background-color: var(--primary-color);
 }
+
 /* ------------------------ Footer ---------------------------------- */
 /* .footer{
   padding:20px;

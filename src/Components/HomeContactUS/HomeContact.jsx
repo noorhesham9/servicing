@@ -58,7 +58,7 @@ const HomeContact = (Props) => {
         {t("landingBtnTwo")}
       </Typography>
       <Typography
-        sx={{ textAlign: "center" }}
+        sx={{ textAlign: "center", padding: "0px 10px" }}
         className={` ${lang === "en" ? "english-text" : " arabic-text"}`}>
         {t("contactSubTitle")}
       </Typography>

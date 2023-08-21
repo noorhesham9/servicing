@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FormControl } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 
-import InputLabel from "@mui/material/InputLabel";
 import FormLabel from "@mui/material/FormLabel";
 import { Field } from "formik";
 import { infoPlanCard } from "../../Constants";
@@ -48,7 +47,9 @@ const Radiooo = (Props) => {
               control={<Radio />}
               label={t(title)}
               className={`  ${
-                lang === "en" ? "english-heading" : "arabic-text"
+                lang === "en"
+                  ? "Radiolabel english-heading"
+                  : " Radiolabel arabic-text"
               }`}
             />
           );

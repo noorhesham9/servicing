@@ -22,7 +22,7 @@ function ScrollUp() {
     });
   };
   return (
-    <Box className="scroll-up">
+    <Box>
       {scrollToTop && (
         <div className="scroll-up" onClick={ScrollUpToTop}>
           <IconButton>
