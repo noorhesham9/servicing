@@ -109,8 +109,7 @@ const Landing2 = (Props) => {
       width={"100%"}
       justifyContent={"center"}
       alignItems={"center"}
-      className="landing"
-    >
+      className="landing">
       <Box
         sx={{
           width: { xs: "0px", sm: "440px" },
@@ -121,20 +120,17 @@ const Landing2 = (Props) => {
           position: "absolute",
           top: "-2%",
           left: "-5%",
-        }}
-      ></Box>
+        }}></Box>
       <Container
         sx={{
           height: "100%",
-        }}
-      >
+        }}>
         <Box className="flex contianerLanding">
           <Box
             sx={{
               maxWidth: "670px",
               textAlign: "center",
-            }}
-          >
+            }}>
             <Typography
               className="logoLAnding"
               component={motion.p}
@@ -142,9 +138,8 @@ const Landing2 = (Props) => {
               animate={Logolanding().show}
               sx={{
                 textShadow: "var(--textShdowLanding)",
-              }}
-            >
-              Servo
+              }}>
+              Seervo
             </Typography>
             <Typography
               component={motion.p}
@@ -153,8 +148,7 @@ const Landing2 = (Props) => {
               // className="title"
               className={` title ${
                 lang === "en" ? "english-text  " : "arabic-heading "
-              }`}
-            >
+              }`}>
               {t("title")}
             </Typography>
             <Typography
@@ -164,8 +158,7 @@ const Landing2 = (Props) => {
               fontSize={lang === "en" ? "18px" : "24px"}
               className={` brief ${
                 lang === "en" ? "english-text" : " arabic-text"
-              }`}
-            >
+              }`}>
               {t("WebsiteDescriptionLanding")}
             </Typography>
             <Box
@@ -177,8 +170,7 @@ const Landing2 = (Props) => {
                 justifyContent: "center",
                 gap: "25px",
                 maxWidth: "100%",
-              }}
-            >
+              }}>
               <Link smooth={true} duration={800} to="services">
                 <Button
                   component={motion.div}
@@ -187,8 +179,7 @@ const Landing2 = (Props) => {
                   // className="servicesButtonLanding"
                   className={` servicesButtonLanding ${
                     lang === "en" ? "english-heading  " : "arabic-text "
-                  }`}
-                >
+                  }`}>
                   {t("landingBtnOne")}
                 </Button>
               </Link>
@@ -200,8 +191,7 @@ const Landing2 = (Props) => {
                   // className="contactButtonLanding"
                   className={` contactButtonLanding ${
                     lang === "en" ? "english-heading  " : "arabic-text "
-                  }`}
-                >
+                  }`}>
                   {t("landingBtnTwo")}
                 </Button>{" "}
               </Link>

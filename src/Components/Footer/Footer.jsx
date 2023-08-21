@@ -31,7 +31,7 @@ function Footer(Props) {
                 xs: "var(--xs-title-second-font-fontSize)",
                 md: "var(--lg-title-second-font-fontSize)",
               }}>
-              logo
+              Seervo
             </Typography>
             <Typography
               color="white"

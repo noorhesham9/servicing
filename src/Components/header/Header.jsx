@@ -150,7 +150,7 @@ const Header = (Props) => {
             }}
             to="/"
             className="logo">
-            Logo
+            Seervo
           </LinkRouter>
         ) : (
           <LinkScroll
@@ -161,7 +161,7 @@ const Header = (Props) => {
             duration={800}
             to="home"
             className="logo">
-            Logo
+            Seervo
           </LinkScroll>
         )}
 
