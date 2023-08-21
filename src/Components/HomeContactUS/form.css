@@ -150,4 +150,8 @@
 .MuiPaper-root.MuiPopover-paper.MuiMenu-paper {
   background-color: #0a1411;
   color: white;
+}
+
+.Radiolabel span {
+  font-family: inherit;
 }/*# sourceMappingURL=form.css.map */
