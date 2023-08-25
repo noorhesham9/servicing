@@ -99,8 +99,6 @@
   }
 }
 .listNavLinks {
-  .liEN {
-  }
   .liAr {
     padding: 4px 16px;
   }
@@ -206,8 +204,7 @@
   cursor: pointer;
   transition: var(--transition);
 }
-.openToggle {
-}
+
 .closedToggle {
   box-shadow: 0 0px 8px 3px rgba(255, 255, 255, 0.1),
     -1px 0px 2.26765px rgba(255, 255, 255, 0.08) !important;
