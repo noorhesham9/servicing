@@ -268,3 +268,10 @@
     padding: 40px 7px 5px;
   }
 }
+
+.svvvg {
+  transition: var(--transition);
+  &:hover {
+    fill: white !important;
+  }
+}

@@ -225,4 +225,11 @@
   align-items: center;
   flex-direction: column;
   padding: 40px 7px 5px;
+}
+
+.svvvg {
+  transition: var(--transition);
+}
+.svvvg:hover {
+  fill: white !important;
 }/*# sourceMappingURL=header.css.map */
