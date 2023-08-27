@@ -162,25 +162,29 @@ export const secondContactInfo = [
   //   icon: WhatsApp,
   //   info: "",
   // },
-  {
-    id: 2,
-    icon: InstagramIcon,
-    info: "",
-  },
-  {
-    id: 3,
-    icon: LinkedIn,
-    info: "",
-  },
+  // {
+  //   id: 2,
+  //   icon: InstagramIcon,
+  //   info: "",
+  //   link: "",
+  // },
+  // {
+  //   id: 3,
+  //   icon: LinkedIn,
+  //   info: "",
+  //   link: "",
+  // },
   {
     id: 4,
     icon: Twitter,
     info: "",
+    link: "https://twitter.com/SeervoC",
   },
   {
     id: 5,
     icon: Facebook,
     info: "",
+    link: "https://www.facebook.com/profile.php?id=61550584223805",
   },
 ];
 export const info = {

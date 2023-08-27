@@ -132,11 +132,13 @@ const HomeContact = (Props) => {
                 className="socialcontacts"
                 direction="row"
                 alignItems="center">
-                {secondContactInfo.map((info) => (
-                  <IconButton key={info.id}>
-                    <info.icon sx={{ color: "var(--third-color)" }} />
-                  </IconButton>
-                ))}
+                {secondContactInfo.map((info) => {
+                  return (
+                    <IconButton key={info.id} href={info.link}>
+                      <info.icon sx={{ color: "var(--third-color)" }} />
+                    </IconButton>
+                  );
+                })}
               </Stack>
             </Box>
           </Box>
