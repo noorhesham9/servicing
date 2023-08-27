@@ -17,6 +17,7 @@ function ServicePage(Props) {
     contactButton,
     setConatctButton,
   } = Props;
+
   return (
     <>
       <Header
@@ -34,6 +35,7 @@ function ServicePage(Props) {
         name="contactus"
         services={services}
         plan={plan}
+        setPlan={setPlan}
         lang={lang}
         t={t}
       />

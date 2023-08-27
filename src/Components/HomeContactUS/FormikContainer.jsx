@@ -27,10 +27,8 @@ const validationSchema = Yup.object({
   message: Yup.string().required("Required !"),
   plan: Yup.string().required("Required !"),
 });
-
 function FormikContainer(Props) {
   const { services, Plan, setPlan, t, lang } = Props;
-
   {
     services === undefined
       ? (initialValues.subject = "")
@@ -45,19 +43,18 @@ function FormikContainer(Props) {
   };
 
   const handleSubmit = (values, { resetForm }) => {
-    console.log("start");
-    // console.log(values);
     axios
       .post(
-        "https://sheet.best/api/sheets/80c4ff43-28b0-4306-bc41-0e6c60b8e850",
+        "https://sheet.best/api/sheets/77d9d849-49b4-4091-95f1-8fb35338007a",
         values
       )
       .then(() => {
         setOpen(true);
-        resetForm({ values: initialValues });
         setPlan("");
+        resetForm({ values: initialValues });
       })
-      .catch(() => {
+      .catch((error) => {
+        console.log(error);
         setOpenerror(true);
       });
   };
@@ -131,7 +128,7 @@ function FormikContainer(Props) {
               <FormikControl
                 plan={Plan}
                 required
-                // className="planInput"
+                setPlan={setPlan}
                 control="radio"
                 name="plan"
                 title={t("contactPlan")}

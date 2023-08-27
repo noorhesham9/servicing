@@ -22,6 +22,7 @@ import { useTranslation } from "react-i18next";
 import { infoCard } from "./Constants";
 
 function App() {
+  const [plan, setPlan] = useState("");
   const [contactButton, setConatctButton] = useState(false);
   const [lang, setlang] = useCycle("ar", "en");
   const { t, i18n } = useTranslation();

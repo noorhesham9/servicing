@@ -9,11 +9,12 @@ import { Field } from "formik";
 import { infoPlanCard } from "../../Constants";
 
 const Radiooo = (Props) => {
-  const { name, plan, t, title, lang, ...rest } = Props;
+  const { name, plan, setPlan, t, title, lang, ...rest } = Props;
   const [checked, setChecked] = useState("");
   useEffect(() => {
     setChecked(plan);
   }, [plan]);
+
   return (
     <FormControl className="radioControl" required fullWidth>
       <FormLabel
@@ -40,6 +41,9 @@ const Radiooo = (Props) => {
             <FormControlLabel
               onChange={() => {
                 setChecked(title);
+              }}
+              onClick={() => {
+                setPlan(title);
               }}
               checked={checked === title}
               value={title}

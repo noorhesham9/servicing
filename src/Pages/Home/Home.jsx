@@ -6,6 +6,7 @@ import Plan from "../../Components/Plan/Plan";
 import { useState } from "react";
 function Home(Props) {
   const [plan, setPlan] = useState("");
+
   const { t, i18n, lang, setlang, setConatctButton } = Props;
 
   return (
@@ -21,7 +22,13 @@ function Home(Props) {
       <Landing2 t={t} lang={lang} setlang={setlang} />
       <Services setConatctButton={setConatctButton} t={t} lang={lang} />
       <Plan setPlan={setPlan} t={t} lang={lang} />
-      <HomeContact name="contactus" plan={plan} t={t} lang={lang} />
+      <HomeContact
+        name="contactus"
+        plan={plan}
+        setPlan={setPlan}
+        t={t}
+        lang={lang}
+      />
     </>
   );
 }
