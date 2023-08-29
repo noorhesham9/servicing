@@ -4,7 +4,8 @@ export const LandingImage = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="251"
       height="251"
-      viewBox="0 0 800 800">
+      viewBox="0 0 800 800"
+    >
       <g fill="none" stroke="#16A100" strokeWidth="1">
         <path d="M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63" />
         <path d="M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764" />
@@ -138,17 +139,13 @@ export const firstContactInfo = [
   {
     id: 1,
     icon: EmailIcon,
-    info: "ex@gmail.com",
+    info: "seervocom@gmail.com",
   },
-  {
-    id: 2,
-    icon: PhoneIphoneIcon,
-    info: "012......",
-  },
+
   {
     id: 3,
     icon: LocationOnIcon,
-    info: "Giza,Egypt",
+    info: "cairo,Egypt",
   },
 ];
 export const secondContactInfo = [
