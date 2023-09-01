@@ -95,7 +95,7 @@ export const infoCard = [
     services: "screenservices",
     useTitle: "screentitle",
     title: "screentitle",
-    desc: "laptopDescription",
+    desc: "screenDescription",
     bOne: "cardServiceBtnOne",
     bTwo: "cardServiceBtnTwo",
     route: "/screens",

@@ -59,6 +59,7 @@ function ServiceCard(Props) {
             {t(title)}
           </Typography>
           <Typography
+            dir={lang === "en" ? "ltr" : "rtl"}
             textAlign="center"
             fontSize="var( --text-fontSize)"
             className={` text ${

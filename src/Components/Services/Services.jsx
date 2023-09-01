@@ -43,26 +43,29 @@ function Services(Props) {
           </span>
         </Typography>
         <Grid container spacing={2}>
-          {infoCard.map((info) => (
-            <Grid
-              item
-              key={info.id}
-              xs={12}
-              md={4}
-              sm={6}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "center",
-              }}>
-              <ServiceCard
-                info={info}
-                t={t}
-                lang={lang}
-                setConatctButton={setConatctButton}
-              />
-            </Grid>
-          ))}
+          {infoCard.map((info) => {
+            console.log(info);
+            return (
+              <Grid
+                item
+                key={info.id}
+                xs={12}
+                md={4}
+                sm={6}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  textAlign: "center",
+                }}>
+                <ServiceCard
+                  info={info}
+                  t={t}
+                  lang={lang}
+                  setConatctButton={setConatctButton}
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </Box>
