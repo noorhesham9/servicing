@@ -44,7 +44,6 @@ function Services(Props) {
         </Typography>
         <Grid container spacing={2}>
           {infoCard.map((info) => {
-            console.log(info);
             return (
               <Grid
                 item
